@@ -285,12 +285,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a4f4829753241bd95060f53f13ef26fe17033476",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:09:40.000Z",
       "message": "feat(api): add runtime configuration",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/a4f4829753241bd95060f53f13ef26fe17033476"
     },
     "stats": {
       "total": 155,
@@ -300,6 +300,25 @@
     },
     "coverage": 72.97,
     "test_count": 66,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:12:02.000Z",
+      "message": "feat(api): verify Supabase access tokens",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 156,
+      "additions": 155,
+      "deletions": 1,
+      "date": "2026-10-21"
+    },
+    "coverage": 75.29,
+    "test_count": 69,
     "failed_tests": 0,
     "conclusion": "success"
   }

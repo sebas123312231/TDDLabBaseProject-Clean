@@ -8,9 +8,11 @@
     "typecheck": "tsc -p tsconfig.check.json"
   },
   "dependencies": {
-    "@perdiu/database": "workspace:*"
+    "@perdiu/database": "workspace:*",
+    "jose": "^6.2.12"
   },
   "devDependencies": {
+    "@jest/globals": "29.7.0",
     "@types/node": "^26.6.5",
     "typescript": "7.0.2"
   }
