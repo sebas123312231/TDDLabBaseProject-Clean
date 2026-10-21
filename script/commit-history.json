@@ -1501,12 +1501,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "aa6e57a62b2ccb087eae17d38188ba8d99891d3a",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T17:04:54.000Z",
       "message": "feat(web): align page headings with reference",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/aa6e57a62b2ccb087eae17d38188ba8d99891d3a"
     },
     "stats": {
       "total": 283,
@@ -1516,6 +1516,25 @@
     },
     "coverage": 87.75,
     "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T17:15:37.000Z",
+      "message": "test(web): enforce MVP layer boundaries",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 215,
+      "additions": 215,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 88.34,
+    "test_count": 235,
     "failed_tests": 0,
     "conclusion": "success"
   }
