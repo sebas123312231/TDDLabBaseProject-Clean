@@ -10,3 +10,10 @@ test('el proyecto usa PNPM y declara workspaces sin reinicializar Git', () => {
   assert.equal(existsSync('package-lock.json'), false)
   assert.equal(manifest.scripts.postinstall, undefined)
 })
+
+test('las pruebas instrumentadas construyen los workspaces antes de ejecutar Jest', () => {
+  const { scripts } = JSON.parse(readFileSync('package.json', 'utf8'))
+
+  assert.equal(scripts.test, 'pnpm test:build && node ./scripts/run-tdd.mjs')
+  assert.equal(scripts['test:build'], 'pnpm --recursive --if-present build')
+})

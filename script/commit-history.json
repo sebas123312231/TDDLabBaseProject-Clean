@@ -57,12 +57,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "b4f8951f90b8fd58a2e1715032a07e80b90651ee",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T00:37:23.000Z",
       "message": "feat(contracts): define shared report DTOs",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/b4f8951f90b8fd58a2e1715032a07e80b90651ee"
     },
     "stats": {
       "total": 317,
@@ -72,6 +72,25 @@
     },
     "coverage": 100,
     "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T00:38:06.000Z",
+      "message": "chore(test): build workspace packages before Jest",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 9,
+      "deletions": 1,
+      "date": "2026-10-21"
+    },
+    "coverage": 100,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   }

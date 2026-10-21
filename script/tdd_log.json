@@ -114,9 +114,31 @@
     "testId": 3
   },
   {
-    "commitId": "HEAD",
+    "commitId": "b4f8951f90b8fd58a2e1715032a07e80b90651ee",
     "commitName": "feat(contracts): define shared report DTOs",
     "commitTimestamp": 1792543043235,
     "testId": 3
+  },
+  {
+    "numPassedTests": 4,
+    "failedTests": 1,
+    "numTotalTests": 5,
+    "timestamp": 1792543074130,
+    "success": false,
+    "testId": 4
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1792543081065,
+    "success": true,
+    "testId": 4
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "chore(test): build workspace packages before Jest",
+    "commitTimestamp": 1792543086943,
+    "testId": 4
   }
 ]
