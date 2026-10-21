@@ -4,6 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
     "./config": {
       "types": "./dist/config.d.ts",
       "import": "./dist/config.js"
@@ -12,7 +16,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.check.json",
-    "test:integration": "PERDIU_TEST_CONTAINER=1 pnpm --workspace-root exec jest --runInBand --runTestsByPath packages/database/test/migrations.integration.test.ts"
+    "test:integration": "PERDIU_TEST_CONTAINER=1 pnpm --workspace-root exec jest --runInBand --testPathPattern=packages/database/test/"
   },
   "devDependencies": {
     "@jest/globals": "29.7.0",
@@ -21,6 +25,8 @@
     "typescript": "7.0.2"
   },
   "dependencies": {
+    "@perdiu/catalog": "workspace:*",
+    "@perdiu/contracts": "workspace:*",
     "pg": "^8.23.1"
   }
 }

@@ -152,12 +152,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c305209779df9322974aa3dcd89d61bfdc713c02",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T00:53:14.000Z",
       "message": "feat(database): define catalog schema",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/c305209779df9322974aa3dcd89d61bfdc713c02"
     },
     "stats": {
       "total": 316,
@@ -167,6 +167,25 @@
     },
     "coverage": 96.23,
     "test_count": 43,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T00:58:21.000Z",
+      "message": "feat(database): query persisted public reports",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 375,
+      "additions": 374,
+      "deletions": 1,
+      "date": "2026-10-21"
+    },
+    "coverage": 96.23,
+    "test_count": 53,
     "failed_tests": 0,
     "conclusion": "success"
   }
