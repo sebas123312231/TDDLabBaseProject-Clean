@@ -56,8 +56,15 @@ export function SectionContent({ app }: { app: AppView }) {
       />
     )
 
-  if (section === 'profile')
-    return <ProfilePage app={app} />
+  if (section === 'profile' && app.shell.account)
+    return (
+      <ProfilePage
+        account={app.shell.account}
+        signingOut={app.shell.signingOut}
+        onNavigate={app.actions.navigate}
+        onSignOut={app.actions.signOut}
+      />
+    )
 
   if (section === 'safety')
     return <SafetyPage />

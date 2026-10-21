@@ -1083,17 +1083,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a03a4967d31865a3aa890bd9666f14c10ce51eea",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T15:35:01.000Z",
       "message": "feat(web): add account menu and profile avatars",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/a03a4967d31865a3aa890bd9666f14c10ce51eea"
     },
     "stats": {
       "total": 149,
       "additions": 141,
       "deletions": 8,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T15:38:05.000Z",
+      "message": "feat(web): complete account profile actions",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 69,
+      "additions": 57,
+      "deletions": 12,
       "date": "2026-10-21"
     },
     "coverage": 91.78,

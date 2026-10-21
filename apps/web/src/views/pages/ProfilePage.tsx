@@ -1,16 +1,36 @@
-import type { AppView } from '../../presenters/app/useApp.js'
+import type { Section } from '../../presenters/app/sections.js'
+import type { AccountView } from '../../presenters/app/shell.presenter.js'
 import { UserAvatar } from '../components/UserAvatar.js'
 
-export function ProfilePage({ app }: { app: AppView }) {
-  const account = app.shell.account
+type ProfilePageProps = {
+  account: AccountView
+  signingOut: boolean
+  onNavigate: (section: Section) => void
+  onSignOut: () => void
+}
+
+export function ProfilePage({ account, signingOut, onNavigate, onSignOut }: ProfilePageProps) {
   return (
-    <section className="profile-card">
-      {account && <UserAvatar account={account} size="large" />}
-      <div>
-        <h2>{account?.name ?? 'Invitado'}</h2>
-        <p>{account?.email ?? 'Inicia sesión para ver tu perfil.'}</p>
+    <>
+      <section className="profile-card" aria-label="Datos de tu cuenta">
+        <UserAvatar account={account} size="large" />
+        <div>
+          <h2>{account.name}</h2>
+          <p>{account.email}</p>
+          <small className="hint">Tu correo es privado: solo tú lo ves aquí.</small>
+        </div>
+      </section>
+      <div className="profile-actions">
+        <button className="profile-link" onClick={() => onNavigate('my-reports')}>
+          <span>
+            <b>Mis reportes</b>
+            <small>Consulta el título, el tipo y el estado de tus publicaciones.</small>
+          </span>
+        </button>
+        <button className="secondary-button" disabled={signingOut} onClick={onSignOut}>
+          {signingOut ? 'Cerrando sesión…' : 'Cerrar sesión'}
+        </button>
       </div>
-      <button className="secondary-button" onClick={() => void app.actions.signOut()}>Cerrar sesión</button>
-    </section>
+    </>
   )
 }

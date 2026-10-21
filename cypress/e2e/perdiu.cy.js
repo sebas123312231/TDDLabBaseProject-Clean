@@ -259,4 +259,19 @@ describe('PerdiU web', () => {
     })
     cy.get('.profile-card').should('be.visible')
   })
+
+  it('explains that profile email is only visible to the account owner', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mi perfil').click()
+    cy.contains('.profile-card', 'Tu correo es privado: solo tú lo ves aquí.').should('be.visible')
+  })
+
+  it('navigates from the profile to the signed-in user reports', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mi perfil').click()
+    cy.get('.profile-link').click()
+    cy.get('.app-header').should('contain', 'Mis reportes')
+  })
 })
