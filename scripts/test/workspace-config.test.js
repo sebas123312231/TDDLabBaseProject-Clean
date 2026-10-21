@@ -11,6 +11,12 @@ test('el proyecto usa PNPM y declara workspaces sin reinicializar Git', () => {
   assert.equal(manifest.scripts.postinstall, undefined)
 })
 
+test('el workspace descubre las aplicaciones del proyecto', () => {
+  const workspace = readFileSync('pnpm-workspace.yaml', 'utf8')
+
+  assert.match(workspace, /^\s*- apps\/\*\s*$/m)
+})
+
 test('las pruebas instrumentadas construyen los workspaces antes de ejecutar Jest', () => {
   const { scripts } = JSON.parse(readFileSync('package.json', 'utf8'))
 
