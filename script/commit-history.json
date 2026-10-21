@@ -418,12 +418,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "d575c43d1a21227bbe14b1dd2949f3634b3d12ba",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:21:31.000Z",
       "message": "feat(api): expose authenticated profile",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/d575c43d1a21227bbe14b1dd2949f3634b3d12ba"
     },
     "stats": {
       "total": 152,
@@ -432,6 +432,25 @@
       "date": "2026-10-21"
     },
     "coverage": 80.53,
+    "test_count": 79,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:23:34.000Z",
+      "message": "feat(api): revoke session on logout",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 74,
+      "additions": 72,
+      "deletions": 2,
+      "date": "2026-10-21"
+    },
+    "coverage": 59.29,
     "test_count": 79,
     "failed_tests": 0,
     "conclusion": "success"

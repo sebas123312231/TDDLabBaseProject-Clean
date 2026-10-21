@@ -23,8 +23,12 @@ async function signedIdentity() {
   })
   await new Promise<void>((resolve) => server.listen(0, '127.0.0.1', resolve))
   const { port } = server.address() as { port: number }
-  const sign = (sub = owner) =>
-    new SignJWT({ email: 'persona@example.test', role: 'authenticated', session_id: sessionId })
+  const sign = (sub = owner, tokenSessionId = sessionId) =>
+    new SignJWT({
+      email: 'persona@example.test',
+      role: 'authenticated',
+      session_id: tokenSessionId,
+    })
       .setProtectedHeader({ alg: 'ES256', kid: 'account-test' })
       .setIssuer(issuer)
       .setAudience(audience)
@@ -81,6 +85,55 @@ test('GET /me responde solo la identidad verificada y el perfil público propio'
     })
   } finally {
     await app?.close()
+    await pool.query('TRUNCATE TABLE profiles CASCADE')
+    await pool.end()
+    await identity.close()
+  }
+})
+
+test('POST /me/logout revoca esa sesión incluso tras reiniciar la API', async () => {
+  assert.equal(process.env.PERDIU_TEST_CONTAINER, '1')
+  const databaseUrl = process.env.TEST_DATABASE_URL
+  assert.ok(databaseUrl)
+  assertLocalDatabase(databaseUrl)
+  const identity = await signedIdentity()
+  const pool = createPool(databaseUrl)
+  const closingSession = '9b889b5a-4a25-4585-bb3a-367e0c63c46d'
+  const otherSession = '86268d42-7271-423e-a85b-9cd43b82af63'
+  const closing = await identity.sign(owner, closingSession)
+  const otherToken = await identity.sign(owner, otherSession)
+  let app: Awaited<ReturnType<typeof createApplication>> | undefined
+
+  try {
+    await migrate(pool)
+    await pool.query('TRUNCATE TABLE profiles CASCADE')
+    await pool.query('TRUNCATE TABLE session_revocations')
+    app = await createApplication(databaseUrl, identity.verifier)
+    await app.listen(0, '127.0.0.1')
+    let url = await app.getUrl()
+    const request = (path: string, token?: string, method = 'GET') =>
+      fetch(`${url}${path}`, {
+        method,
+        headers: token ? { authorization: `Bearer ${token}` } : {},
+      })
+
+    assert.equal((await request('/me', closing)).status, 200)
+    const logout = await request('/me/logout', closing, 'POST')
+    assert.equal(logout.status, 204)
+    assert.equal(logout.headers.get('cache-control'), 'no-store')
+    assert.equal((await request('/me', closing)).status, 401)
+    assert.equal((await request('/me', otherToken)).status, 200)
+
+    await app.close()
+    app = undefined
+    app = await createApplication(databaseUrl, identity.verifier)
+    await app.listen(0, '127.0.0.1')
+    url = await app.getUrl()
+    assert.equal((await request('/me', closing)).status, 401)
+    assert.equal((await request('/me', otherToken)).status, 200)
+  } finally {
+    await app?.close()
+    await pool.query('TRUNCATE TABLE session_revocations')
     await pool.query('TRUNCATE TABLE profiles CASCADE')
     await pool.end()
     await identity.close()

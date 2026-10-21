@@ -3,8 +3,10 @@ import {
   Controller,
   Get,
   Header,
+  HttpCode,
   Inject,
   Module,
+  Post,
   Query,
   ServiceUnavailableException,
   UseGuards,
@@ -17,6 +19,7 @@ import {
   withSessionRevocation,
   type AccessTokenVerifier,
   type AuthenticatedUser,
+  type SessionRevocations,
 } from './auth/access-token.js'
 import { ACCESS_TOKEN_VERIFIER, AuthGuard, CurrentUser } from './auth/guard.js'
 import { parseReportQuery } from './reports/query.js'
@@ -37,11 +40,13 @@ class ReportsController {
 }
 
 const PROFILES = 'PROFILES'
+const SESSION_REVOCATIONS = 'SESSION_REVOCATIONS'
 
 @Controller('me')
 @UseGuards(AuthGuard)
 class AccountController {
   constructor(
+    @Inject(SESSION_REVOCATIONS) private readonly sessions: SessionRevocations,
     @Inject(PROFILES) private readonly profiles: Pick<PostgresProfileRepository, 'find'>,
   ) {}
 
@@ -61,6 +66,17 @@ class AccountController {
       ...(profile?.photoUrl && { photoUrl: profile.photoUrl }),
     }
   }
+
+  @Post('logout')
+  @HttpCode(204)
+  @Header('Cache-Control', 'no-store')
+  async logout(@CurrentUser() user: AuthenticatedUser): Promise<void> {
+    try {
+      await this.sessions.revoke(user.sessionId)
+    } catch {
+      throw new ServiceUnavailableException('No se pudo cerrar la sesión. Intenta nuevamente.')
+    }
+  }
 }
 
 @Module({})
@@ -76,6 +92,7 @@ export async function createApplication(databaseUrl: string, verifier: AccessTok
         controllers: [ReportsController, AccountController],
         providers: [
           { provide: ListReports, useValue: new ListReports(database.reports) },
+          { provide: SESSION_REVOCATIONS, useValue: database.sessions },
           { provide: PROFILES, useValue: database.profiles },
           {
             provide: ACCESS_TOKEN_VERIFIER,
