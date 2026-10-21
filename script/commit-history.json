@@ -1254,17 +1254,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "30cc06f97c0079e58ea47277d8957d0b15a53892",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:24:07.000Z",
       "message": "feat(web): guide report titles and descriptions",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/30cc06f97c0079e58ea47277d8957d0b15a53892"
     },
     "stats": {
       "total": 13,
       "additions": 13,
       "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:26:12.000Z",
+      "message": "refactor(web): pass overview data and actions explicitly",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 47,
+      "additions": 34,
+      "deletions": 13,
       "date": "2026-10-21"
     },
     "coverage": 91.78,

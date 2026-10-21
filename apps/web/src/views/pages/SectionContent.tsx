@@ -12,7 +12,15 @@ export function SectionContent({ app }: { app: AppView }) {
   const { section } = app.shell
 
   if (section === 'overview')
-    return <OverviewPage app={app} />
+    return (
+      <OverviewPage
+        overview={app.overview}
+        onNavigate={app.actions.navigate}
+        isSaved={app.isSaved}
+        onSave={app.actions.reports.toggleSaved}
+        onOpen={app.actions.reports.open}
+      />
+    )
 
   if (section === 'explore')
     return (

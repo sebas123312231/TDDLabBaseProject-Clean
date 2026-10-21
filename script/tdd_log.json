@@ -3996,9 +3996,23 @@
     "testId": 66
   },
   {
-    "commitId": "HEAD",
+    "commitId": "30cc06f97c0079e58ea47277d8957d0b15a53892",
     "commitName": "feat(web): guide report titles and descriptions",
     "commitTimestamp": 1792599847718,
     "testId": 66
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792599962265,
+    "success": true,
+    "testId": 67
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "refactor(web): pass overview data and actions explicitly",
+    "commitTimestamp": 1792599972424,
+    "testId": 67
   }
 ]

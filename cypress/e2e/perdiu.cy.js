@@ -502,4 +502,13 @@ describe('PerdiU web', () => {
     cy.contains('.publish-form label', 'Descripción').find('textarea')
       .should('have.attr', 'placeholder', 'Color, características, cuándo y dónde…')
   })
+
+  it('opens publication from the overview action', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('.content button', 'Nuevo reporte').click()
+
+    cy.get('.app-header').should('contain', 'Publicar reporte')
+    cy.get('.publish-form').should('be.visible')
+  })
 })
