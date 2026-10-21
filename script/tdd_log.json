@@ -3450,9 +3450,159 @@
     "testId": 43
   },
   {
-    "commitId": "HEAD",
+    "commitId": "9dea3448832a3a113fc83ee8c3f17f81d948c8fa",
     "commitName": "feat(web): add shell navigation and notices",
     "commitTimestamp": 1792559822765,
     "testId": 43
+  },
+  {
+    "numPassedTests": 208,
+    "failedTests": 1,
+    "numTotalTests": 209,
+    "timestamp": 1792559845414,
+    "success": false,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 208,
+    "failedTests": 1,
+    "numTotalTests": 209,
+    "timestamp": 1792559855456,
+    "success": false,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 209,
+    "failedTests": 0,
+    "numTotalTests": 209,
+    "timestamp": 1792559864218,
+    "success": true,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 209,
+    "failedTests": 1,
+    "numTotalTests": 210,
+    "timestamp": 1792559875405,
+    "success": false,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 210,
+    "failedTests": 0,
+    "numTotalTests": 210,
+    "timestamp": 1792559884883,
+    "success": true,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 210,
+    "failedTests": 1,
+    "numTotalTests": 211,
+    "timestamp": 1792559896042,
+    "success": false,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 211,
+    "failedTests": 0,
+    "numTotalTests": 211,
+    "timestamp": 1792559905695,
+    "success": true,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 211,
+    "failedTests": 1,
+    "numTotalTests": 212,
+    "timestamp": 1792559916336,
+    "success": false,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 212,
+    "failedTests": 0,
+    "numTotalTests": 212,
+    "timestamp": 1792559931203,
+    "success": true,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 212,
+    "failedTests": 1,
+    "numTotalTests": 213,
+    "timestamp": 1792559940146,
+    "success": false,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 213,
+    "failedTests": 0,
+    "numTotalTests": 213,
+    "timestamp": 1792559947979,
+    "success": true,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 213,
+    "failedTests": 1,
+    "numTotalTests": 214,
+    "timestamp": 1792559959976,
+    "success": false,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 214,
+    "failedTests": 0,
+    "numTotalTests": 214,
+    "timestamp": 1792559971234,
+    "success": true,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 214,
+    "failedTests": 1,
+    "numTotalTests": 215,
+    "timestamp": 1792559982411,
+    "success": false,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 215,
+    "failedTests": 0,
+    "numTotalTests": 215,
+    "timestamp": 1792559992987,
+    "success": true,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 215,
+    "failedTests": 1,
+    "numTotalTests": 216,
+    "timestamp": 1792560008627,
+    "success": false,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 216,
+    "failedTests": 0,
+    "numTotalTests": 216,
+    "timestamp": 1792560016070,
+    "success": true,
+    "testId": 44
+  },
+  {
+    "numPassedTests": 216,
+    "failedTests": 0,
+    "numTotalTests": 216,
+    "timestamp": 1792560064533,
+    "success": true,
+    "testId": 44
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): coordinate session and shell state",
+    "commitTimestamp": 1792560075319,
+    "testId": 44
   }
 ]

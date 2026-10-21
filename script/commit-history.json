@@ -817,12 +817,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "9dea3448832a3a113fc83ee8c3f17f81d948c8fa",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T05:17:02.000Z",
       "message": "feat(web): add shell navigation and notices",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/9dea3448832a3a113fc83ee8c3f17f81d948c8fa"
     },
     "stats": {
       "total": 171,
@@ -832,6 +832,25 @@
     },
     "coverage": 88.8,
     "test_count": 208,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T05:21:15.000Z",
+      "message": "feat(web): coordinate session and shell state",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 342,
+      "additions": 334,
+      "deletions": 8,
+      "date": "2026-10-21"
+    },
+    "coverage": 89.7,
+    "test_count": 216,
     "failed_tests": 0,
     "conclusion": "success"
   }
