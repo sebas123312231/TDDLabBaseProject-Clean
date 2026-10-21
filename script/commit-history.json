@@ -1197,17 +1197,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "81db9948962943f5b72aafd30c8e76f7a82f9700",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:16:57.000Z",
       "message": "fix(web): connect publication errors to form fields",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/81db9948962943f5b72aafd30c8e76f7a82f9700"
     },
     "stats": {
       "total": 90,
       "additions": 84,
       "deletions": 6,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:19:18.000Z",
+      "message": "feat(web): add accessible report photo upload",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 73,
+      "additions": 59,
+      "deletions": 14,
       "date": "2026-10-21"
     },
     "coverage": 91.78,

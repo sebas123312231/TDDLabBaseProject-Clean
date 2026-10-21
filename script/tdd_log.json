@@ -3954,9 +3954,23 @@
     "testId": 63
   },
   {
-    "commitId": "HEAD",
+    "commitId": "81db9948962943f5b72aafd30c8e76f7a82f9700",
     "commitName": "fix(web): connect publication errors to form fields",
     "commitTimestamp": 1792599417531,
     "testId": 63
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792599547325,
+    "success": true,
+    "testId": 64
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): add accessible report photo upload",
+    "commitTimestamp": 1792599558451,
+    "testId": 64
   }
 ]

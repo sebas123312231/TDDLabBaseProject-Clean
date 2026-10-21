@@ -81,7 +81,10 @@ textarea { min-height: 110px; resize: vertical; }
 .type-choice legend { margin-bottom: 8px; font-weight: 600; }
 .type-choice button { min-height: 36px; padding: 0 16px; border: 1px solid var(--line); border-radius: var(--radius); }
 .type-choice .selected { border-color: var(--green); color: white; background: var(--green); }
-.photo-preview { width: min(320px, 100%); max-height: 240px; object-fit: contain; }
+.photo-field { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.photo-field > img { width: min(320px, 100%); max-height: 240px; object-fit: contain; }
+.upload-zone { position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; padding: 20px; border: 1px dashed var(--line); border-radius: var(--radius); color: var(--muted); cursor: pointer; }
+.upload-zone input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
 .illustrative-map { position: relative; height: 280px; margin: 20px 0; overflow: hidden; border: 1px solid var(--line); background: #e9efe9; }
 .illustrative-map::before { position: absolute; inset: 15% 22%; border: 2px dashed #9dac9d; border-radius: 45% 55% 38% 62%; content: ''; }
 .illustrative-map button { position: absolute; z-index: 1; width: 28px; height: 28px; border-radius: 50%; color: white; background: var(--green); transform: translate(-50%, -50%); }

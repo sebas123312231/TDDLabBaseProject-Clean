@@ -430,4 +430,35 @@ describe('PerdiU web', () => {
       .and('have.attr', 'aria-describedby', 'zone-error')
     cy.get('#zone-error').should('contain', 'Indica la zona o el barrio.')
   })
+
+  it('previews an accepted report photo and lets the user remove it', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+    cy.get('.publish-form input[type="file"]').selectFile({
+      contents: Cypress.Buffer.from(
+        'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+nZ9sAAAAASUVORK5CYII=',
+        'base64',
+      ),
+      fileName: 'foto.png',
+      mimeType: 'image/png',
+    })
+
+    cy.get('.photo-preview').should('be.visible').and('have.attr', 'src').and('match', /^blob:/)
+    cy.contains('.publish-form button', 'Quitar foto').click()
+    cy.get('.photo-preview').should('not.exist')
+  })
+
+  it('explains accepted photo formats and size in the upload control', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+
+    cy.contains('strong', 'Selecciona una foto').should('be.visible')
+    cy.contains('small', 'JPG o PNG · Hasta 5 MB').should('be.visible')
+    cy.get('.upload-zone').should('have.css', 'border-top-style', 'dashed')
+    cy.get('.publish-form input[type="file"]')
+      .should('have.attr', 'accept', 'image/jpeg,image/png')
+      .and('have.attr', 'aria-label', 'Subir fotografía')
+  })
 })

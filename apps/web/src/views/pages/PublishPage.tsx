@@ -92,19 +92,30 @@ export function PublishPage({ form, actions }: PublishPageProps) {
         Fecha del incidente
         <input type="date" value={form.draft.incidentDate} onChange={(event) => actions.setField('incidentDate', event.target.value)} />
       </label>
-      <label>
-        Fotografía
-        <input type="file" accept="image/jpeg,image/png" onChange={(event) => {
-          const file = event.target.files?.[0]
-          if (file) actions.choosePhoto(file)
-        }} />
-      </label>
-      {form.imagePreview && (
-        <>
-          <img className="photo-preview" src={form.imagePreview} alt="Vista previa" />
-          <button className="text-button" type="button" onClick={actions.clearPhoto}>Quitar foto</button>
-        </>
-      )}
+      <div className="photo-field">
+        {form.imagePreview ? (
+          <>
+            <img className="photo-preview" src={form.imagePreview} alt="Vista previa de la foto" />
+            <button className="secondary-button" type="button" onClick={actions.clearPhoto}>
+              Quitar foto
+            </button>
+          </>
+        ) : (
+          <label className="upload-zone">
+            <strong>Selecciona una foto</strong>
+            <small>JPG o PNG · Hasta 5 MB</small>
+            <input
+              type="file"
+              accept="image/jpeg,image/png"
+              aria-label="Subir fotografía"
+              onChange={(event) => {
+                const file = event.target.files?.[0]
+                if (file) actions.choosePhoto(file)
+              }}
+            />
+          </label>
+        )}
+      </div>
       <small className="hint">Tu correo y tu número no aparecen públicamente.</small>
       <button className="primary-button" type="submit">Publicar reporte</button>
     </form>
