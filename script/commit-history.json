@@ -760,12 +760,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "72ebdb184f3c65b1ba3f339928ea8250b1b938e6",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T05:08:52.000Z",
       "message": "feat(web): publish demo reports from validated drafts",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/72ebdb184f3c65b1ba3f339928ea8250b1b938e6"
     },
     "stats": {
       "total": 282,
@@ -775,6 +775,25 @@
     },
     "coverage": 86.44,
     "test_count": 182,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T05:13:23.000Z",
+      "message": "feat(web): verify sessions and authenticate accounts",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 507,
+      "additions": 507,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 88.01,
+    "test_count": 199,
     "failed_tests": 0,
     "conclusion": "success"
   }
