@@ -893,17 +893,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "5085ee94248ff61c20c887b61a2802ec127aebd7",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T05:31:10.000Z",
       "message": "test(web): cover catalog flows in browser",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/5085ee94248ff61c20c887b61a2802ec127aebd7"
     },
     "stats": {
       "total": 50,
       "additions": 49,
       "deletions": 1,
+      "date": "2026-10-21"
+    },
+    "coverage": 87.75,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T05:32:14.000Z",
+      "message": "feat(web): show overview totals by city",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 47,
+      "additions": 37,
+      "deletions": 10,
       "date": "2026-10-21"
     },
     "coverage": 87.75,

@@ -3690,9 +3690,23 @@
     "testId": 47
   },
   {
-    "commitId": "HEAD",
+    "commitId": "5085ee94248ff61c20c887b61a2802ec127aebd7",
     "commitName": "test(web): cover catalog flows in browser",
     "commitTimestamp": 1792560670662,
     "testId": 47
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792560727666,
+    "success": true,
+    "testId": 48
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): show overview totals by city",
+    "commitTimestamp": 1792560734203,
+    "testId": 48
   }
 ]

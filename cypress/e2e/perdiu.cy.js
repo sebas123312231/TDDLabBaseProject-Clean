@@ -45,4 +45,9 @@ describe('PerdiU web', () => {
     cy.contains('button', 'Iniciar sesión').last().click()
     cy.contains('Ingresa un correo electrónico válido.').should('be.visible')
   })
+
+  it('shows report totals and the city breakdown on the overview', () => {
+    cy.contains('.metric-grid', 'Reportes activos').should('contain', '7')
+    cy.get('.city-list').should('contain', 'La Paz').and('contain', 'Cochabamba')
+  })
 })

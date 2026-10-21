@@ -2,6 +2,7 @@ import type { AppView } from '../../presenters/app/useApp.js'
 import { filterOptions } from '../../presenters/catalog/filters.presenter.js'
 import { publishOptions } from '../../presenters/reports/publish.presenter.js'
 import { ReportGrid } from '../components/ReportGrid.js'
+import { OverviewPage } from './OverviewPage.js'
 
 export function SectionContent({ app }: { app: AppView }) {
   const cards = {
@@ -12,16 +13,7 @@ export function SectionContent({ app }: { app: AppView }) {
   const { section } = app.shell
 
   if (section === 'overview')
-    return (
-      <>
-        <div className="metric-grid">
-          {app.overview.metrics.map((metric) => <article className="metric-card" key={metric.label}><span>{metric.label}</span><strong>{metric.value}</strong></article>)}
-        </div>
-        <h2>Reportes recientes</h2>
-        <ReportGrid reports={app.overview.recent} {...cards} />
-        <button className="primary-button" onClick={() => app.actions.navigate('explore')}>Explorar reportes</button>
-      </>
-    )
+    return <OverviewPage app={app} />
 
   if (section === 'explore')
     return (
