@@ -7,7 +7,7 @@ import { pathToFileURL } from 'node:url'
 import { test } from '@jest/globals'
 import { Pool } from 'pg'
 import { assertLocalDatabase } from '../src/config.js'
-import { migrate } from '../src/maintenance.js'
+import { migrate } from '@perdiu/database/maintenance'
 
 const integrationTest = process.env.PERDIU_TEST_CONTAINER === '1' ? test : test.skip
 

@@ -48,3 +48,19 @@ export async function migrate(
     client.release()
   }
 }
+
+export async function seed(pool: Pool): Promise<void> {
+  const sql = await readFile(new URL('../seeds/development.sql', import.meta.url), 'utf8')
+  const client = await pool.connect()
+  try {
+    await client.query('BEGIN')
+    await client.query('SELECT pg_advisory_xact_lock(hashtext($1))', ['perdiu_seed'])
+    await client.query(sql)
+    await client.query('COMMIT')
+  } catch (error) {
+    await client.query('ROLLBACK')
+    throw error
+  } finally {
+    client.release()
+  }
+}
