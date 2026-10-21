@@ -86,6 +86,24 @@ describe('PerdiU web', () => {
     cy.contains('Mochila azul encontrada').should('be.visible')
   })
 
+  it('renders report cards with accessible actions and report metadata', () => {
+    cy.wait('@catalog')
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
+
+    cy.get('.report-card').first().within(() => {
+      cy.get('.card-image-button')
+        .should('have.attr', 'aria-label', 'Ver reporte: Mochila azul encontrada')
+      cy.get('.card-meta').first().should('contain', 'Encontrado · Objeto')
+      cy.get('.card-title').should('contain', 'Mochila azul encontrada')
+      cy.get('.card-meta').last().should('contain', 'Centro, La Paz · Persona')
+      cy.get('button[aria-label="Guardar reporte"]').click()
+      cy.get('button[aria-label="Quitar de guardados"]').should('have.attr', 'aria-pressed', 'true')
+      cy.get('.card-title').click()
+    })
+
+    cy.get('[role="dialog"]').should('be.visible')
+  })
+
   it('requires a session before opening publication and validates invalid email', () => {
     cy.contains('button', 'Publicar reporte').click()
     cy.get('input[type="email"]').type('correo-inválido')
@@ -169,7 +187,9 @@ describe('PerdiU web', () => {
 
   it('guides someone from an empty saved list back to the catalog', () => {
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Guardados').click()
-    cy.get('.report-grid').contains('button', 'Guardado').click()
+    cy.get('.report-grid button[aria-label="Quitar de guardados"]')
+      .should('have.attr', 'aria-pressed', 'true')
+      .click()
     cy.get('.empty-state').within(() => {
       cy.contains('Tu lista está vacía por ahora').should('be.visible')
       cy.contains('Guarda reportes con el ícono de corazón y aparecerán aquí.').should('be.visible')

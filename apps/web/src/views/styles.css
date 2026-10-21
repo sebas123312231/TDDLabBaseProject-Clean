@@ -55,13 +55,12 @@ p { margin: 0 0 12px; }
 .report-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin: 20px 0; }
 .report-card, .profile-card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .report-card { overflow: hidden; }
-.report-open { width: 100%; padding: 0 0 12px; text-align: left; }
-.report-open img { width: 100%; height: 170px; object-fit: cover; background: var(--green-soft); }
-.report-open h3, .report-open p, .report-open small { display: block; margin: 8px 12px; }
-.report-open p, .report-open small { color: var(--muted); }
-.badge { display: inline-block; margin: 12px 12px 0; padding: 2px 8px; border-radius: 3px; color: var(--green-dark); background: var(--green-soft); font-size: 13px; font-weight: 700; }
-.badge.lost { color: var(--lost); background: #fbeee9; }
-.save-button { margin: 0 12px; }
+.card-image { position: relative; height: 150px; background: var(--line); }
+.card-image-button { width: 100%; height: 100%; padding: 0; }
+.card-image img { width: 100%; height: 100%; object-fit: cover; }
+.save-button { position: absolute; top: 8px; right: 8px; width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--muted); background: var(--surface); }
+.save-button.saved { color: var(--lost); }
+.card-content { display: flex; flex-direction: column; gap: 4px; padding: 12px; }
 .filter-row { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; margin: 16px 0; }
 label { display: flex; flex-direction: column; gap: 5px; font-weight: 600; }
 input, select, textarea { min-height: 38px; padding: 7px 9px; border: 1px solid #aeb8ae; border-radius: var(--radius); background: var(--surface); }

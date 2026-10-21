@@ -1463,17 +1463,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "9337f1ccf16d6713a173182e6fdbc92e97d09ce5",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:48:48.000Z",
       "message": "feat(web): restore guidance on publish and safety pages",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/9337f1ccf16d6713a173182e6fdbc92e97d09ce5"
     },
     "stats": {
       "total": 25,
       "additions": 23,
       "deletions": 2,
+      "date": "2026-10-21"
+    },
+    "coverage": 87.75,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:52:34.000Z",
+      "message": "feat(web): restore accessible report cards",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 103,
+      "additions": 81,
+      "deletions": 22,
       "date": "2026-10-21"
     },
     "coverage": 87.75,

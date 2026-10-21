@@ -4150,9 +4150,23 @@
     "testId": 77
   },
   {
-    "commitId": "HEAD",
+    "commitId": "9337f1ccf16d6713a173182e6fdbc92e97d09ce5",
     "commitName": "feat(web): restore guidance on publish and safety pages",
     "commitTimestamp": 1792601328674,
     "testId": 77
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792601545718,
+    "success": true,
+    "testId": 78
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): restore accessible report cards",
+    "commitTimestamp": 1792601554663,
+    "testId": 78
   }
 ]
