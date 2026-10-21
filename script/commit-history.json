@@ -722,12 +722,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "9a3244db14c26e0a25c52abd69f7d8b1232846ff",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T05:01:53.000Z",
       "message": "feat(web): load filtered report catalog",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/9a3244db14c26e0a25c52abd69f7d8b1232846ff"
     },
     "stats": {
       "total": 301,
@@ -737,6 +737,25 @@
     },
     "coverage": 80.86,
     "test_count": 165,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T05:05:51.000Z",
+      "message": "feat(web): manage community report views",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 451,
+      "additions": 450,
+      "deletions": 1,
+      "date": "2026-10-21"
+    },
+    "coverage": 84.87,
+    "test_count": 175,
     "failed_tests": 0,
     "conclusion": "success"
   }
