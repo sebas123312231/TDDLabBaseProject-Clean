@@ -7,7 +7,8 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "node ./script/tddScript.js",
+    "test": "node ./scripts/run-tdd.mjs",
+    "test:runner": "node --test scripts/test/tdd-script.test.mjs",
     "cypress": "cypress open",
     "cypress-run": "cypress run",
     "lint": "eslint .",
