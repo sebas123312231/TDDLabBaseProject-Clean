@@ -3718,9 +3718,55 @@
     "testId": 49
   },
   {
-    "commitId": "HEAD",
+    "commitId": "af9d0c944f123a0d79d50bdfd23934707bf83625",
     "commitName": "feat(web): restore map and safety views",
     "commitTimestamp": 1792561000488,
     "testId": 49
+  },
+  {
+    "numPassedTests": 174,
+    "failedTests": 47,
+    "numTotalTests": 221,
+    "timestamp": 1792594467916,
+    "success": false,
+    "testId": 50
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792594500953,
+    "success": true,
+    "testId": 50
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792594546278,
+    "success": true,
+    "testId": 50
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792594671018,
+    "success": true,
+    "testId": 50
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792595022251,
+    "success": true,
+    "testId": 50
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): split shell and improve report detail",
+    "commitTimestamp": 1792595043604,
+    "testId": 50
   }
 ]

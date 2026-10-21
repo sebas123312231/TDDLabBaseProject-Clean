@@ -31,9 +31,14 @@ describe('PerdiU web', () => {
       expect(requests.at(-1).request.url).to.contain('q=mochila')
     })
     cy.contains('button', 'Mochila azul encontrada').click()
-    cy.get('[role="dialog"]').should('contain', 'Centro, La Paz')
-    cy.get('[role="dialog"]').contains('button', 'Guardar reporte').click()
-    cy.get('[role="dialog"]').find('[aria-pressed="true"]').should('exist')
+    cy.get('[role="dialog"]').within(() => {
+      cy.contains('.card-meta', 'Encontrado · Objeto · Publicado el').should('be.visible')
+      cy.contains('.card-meta', 'Centro, La Paz').should('be.visible')
+      cy.contains('.hint', 'Tu correo no se muestra.').should('be.visible')
+      cy.contains('button', 'Guardar').should('have.attr', 'aria-pressed', 'false').click()
+      cy.contains('button', 'Guardado').should('have.attr', 'aria-pressed', 'true')
+    })
+    cy.get('[role="status"]').should('contain', 'Guardaste este reporte')
     cy.get('[aria-label="Cerrar detalle"]').click()
     cy.contains('button', 'Guardados').click()
     cy.contains('Mochila azul encontrada').should('be.visible')
@@ -74,5 +79,20 @@ describe('PerdiU web', () => {
     cy.contains('button', 'Seguridad y privacidad').click()
     cy.contains('h2', 'Tu privacidad en PerdiU').should('be.visible')
     cy.contains('El correo de tu cuenta nunca se muestra en el catálogo.').should('be.visible')
+  })
+
+  it('opens and closes the navigation on a narrow screen', () => {
+    cy.viewport(390, 844)
+    cy.get('button[aria-label="Abrir menú"]').click()
+    cy.get('.sidebar').should('have.class', 'sidebar-open')
+    cy.get('.sidebar-close').click()
+    cy.get('.sidebar').should('not.have.class', 'sidebar-open')
+  })
+
+  it('marks the selected section and updates the header title', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mapa').click()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mapa')
+      .should('have.attr', 'aria-current', 'page')
+    cy.get('.app-header').should('contain', 'Mapa')
   })
 })
