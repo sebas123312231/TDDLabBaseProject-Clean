@@ -1458,9 +1458,23 @@
     "testId": 19
   },
   {
-    "commitId": "HEAD",
+    "commitId": "da257465f79b74fd7c938346584c3e4659dc7f38",
     "commitName": "feat(api): validate public catalog query",
     "commitTimestamp": 1792545454978,
     "testId": 19
+  },
+  {
+    "numPassedTests": 78,
+    "failedTests": 0,
+    "numTotalTests": 78,
+    "timestamp": 1792545548468,
+    "success": true,
+    "testId": 20
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(api): serve public report catalog",
+    "commitTimestamp": 1792545566714,
+    "testId": 20
   }
 ]

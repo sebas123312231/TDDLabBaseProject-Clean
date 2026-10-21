@@ -361,17 +361,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "da257465f79b74fd7c938346584c3e4659dc7f38",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:17:34.000Z",
       "message": "feat(api): validate public catalog query",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/da257465f79b74fd7c938346584c3e4659dc7f38"
     },
     "stats": {
       "total": 85,
       "additions": 85,
       "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 80.36,
+    "test_count": 78,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:19:26.000Z",
+      "message": "feat(api): serve public report catalog",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 588,
+      "additions": 587,
+      "deletions": 1,
       "date": "2026-10-21"
     },
     "coverage": 80.36,
