@@ -19,6 +19,44 @@ const limitedReports = Array.from({ length: 50 }, (_, index) => ({
   id: `catalog-${index + 1}`,
 }))
 
+function restoreTestAccount() {
+  cy.intercept('GET', '/auth/user', {
+    body: {
+      id: 'user-1',
+      aud: 'authenticated',
+      role: 'authenticated',
+      email: 'persona@example.test',
+      user_metadata: { display_name: 'Persona de prueba' },
+    },
+  }).as('providerUser')
+  cy.intercept('GET', '/api/me', {
+    body: {
+      id: 'user-1',
+      email: 'persona@example.test',
+      displayName: 'Persona de prueba',
+      photoUrl: 'https://cdn.example.test/avatar.png',
+    },
+  }).as('account')
+  cy.window().then((window) => {
+    window.localStorage.setItem('perdiu-auth', JSON.stringify({
+      access_token: 'isolated-test-token',
+      refresh_token: 'isolated-test-refresh-token',
+      expires_at: Math.floor(Date.now() / 1000) + 3600,
+      expires_in: 3600,
+      token_type: 'bearer',
+      user: {
+        id: 'user-1',
+        aud: 'authenticated',
+        role: 'authenticated',
+        email: 'persona@example.test',
+        user_metadata: { display_name: 'Persona de prueba' },
+      },
+    }))
+  })
+  cy.reload()
+  cy.wait('@account')
+}
+
 describe('PerdiU web', () => {
   beforeEach(() => {
     cy.intercept('GET', '/api/reports*', { body: reports }).as('catalog')
@@ -198,5 +236,27 @@ describe('PerdiU web', () => {
       cy.contains('button', 'Publicar reporte').click()
     })
     cy.get('input[type="email"]').should('be.visible')
+  })
+
+  it('shows a generic account avatar when the profile photo cannot load', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mi perfil').click()
+    cy.get('.profile-card .user-avatar').should('exist')
+    cy.wait('@avatar')
+    cy.get('.profile-card .user-avatar[aria-hidden="true"]').should('be.visible')
+    cy.get('.profile-card img.user-avatar').should('not.exist')
+  })
+
+  it('opens the account menu and navigates to the profile', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.get('.header-account').click()
+    cy.get('[role="menu"]').within(() => {
+      cy.contains('persona@example.test').should('be.visible')
+      cy.contains('[role="menuitem"]', 'Cerrar sesión').should('be.enabled')
+      cy.contains('[role="menuitem"]', 'Mi perfil').click()
+    })
+    cy.get('.profile-card').should('be.visible')
   })
 })

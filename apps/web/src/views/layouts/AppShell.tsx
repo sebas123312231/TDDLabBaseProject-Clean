@@ -30,6 +30,7 @@ export function AppShell({ app }: { app: AppView }) {
           signingOut={shell.signingOut}
           onOpenMenu={actions.openMenu}
           onOpenAuth={actions.openAuth}
+          onOpenProfile={() => actions.navigate('profile')}
           onSignOut={actions.signOut}
         />
         <main className="content">

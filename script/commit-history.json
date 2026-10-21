@@ -1064,17 +1064,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "1950060db04115a7dbf6031b3efcb7d81020bc95",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T15:26:47.000Z",
       "message": "feat(web): refine illustrative map filters",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/1950060db04115a7dbf6031b3efcb7d81020bc95"
     },
     "stats": {
       "total": 109,
       "additions": 77,
       "deletions": 32,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T15:35:01.000Z",
+      "message": "feat(web): add account menu and profile avatars",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 149,
+      "additions": 141,
+      "deletions": 8,
       "date": "2026-10-21"
     },
     "coverage": 91.78,

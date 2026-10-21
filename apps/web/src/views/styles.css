@@ -43,6 +43,10 @@ p { margin: 0 0 12px; }
 .main-column { min-height: 100vh; margin-left: 220px; display: flex; flex-direction: column; }
 .app-header { position: sticky; z-index: 10; top: 0; min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 28px; border-bottom: 1px solid var(--line); background: var(--surface); }
 .header-tools { display: flex; align-items: center; gap: 16px; }
+.account-menu { position: relative; }
+.header-account { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+.account-popover { position: absolute; z-index: 25; top: calc(100% + 8px); right: 0; min-width: 220px; display: flex; flex-direction: column; gap: 8px; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.account-popover p { color: var(--muted); overflow-wrap: anywhere; }
 .content { width: min(1200px, 100%); flex: 1; margin: 0 auto; padding: 32px 28px; }
 .content > h1 { margin-bottom: 24px; font-size: clamp(24px, 3vw, 34px); }
 .content > h2 { margin: 28px 0 16px; font-size: 21px; }
@@ -96,6 +100,11 @@ textarea { min-height: 110px; resize: vertical; }
 .safety-panel .text-button { display: inline-block; margin-top: 6px; }
 .report-actions { display: flex; gap: 8px; margin: -8px 0 18px; }
 .profile-card { width: min(560px, 100%); padding: 20px; }
+.profile-card { display: flex; align-items: center; gap: 16px; }
+.profile-card h2, .profile-card p { overflow-wrap: anywhere; }
+.user-avatar { width: 32px; height: 32px; display: grid; flex: 0 0 auto; place-items: center; border-radius: 50%; color: var(--muted); background: var(--green-soft); object-fit: cover; }
+.user-avatar-small { width: 28px; height: 28px; }
+.user-avatar-large { width: 64px; height: 64px; }
 .toast { position: fixed; z-index: 60; right: 20px; bottom: 20px; display: flex; gap: 20px; padding: 14px 18px; border: 1px solid var(--green); background: white; }
 .toast-error { border-color: var(--lost); }
 .dialog-backdrop { position: fixed; z-index: 50; inset: 0; display: grid; place-items: center; padding: 20px; background: #17201988; }
