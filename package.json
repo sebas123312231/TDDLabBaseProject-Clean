@@ -1,9 +1,15 @@
 {
-  "name": "parcel-jest-base",
+  "name": "perdi-u",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "default": "index.html",
   "type": "module",
+  "packageManager": "pnpm@10.29.2",
+  "engines": {
+    "node": ">=24 <25",
+    "pnpm": ">=10 <11"
+  },
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -12,7 +18,7 @@
     "cypress": "cypress open",
     "cypress-run": "cypress run",
     "lint": "eslint .",
-    "postinstall": "git init && npx husky",
+    "prepare": "husky",
     "semantic-commits-on": "node semantic-commits.js enable",
     "semantic-commits-off": "node semantic-commits.js disabled"
   },
@@ -29,7 +35,5 @@
     "jest": "^29.7.0",
     "parcel": "^2.12.0"
   },
-  "dependencies": {
-    "parcel-jest-base": "file:"
-  }
+  "dependencies": {}
 }

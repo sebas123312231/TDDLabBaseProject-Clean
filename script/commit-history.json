@@ -1,11 +1,11 @@
 [
   {
-    "sha": "HEAD",
+    "sha": "20a323677d4f78ca41b50f5246e5cd076455c8fa",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T00:30:55.000Z",
       "message": "fix(tdd): reject invalid Jest results",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/20a323677d4f78ca41b50f5246e5cd076455c8fa"
     },
     "stats": {
       "total": 138,
@@ -15,6 +15,25 @@
     },
     "coverage": 100,
     "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T00:34:25.000Z",
+      "message": "chore(build): establish pnpm workspace",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 35933,
+      "additions": 6788,
+      "deletions": 29145,
+      "date": "2026-10-21"
+    },
+    "coverage": 100,
+    "test_count": 2,
     "failed_tests": 0,
     "conclusion": "success"
   }
