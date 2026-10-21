@@ -274,4 +274,46 @@ describe('PerdiU web', () => {
     cy.get('.profile-link').click()
     cy.get('.app-header').should('contain', 'Mis reportes')
   })
+
+  it('shows the account report and its resolve action', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
+    cy.contains('button', 'Milo, gato gris con collar azul').should('be.visible')
+    cy.contains('button', 'Marcar resuelto').should('be.enabled')
+  })
+
+  it('filters own reports with accessible status tabs', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
+    cy.get('[role="tablist"][aria-label="Estado de mis reportes"]').within(() => {
+      cy.contains('[role="tab"]', 'Resueltos').click()
+      cy.contains('[role="tab"][aria-selected="true"]', 'Resueltos').should('be.visible')
+    })
+    cy.contains('button', 'Milo, gato gris con collar azul').should('not.exist')
+  })
+
+  it('offers publication when the selected own report filter is empty', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
+    cy.get('[role="tablist"][aria-label="Estado de mis reportes"]')
+      .contains('[role="tab"]', 'Resueltos')
+      .click()
+    cy.get('.empty-state').within(() => {
+      cy.contains('Todavía no tienes reportes resueltos').should('be.visible')
+      cy.contains('Cuando publiques algo, podrás seguirlo y gestionarlo desde aquí.').should('be.visible')
+      cy.contains('button', 'Publicar mi primer reporte').click()
+    })
+    cy.get('.publish-form').should('be.visible')
+  })
+
+  it('opens publication from the own reports heading action', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
+    cy.contains('button', 'Nuevo reporte').click()
+    cy.get('.publish-form').should('be.visible')
+  })
 })

@@ -43,7 +43,18 @@ export function SectionContent({ app }: { app: AppView }) {
     return <PublishPage app={app} />
 
   if (section === 'my-reports')
-    return <MyReportsPage app={app} />
+    return (
+      <MyReportsPage
+        myReports={app.myReports}
+        isSaved={app.isSaved}
+        onSave={app.actions.reports.toggleSaved}
+        onOpen={app.actions.reports.open}
+        onFilter={app.actions.reports.setOwnFilter}
+        onResolve={app.actions.reports.resolve}
+        onRemove={app.actions.reports.remove}
+        onNavigate={app.actions.navigate}
+      />
+    )
 
   if (section === 'saved')
     return (

@@ -1102,17 +1102,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e7bfe10abdc2a10344e677a36ad8902b38151491",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T15:38:05.000Z",
       "message": "feat(web): complete account profile actions",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/e7bfe10abdc2a10344e677a36ad8902b38151491"
     },
     "stats": {
       "total": 69,
       "additions": 57,
       "deletions": 12,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T15:43:37.000Z",
+      "message": "feat(web): add accessible own-report controls",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 117,
+      "additions": 104,
+      "deletions": 13,
       "date": "2026-10-21"
     },
     "coverage": 91.78,
