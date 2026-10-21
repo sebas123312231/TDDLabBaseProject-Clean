@@ -2138,9 +2138,71 @@
     "testId": 31
   },
   {
-    "commitId": "HEAD",
+    "commitId": "7026028e9ab0106ca0bb283f98d2ce2d07241c66",
     "commitName": "feat(web): validate report drafts",
     "commitTimestamp": 1792546994594,
     "testId": 31
+  },
+  {
+    "numPassedTests": 87,
+    "failedTests": 0,
+    "numTotalTests": 87,
+    "timestamp": 1792547046836,
+    "success": false,
+    "testId": 32
+  },
+  {
+    "numPassedTests": 113,
+    "failedTests": 0,
+    "numTotalTests": 113,
+    "timestamp": 1792547055658,
+    "success": true,
+    "testId": 32
+  },
+  {
+    "numPassedTests": 113,
+    "failedTests": 1,
+    "numTotalTests": 114,
+    "timestamp": 1792547063815,
+    "success": false,
+    "testId": 32
+  },
+  {
+    "numPassedTests": 114,
+    "failedTests": 0,
+    "numTotalTests": 114,
+    "timestamp": 1792547071808,
+    "success": true,
+    "testId": 32
+  },
+  {
+    "numPassedTests": 114,
+    "failedTests": 1,
+    "numTotalTests": 115,
+    "timestamp": 1792547084061,
+    "success": false,
+    "testId": 32
+  },
+  {
+    "numPassedTests": 115,
+    "failedTests": 0,
+    "numTotalTests": 115,
+    "timestamp": 1792547094119,
+    "success": true,
+    "testId": 32
+  },
+  {
+    "numPassedTests": 116,
+    "failedTests": 0,
+    "numTotalTests": 116,
+    "timestamp": 1792547107921,
+    "success": true,
+    "testId": 32
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): validate report photos",
+    "commitTimestamp": 1792547117500,
+    "testId": 32
   }
 ]

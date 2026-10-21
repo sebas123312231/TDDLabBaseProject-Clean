@@ -26,3 +26,10 @@ export function validateDraft(draft: ReportDraft): Partial<Record<DraftField, Dr
   if (!draft.zone.trim()) issues.zone = 'required'
   return issues
 }
+
+export const photoTypes = ['image/jpeg', 'image/png']
+export const maxPhotoBytes = 5 * 1024 * 1024
+
+export function isAcceptedPhoto(file: { type: string; size: number }) {
+  return photoTypes.includes(file.type) && file.size <= maxPhotoBytes
+}

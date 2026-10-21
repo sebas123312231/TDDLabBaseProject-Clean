@@ -589,12 +589,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "7026028e9ab0106ca0bb283f98d2ce2d07241c66",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:43:14.000Z",
       "message": "feat(web): validate report drafts",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/7026028e9ab0106ca0bb283f98d2ce2d07241c66"
     },
     "stats": {
       "total": 72,
@@ -604,6 +604,25 @@
     },
     "coverage": 67.11,
     "test_count": 112,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:45:17.000Z",
+      "message": "feat(web): validate report photos",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 26,
+      "additions": 25,
+      "deletions": 1,
+      "date": "2026-10-21"
+    },
+    "coverage": 67.76,
+    "test_count": 116,
     "failed_tests": 0,
     "conclusion": "success"
   }

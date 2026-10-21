@@ -4,7 +4,7 @@ import { test } from '@jest/globals'
 import { hasActiveFilters, matchesFilters, toReportQuery } from '../../src/models/reports/filters.js'
 import type { DemoReport } from '../../src/models/reports/report.js'
 import { isOwnedBy } from '../../src/models/reports/report.js'
-import { validateDraft } from '../../src/models/reports/publication.js'
+import { isAcceptedPhoto, validateDraft } from '../../src/models/reports/publication.js'
 import { summarizeReports } from '../../src/models/reports/stats.js'
 
 const searchableReport: DemoReport = {
@@ -176,4 +176,21 @@ test('informa todos los campos inválidos en una sola validación', () => {
     validateDraft({ ...validDraft, title: ' ', description: ' ', zone: ' ' }),
     { title: 'required', description: 'required', zone: 'required' },
   )
+})
+
+test('acepta una foto PNG', () => {
+  assert.equal(isAcceptedPhoto({ type: 'image/png', size: 1024 }), true)
+})
+
+test('acepta una foto JPEG', () => {
+  assert.equal(isAcceptedPhoto({ type: 'image/jpeg', size: 1024 }), true)
+})
+
+test('rechaza una foto que supera los cinco mebibytes', () => {
+  assert.equal(isAcceptedPhoto({ type: 'image/png', size: 5 * 1024 * 1024 + 1 }), false)
+})
+
+test('acepta el límite exacto y rechaza formatos distintos de JPG y PNG', () => {
+  assert.equal(isAcceptedPhoto({ type: 'image/png', size: 5 * 1024 * 1024 }), true)
+  assert.equal(isAcceptedPhoto({ type: 'image/gif', size: 10 }), false)
 })
