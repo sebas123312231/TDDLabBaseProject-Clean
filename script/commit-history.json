@@ -437,12 +437,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ea0e72d6ecf8dd630e0af4b7b491efb0279a71fa",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:23:34.000Z",
       "message": "feat(api): revoke session on logout",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/ea0e72d6ecf8dd630e0af4b7b491efb0279a71fa"
     },
     "stats": {
       "total": 74,
@@ -452,6 +452,25 @@
     },
     "coverage": 59.29,
     "test_count": 79,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:27:35.000Z",
+      "message": "feat(database): add local migration and seed commands",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 155,
+      "additions": 155,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 59.29,
+    "test_count": 85,
     "failed_tests": 0,
     "conclusion": "success"
   }
