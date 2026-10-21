@@ -684,12 +684,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ceb84bb1a3dfb9c7f02a29a6f53a5d35eb886aab",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:54:59.000Z",
       "message": "feat(web): present report card data",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/ceb84bb1a3dfb9c7f02a29a6f53a5d35eb886aab"
     },
     "stats": {
       "total": 137,
@@ -699,6 +699,25 @@
     },
     "coverage": 75.13,
     "test_count": 145,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T04:57:39.000Z",
+      "message": "feat(web): add catalog filters presenter",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 184,
+      "additions": 184,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 78.51,
+    "test_count": 155,
     "failed_tests": 0,
     "conclusion": "success"
   }
