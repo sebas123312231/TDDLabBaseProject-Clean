@@ -133,12 +133,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "40400a2c144219f8177b49e5964d2c582d07fb43",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T00:47:20.000Z",
       "message": "feat(database): add transactional migration runner",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/40400a2c144219f8177b49e5964d2c582d07fb43"
     },
     "stats": {
       "total": 296,
@@ -148,6 +148,25 @@
     },
     "coverage": 96.23,
     "test_count": 23,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T00:53:14.000Z",
+      "message": "feat(database): define catalog schema",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 316,
+      "additions": 315,
+      "deletions": 1,
+      "date": "2026-10-21"
+    },
+    "coverage": 96.23,
+    "test_count": 43,
     "failed_tests": 0,
     "conclusion": "success"
   }

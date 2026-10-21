@@ -1,7 +1,10 @@
 import { readFile, readdir } from 'node:fs/promises'
 import type { Pool } from 'pg'
 
-export async function migrate(pool: Pool, directory: URL): Promise<void> {
+export async function migrate(
+  pool: Pool,
+  directory = new URL('../migrations/', import.meta.url),
+): Promise<void> {
   const migrations = (await readdir(directory))
     .filter((file) => file.endsWith('.sql'))
     .map((file) => {
