@@ -950,17 +950,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "43f9c9f6e36721fda468fcfdfc06035bcd206a64",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T15:04:03.000Z",
       "message": "feat(web): split shell and improve report detail",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/43f9c9f6e36721fda468fcfdfc06035bcd206a64"
     },
     "stats": {
       "total": 233,
       "additions": 193,
       "deletions": 40,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T15:06:03.000Z",
+      "message": "refactor(web): separate dashboard section views",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 175,
+      "additions": 128,
+      "deletions": 47,
       "date": "2026-10-21"
     },
     "coverage": 91.78,

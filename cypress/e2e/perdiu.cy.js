@@ -95,4 +95,13 @@ describe('PerdiU web', () => {
       .should('have.attr', 'aria-current', 'page')
     cy.get('.app-header').should('contain', 'Mapa')
   })
+
+  it('clears the catalog search filter', () => {
+    cy.contains('button', 'Explorar reportes').click()
+    cy.intercept('GET', /\/api\/reports\?q=/).as('filteredCatalog')
+    cy.contains('label', 'Buscar').find('input').type('mochila')
+    cy.wait('@filteredCatalog')
+    cy.contains('button', 'Limpiar').click()
+    cy.contains('label', 'Buscar').find('input').should('have.value', '')
+  })
 })
