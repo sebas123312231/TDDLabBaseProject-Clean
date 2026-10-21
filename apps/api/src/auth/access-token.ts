@@ -63,3 +63,27 @@ export function createAccessTokenVerifier(
     },
   }
 }
+
+export interface SessionRevocations {
+  revoke(sessionId: string): Promise<void>
+  isRevoked(sessionId: string): Promise<boolean>
+}
+
+export function withSessionRevocation(
+  verifier: AccessTokenVerifier,
+  revocations: SessionRevocations,
+): AccessTokenVerifier {
+  return {
+    async verify(token) {
+      const user = await verifier.verify(token)
+      let revoked: boolean
+      try {
+        revoked = await revocations.isRevoked(user.sessionId)
+      } catch {
+        throw new AuthUnavailable()
+      }
+      if (revoked) throw new InvalidAccessToken()
+      return user
+    },
+  }
+}

@@ -5,6 +5,7 @@ import {
   AuthUnavailable,
   createAccessTokenVerifier,
   InvalidAccessToken,
+  withSessionRevocation,
 } from '../src/auth/access-token.js'
 
 const issuer = 'http://localhost:5173/auth'
@@ -73,4 +74,17 @@ test('la indisponibilidad de las claves de Auth no se confunde con una credencia
   )
 
   await assert.rejects(verifier.verify(token), (error) => error instanceof AuthUnavailable)
+})
+
+test('revocar el session_id verificado rechaza el token todavía firmado', async () => {
+  const { verifier, token } = await signedToken()
+  const revoked = new Set<string>()
+  const sessions = withSessionRevocation(verifier, {
+    revoke: async (id) => void revoked.add(id),
+    isRevoked: async (id) => revoked.has(id),
+  })
+
+  assert.equal((await sessions.verify(token)).sessionId, sessionId)
+  revoked.add(sessionId)
+  await assert.rejects(sessions.verify(token), InvalidAccessToken)
 })

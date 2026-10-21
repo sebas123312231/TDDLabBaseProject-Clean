@@ -1288,9 +1288,31 @@
     "testId": 16
   },
   {
-    "commitId": "HEAD",
+    "commitId": "5e118fe2953dea0534329ab43ac3aae885dc14e1",
     "commitName": "feat(api): verify Supabase access tokens",
     "commitTimestamp": 1792545122340,
     "testId": 16
+  },
+  {
+    "numPassedTests": 66,
+    "failedTests": 0,
+    "numTotalTests": 66,
+    "timestamp": 1792545139220,
+    "success": false,
+    "testId": 17
+  },
+  {
+    "numPassedTests": 70,
+    "failedTests": 0,
+    "numTotalTests": 70,
+    "timestamp": 1792545148378,
+    "success": true,
+    "testId": 17
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(api): reject revoked access sessions",
+    "commitTimestamp": 1792545164025,
+    "testId": 17
   }
 ]
