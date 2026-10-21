@@ -3792,9 +3792,23 @@
     "testId": 52
   },
   {
-    "commitId": "HEAD",
+    "commitId": "70fc6e8b79f3e8a61766ac727e625540cef4767f",
     "commitName": "feat(web): guide users from an empty saved list",
     "commitTimestamp": 1792595696759,
     "testId": 52
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792595905185,
+    "success": true,
+    "testId": 53
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): guide empty and capped catalog results",
+    "commitTimestamp": 1792595916727,
+    "testId": 53
   }
 ]

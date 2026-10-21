@@ -988,17 +988,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "70fc6e8b79f3e8a61766ac727e625540cef4767f",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T15:14:56.000Z",
       "message": "feat(web): guide users from an empty saved list",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/70fc6e8b79f3e8a61766ac727e625540cef4767f"
     },
     "stats": {
       "total": 64,
       "additions": 59,
       "deletions": 5,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T15:18:36.000Z",
+      "message": "feat(web): guide empty and capped catalog results",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 46,
+      "additions": 44,
+      "deletions": 2,
       "date": "2026-10-21"
     },
     "coverage": 91.78,

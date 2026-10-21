@@ -1,5 +1,6 @@
 import type { AppView } from '../../presenters/app/useApp.js'
 import { filterOptions } from '../../presenters/catalog/filters.presenter.js'
+import { EmptyState } from '../components/EmptyState.js'
 import { ReportGrid } from '../components/ReportGrid.js'
 
 type ExplorePageProps = {
@@ -10,9 +11,10 @@ type ExplorePageProps = {
   isSaved: AppView['isSaved']
   onSave: AppView['actions']['reports']['toggleSaved']
   onOpen: AppView['actions']['reports']['open']
+  onNavigate: AppView['actions']['navigate']
 }
 
-export function ExplorePage({ catalog, selection, filters, onRetry, isSaved, onSave, onOpen }: ExplorePageProps) {
+export function ExplorePage({ catalog, selection, filters, onRetry, isSaved, onSave, onOpen, onNavigate }: ExplorePageProps) {
   return (
     <>
       <p>Busca por palabra, ciudad o categoría.</p>
@@ -25,11 +27,23 @@ export function ExplorePage({ catalog, selection, filters, onRetry, isSaved, onS
       </div>
       {catalog.status === 'loading' && <p role="status">Cargando reportes…</p>}
       {catalog.status === 'error' && <div role="alert"><p>{catalog.message}</p><button className="secondary-button" onClick={onRetry}>Reintentar</button></div>}
+      {catalog.limitReached && (
+        <p className="hint" role="status">
+          Se muestran hasta {catalog.limit} resultados. Ajusta los filtros para precisar la búsqueda.
+        </p>
+      )}
       {catalog.status === 'ready' && <>
         <p>{catalog.count} resultados</p>
         {catalog.count ? (
           <ReportGrid reports={catalog.reports} isSaved={isSaved} onSave={onSave} onOpen={onOpen} />
-        ) : <p>{catalog.empty.title}. {catalog.empty.description}</p>}
+        ) : (
+          <EmptyState
+            title={catalog.empty.title}
+            description={catalog.empty.description}
+            action="Publicar reporte"
+            onAction={() => onNavigate('publish')}
+          />
+        )}
       </>}
     </>
   )

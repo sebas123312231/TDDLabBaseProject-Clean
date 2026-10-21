@@ -14,6 +14,10 @@ const reports = [
     imageUrls: [],
   },
 ]
+const limitedReports = Array.from({ length: 50 }, (_, index) => ({
+  ...reports[0],
+  id: `catalog-${index + 1}`,
+}))
 
 describe('PerdiU web', () => {
   beforeEach(() => {
@@ -114,5 +118,28 @@ describe('PerdiU web', () => {
       cy.contains('button', 'Explorar reportes').click()
     })
     cy.get('.app-header').should('contain', 'Explorar reportes')
+  })
+
+  it('offers publication when catalog filters find no reports', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
+    cy.intercept('GET', /\/api\/reports\?q=/, { body: [] }).as('emptyCatalog')
+    cy.contains('label', 'Buscar').find('input').type('sin-coincidencias')
+    cy.wait('@emptyCatalog')
+    cy.get('.empty-state').within(() => {
+      cy.contains('No se encontraron coincidencias').should('be.visible')
+      cy.contains('Prueba con otra búsqueda o publica un reporte.').should('be.visible')
+      cy.contains('button', 'Publicar reporte').click()
+    })
+    cy.get('input[type="email"]').should('be.visible')
+  })
+
+  it('explains when the catalog has reached its result limit', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
+    cy.intercept('GET', /\/api\/reports\?q=/, { body: limitedReports }).as('limitedCatalog')
+    cy.contains('label', 'Buscar').find('input').type('limite')
+    cy.get('@limitedCatalog.all').should('have.length', 6)
+    cy.get('.hint[role="status"]')
+      .should('contain', 'Se muestran hasta 50 resultados.')
+      .and('contain', 'Ajusta los filtros para precisar la búsqueda.')
   })
 })

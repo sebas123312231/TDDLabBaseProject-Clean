@@ -24,6 +24,7 @@ export function SectionContent({ app }: { app: AppView }) {
         isSaved={app.isSaved}
         onSave={app.actions.reports.toggleSaved}
         onOpen={app.actions.reports.open}
+        onNavigate={app.actions.navigate}
       />
     )
 
