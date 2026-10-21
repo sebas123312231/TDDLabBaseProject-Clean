@@ -20,6 +20,7 @@
     "cypress-run": "cypress run",
     "lint": "eslint .",
     "auth:keys": "node scripts/auth-keys.mjs",
+    "test:auth": "pnpm test:build && node scripts/verify-auth.mjs",
     "prepare": "husky",
     "semantic-commits-on": "node semantic-commits.js enable",
     "semantic-commits-off": "node semantic-commits.js disabled"

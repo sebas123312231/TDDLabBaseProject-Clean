@@ -1539,12 +1539,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "babdc1d08eea0aef7a45c0595a9907e6edcabb20",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T17:17:06.000Z",
       "message": "feat(auth): generate local auth secrets",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/babdc1d08eea0aef7a45c0595a9907e6edcabb20"
     },
     "stats": {
       "total": 49,
@@ -1554,6 +1554,25 @@
     },
     "coverage": 88.34,
     "test_count": 236,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T17:27:47.000Z",
+      "message": "feat(auth): run self-hosted auth locally",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 547,
+      "additions": 546,
+      "deletions": 1,
+      "date": "2026-10-21"
+    },
+    "coverage": 88.34,
+    "test_count": 240,
     "failed_tests": 0,
     "conclusion": "success"
   }

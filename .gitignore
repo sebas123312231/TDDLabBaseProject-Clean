@@ -3,6 +3,9 @@ node_modules
 dist
 .parcel-cache
 /coverage
+.env
+.env.*
+!.env.example
 .DS_Store
 report.json
 ./.husky/_
