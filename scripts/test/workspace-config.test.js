@@ -27,7 +27,7 @@ test('las pruebas instrumentadas construyen los workspaces antes de ejecutar Jes
 test('los comandos principales ejecutan Vite y las aplicaciones del workspace', () => {
   const { scripts } = JSON.parse(readFileSync('package.json', 'utf8'))
 
-  assert.equal(scripts.start, 'pnpm --filter @perdiu/web preview')
+  assert.equal(scripts.preview, 'pnpm --filter @perdiu/web preview')
   assert.equal(scripts.build, 'pnpm --recursive --if-present build')
   assert.equal(
     scripts.dev,

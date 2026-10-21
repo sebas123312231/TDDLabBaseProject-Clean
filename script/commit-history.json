@@ -1596,16 +1596,35 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "9775c838da1151fb530b32307fb972b7ebfa505a",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T17:32:48.000Z",
       "message": "feat(workspace): run PerdiU from root scripts",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/9775c838da1151fb530b32307fb972b7ebfa505a"
     },
     "stats": {
       "total": 39,
       "additions": 37,
+      "deletions": 2,
+      "date": "2026-10-21"
+    },
+    "coverage": 88.66,
+    "test_count": 251,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T17:34:50.000Z",
+      "message": "fix(workspace): expose Vite preview command",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
       "deletions": 2,
       "date": "2026-10-21"
     },

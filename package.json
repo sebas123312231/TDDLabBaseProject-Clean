@@ -11,7 +11,7 @@
     "pnpm": ">=10 <11"
   },
   "scripts": {
-    "start": "pnpm --filter @perdiu/web preview",
+    "preview": "pnpm --filter @perdiu/web preview",
     "dev": "pnpm test:build && pnpm --parallel --stream --filter @perdiu/api --filter @perdiu/web run dev",
     "dev:api": "pnpm test:build && pnpm --filter @perdiu/api dev",
     "dev:web": "pnpm --filter @perdiu/web dev",
