@@ -342,12 +342,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "41a7f394f5b6ff5621de330c17e308c91bd47e02",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:15:47.000Z",
       "message": "feat(api): enforce bearer authentication guard",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/41a7f394f5b6ff5621de330c17e308c91bd47e02"
     },
     "stats": {
       "total": 267,
@@ -357,6 +357,25 @@
     },
     "coverage": 76.34,
     "test_count": 74,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:17:34.000Z",
+      "message": "feat(api): validate public catalog query",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 85,
+      "additions": 85,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 80.36,
+    "test_count": 78,
     "failed_tests": 0,
     "conclusion": "success"
   }
