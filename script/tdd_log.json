@@ -4412,9 +4412,23 @@
     "testId": 82
   },
   {
-    "commitId": "HEAD",
+    "commitId": "c732b0c38a6a744f9a46579b402fe56adf97f9b6",
     "commitName": "feat(auth): run self-hosted auth locally",
     "commitTimestamp": 1792603667328,
     "testId": 82
+  },
+  {
+    "numPassedTests": 249,
+    "failedTests": 0,
+    "numTotalTests": 249,
+    "timestamp": 1792603794744,
+    "success": true,
+    "testId": 83
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "test(api): cover JWT rejection boundaries",
+    "commitTimestamp": 1792603803159,
+    "testId": 83
   }
 ]

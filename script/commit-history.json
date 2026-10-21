@@ -1558,12 +1558,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c732b0c38a6a744f9a46579b402fe56adf97f9b6",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T17:27:47.000Z",
       "message": "feat(auth): run self-hosted auth locally",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/c732b0c38a6a744f9a46579b402fe56adf97f9b6"
     },
     "stats": {
       "total": 547,
@@ -1573,6 +1573,25 @@
     },
     "coverage": 88.34,
     "test_count": 240,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T17:30:03.000Z",
+      "message": "test(api): cover JWT rejection boundaries",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 143,
+      "additions": 137,
+      "deletions": 6,
+      "date": "2026-10-21"
+    },
+    "coverage": 88.66,
+    "test_count": 249,
     "failed_tests": 0,
     "conclusion": "success"
   }
