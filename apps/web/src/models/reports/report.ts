@@ -9,3 +9,9 @@ export type DemoReport = ReportSummary & {
 }
 
 export type Report = CatalogReport | DemoReport
+
+export const cities = ['La Paz', 'Cochabamba', 'Santa Cruz'] as const
+
+export function isOwnedBy(report: Report, ownerId: string): boolean {
+  return report.source === 'demo' && report.author.id === ownerId
+}

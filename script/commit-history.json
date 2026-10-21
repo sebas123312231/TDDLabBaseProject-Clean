@@ -551,12 +551,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "df96199ace4c2db7c85d7514345ee65e2d26ae0a",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:38:46.000Z",
       "message": "feat(web): implement local report filters",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/df96199ace4c2db7c85d7514345ee65e2d26ae0a"
     },
     "stats": {
       "total": 70,
@@ -566,6 +566,25 @@
     },
     "coverage": 60.16,
     "test_count": 103,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:40:03.000Z",
+      "message": "feat(web): summarize demo report ownership and totals",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 70,
+      "additions": 70,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 63.43,
+    "test_count": 105,
     "failed_tests": 0,
     "conclusion": "success"
   }

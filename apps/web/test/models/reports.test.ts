@@ -3,6 +3,8 @@ import { existsSync, readFileSync } from 'node:fs'
 import { test } from '@jest/globals'
 import { hasActiveFilters, matchesFilters, toReportQuery } from '../../src/models/reports/filters.js'
 import type { DemoReport } from '../../src/models/reports/report.js'
+import { isOwnedBy } from '../../src/models/reports/report.js'
+import { summarizeReports } from '../../src/models/reports/stats.js'
 
 const searchableReport: DemoReport = {
   id: 'demo-1',
@@ -95,4 +97,39 @@ test('la categoría excluye reportes de otra categoría', () => {
 
 test('el tipo excluye reportes de otra clase', () => {
   assert.equal(matchesFilters(searchableReport, { text: '', type: 'found' }), false)
+})
+
+test('la propiedad demo se determina por ID y no por nombre visible', () => {
+  const renamedOwner = {
+    ...searchableReport,
+    author: { ...searchableReport.author, displayName: 'Nombre cambiado' },
+  }
+  const sameNameDifferentId = {
+    ...searchableReport,
+    author: { ...searchableReport.author, id: 'someone-else' },
+  }
+  assert.equal(isOwnedBy(renamedOwner, 'demo-owner'), true)
+  assert.equal(isOwnedBy(sameNameDifferentId, 'demo-owner'), false)
+})
+
+test('el resumen cuenta activos, tipos y ciudades conocidas o restantes', () => {
+  const reports = [
+    searchableReport,
+    { ...searchableReport, id: 'demo-2', type: 'found' as const, city: 'Cochabamba' },
+    { ...searchableReport, id: 'demo-3', city: 'Tarija' },
+    { ...searchableReport, id: 'demo-4', state: 'resolved' as const },
+  ]
+
+  assert.deepEqual(summarizeReports(reports), {
+    active: 3,
+    lost: 2,
+    found: 1,
+    resolved: 1,
+    byCity: [
+      { city: 'La Paz', count: 1 },
+      { city: 'Cochabamba', count: 1 },
+      { city: 'Santa Cruz', count: 0 },
+    ],
+    other: 1,
+  })
 })

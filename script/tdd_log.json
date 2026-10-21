@@ -1982,9 +1982,63 @@
     "testId": 29
   },
   {
-    "commitId": "HEAD",
+    "commitId": "df96199ace4c2db7c85d7514345ee65e2d26ae0a",
     "commitName": "feat(web): implement local report filters",
     "commitTimestamp": 1792546726090,
     "testId": 29
+  },
+  {
+    "numPassedTests": 103,
+    "failedTests": 1,
+    "numTotalTests": 104,
+    "timestamp": 1792546749099,
+    "success": false,
+    "testId": 30
+  },
+  {
+    "numPassedTests": 104,
+    "failedTests": 0,
+    "numTotalTests": 104,
+    "timestamp": 1792546756000,
+    "success": true,
+    "testId": 30
+  },
+  {
+    "numPassedTests": 104,
+    "failedTests": 0,
+    "numTotalTests": 104,
+    "timestamp": 1792546763255,
+    "success": true,
+    "testId": 30
+  },
+  {
+    "numPassedTests": 104,
+    "failedTests": 1,
+    "numTotalTests": 105,
+    "timestamp": 1792546781631,
+    "success": false,
+    "testId": 30
+  },
+  {
+    "numPassedTests": 105,
+    "failedTests": 0,
+    "numTotalTests": 105,
+    "timestamp": 1792546789448,
+    "success": true,
+    "testId": 30
+  },
+  {
+    "numPassedTests": 105,
+    "failedTests": 0,
+    "numTotalTests": 105,
+    "timestamp": 1792546797121,
+    "success": true,
+    "testId": 30
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): summarize demo report ownership and totals",
+    "commitTimestamp": 1792546803949,
+    "testId": 30
   }
 ]
