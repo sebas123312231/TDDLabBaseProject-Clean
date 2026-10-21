@@ -28,4 +28,11 @@ describe('Catálogo conectado a API y PostgreSQL', () => {
     })
     cy.get('.report-card').should('have.length', 1)
   })
+
+  it('limita el contenido central a 1120 píxeles en escritorio', () => {
+    cy.viewport(1600, 900)
+    cy.get('.content').should(($content) => {
+      expect(Math.round($content[0].getBoundingClientRect().width)).to.equal(1120)
+    })
+  })
 })

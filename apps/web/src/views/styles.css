@@ -48,7 +48,7 @@ p { margin: 0 0 12px; }
 .header-account { display: flex; align-items: center; gap: 8px; font-weight: 600; }
 .account-popover { position: absolute; z-index: 25; top: calc(100% + 8px); right: 0; min-width: 220px; display: flex; flex-direction: column; gap: 8px; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .account-popover p { color: var(--muted); overflow-wrap: anywhere; }
-.content { width: min(1200px, 100%); flex: 1; margin: 0 auto; padding: 32px 28px; }
+.content { width: 100%; max-width: 1120px; flex: 1; margin: 0 auto; padding: 32px 28px; }
 .content > h2 { margin: 28px 0 16px; font-size: 21px; }
 .page-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
 .page-heading h1 { font-size: 24px; }
