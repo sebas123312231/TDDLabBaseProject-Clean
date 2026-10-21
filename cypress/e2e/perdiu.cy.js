@@ -334,6 +334,17 @@ describe('PerdiU web', () => {
     cy.contains('button', 'Milo, gato gris con collar azul').should('not.exist')
   })
 
+  it('shows the visible result count for the selected own report filter', () => {
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
+    cy.get('.filter-row .result-count').should('contain', '1 resultados')
+
+    cy.get('[role="tablist"][aria-label="Estado de mis reportes"]')
+      .contains('[role="tab"]', 'Resueltos')
+      .click()
+    cy.get('.filter-row .result-count').should('contain', '0 resultados')
+  })
+
   it('offers publication when the selected own report filter is empty', () => {
     cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
     restoreTestAccount()

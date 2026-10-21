@@ -4108,9 +4108,23 @@
     "testId": 74
   },
   {
-    "commitId": "HEAD",
+    "commitId": "50bf8927574d23d2531d57e0fc463f66da88a81c",
     "commitName": "feat(web): summarize owned reports in page header",
     "commitTimestamp": 1792600826237,
     "testId": 74
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792600954264,
+    "success": true,
+    "testId": 75
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): show filtered count in own reports",
+    "commitTimestamp": 1792600961346,
+    "testId": 75
   }
 ]

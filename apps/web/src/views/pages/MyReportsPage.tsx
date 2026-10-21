@@ -39,6 +39,7 @@ export function MyReportsPage({
       </div>
       <div className="filter-row">
         <StatusTabs label="Estado de mis reportes" options={filters} value={myReports.filter} onChange={onFilter} />
+        <span className="result-count"><b>{myReports.cards.length}</b> resultados</span>
       </div>
       <div className="managed-list">
         {myReports.cards.map((report) => (
