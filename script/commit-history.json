@@ -1121,17 +1121,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "5e374ac9ff4a090c4463b327ef6b425c405937db",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T15:43:37.000Z",
       "message": "feat(web): add accessible own-report controls",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/5e374ac9ff4a090c4463b327ef6b425c405937db"
     },
     "stats": {
       "total": 117,
       "additions": 104,
       "deletions": 13,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:03:04.000Z",
+      "message": "fix(web): make own report actions stateful and accessible",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 28,
+      "additions": 26,
+      "deletions": 2,
       "date": "2026-10-21"
     },
     "coverage": 91.78,

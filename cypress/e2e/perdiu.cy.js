@@ -316,4 +316,25 @@ describe('PerdiU web', () => {
     cy.contains('button', 'Nuevo reporte').click()
     cy.get('.publish-form').should('be.visible')
   })
+
+  it('hides the resolve action after resolving an own report', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
+    cy.contains('button', 'Marcar resuelto').click()
+    cy.get('.report-grid').should('contain', 'Resuelto')
+    cy.contains('button', 'Marcar resuelto').should('not.exist')
+  })
+
+  it('removes an own report through its accessible delete action', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
+    cy.get('button[aria-label="Eliminar reporte"]')
+      .should('have.class', 'danger')
+      .and('contain.text', 'Eliminar')
+      .click()
+    cy.get('.empty-state').should('contain', 'Aún no publicaste reportes')
+    cy.contains('button', 'Publicar mi primer reporte').should('be.visible')
+  })
 })

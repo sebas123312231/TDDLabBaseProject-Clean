@@ -3898,9 +3898,23 @@
     "testId": 59
   },
   {
-    "commitId": "HEAD",
+    "commitId": "5e374ac9ff4a090c4463b327ef6b425c405937db",
     "commitName": "feat(web): add accessible own-report controls",
     "commitTimestamp": 1792597417207,
     "testId": 59
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792598574042,
+    "success": true,
+    "testId": 60
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix(web): make own report actions stateful and accessible",
+    "commitTimestamp": 1792598584620,
+    "testId": 60
   }
 ]

@@ -52,8 +52,10 @@ export function MyReportsPage({
       )}
       {myReports.cards.map((report) => (
         <div className="report-actions" key={report.id}>
-          <button className="secondary-button" onClick={() => onResolve(report.id)}>Marcar resuelto</button>
-          <button className="text-button" onClick={() => onRemove(report.id)}>Quitar</button>
+          {!report.resolved && <button className="secondary-button" onClick={() => onResolve(report.id)}>Marcar resuelto</button>}
+          <button className="text-button danger" aria-label="Eliminar reporte" onClick={() => onRemove(report.id)}>
+            Eliminar
+          </button>
         </div>
       ))}
     </>
