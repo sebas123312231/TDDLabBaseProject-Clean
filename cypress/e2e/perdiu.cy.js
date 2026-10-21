@@ -361,4 +361,18 @@ describe('PerdiU web', () => {
       cy.get('button[aria-label="Eliminar reporte"]').should('be.visible')
     })
   })
+
+  it('selects whether a report was lost or found with accessible controls', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+    cy.get('.type-choice').within(() => {
+      cy.contains('button[aria-pressed="true"]', 'Perdí algo').should('be.visible')
+      cy.contains('button', 'Encontré algo').click()
+      cy.contains('button[aria-pressed="true"]', 'Encontré algo').should('be.visible')
+      cy.contains('button[aria-pressed="false"]', 'Perdí algo').should('be.visible')
+      cy.contains('button[aria-pressed="true"]', 'Encontré algo')
+        .should('have.css', 'background-color', 'rgb(63, 106, 72)')
+    })
+  })
 })

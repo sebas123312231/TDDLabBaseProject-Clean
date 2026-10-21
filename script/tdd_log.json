@@ -3926,9 +3926,23 @@
     "testId": 61
   },
   {
-    "commitId": "HEAD",
+    "commitId": "22d8e754b7380a656aaab72aa48451750f9ee6e2",
     "commitName": "feat(web): manage own reports in compact rows",
     "commitTimestamp": 1792598804179,
     "testId": 61
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792599037779,
+    "success": true,
+    "testId": 62
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): add accessible report type selection",
+    "commitTimestamp": 1792599058874,
+    "testId": 62
   }
 ]

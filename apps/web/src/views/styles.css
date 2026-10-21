@@ -77,6 +77,10 @@ textarea { min-height: 110px; resize: vertical; }
 .status-tabs button.selected { color: white; background: var(--green); font-weight: 600; }
 .publish-form { width: min(640px, 100%); display: grid; gap: 14px; }
 .publish-form .primary-button { justify-self: start; }
+.type-choice { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
+.type-choice legend { margin-bottom: 8px; font-weight: 600; }
+.type-choice button { min-height: 36px; padding: 0 16px; border: 1px solid var(--line); border-radius: var(--radius); }
+.type-choice .selected { border-color: var(--green); color: white; background: var(--green); }
 .photo-preview { width: min(320px, 100%); max-height: 240px; object-fit: contain; }
 .illustrative-map { position: relative; height: 280px; margin: 20px 0; overflow: hidden; border: 1px solid var(--line); background: #e9efe9; }
 .illustrative-map::before { position: absolute; inset: 15% 22%; border: 2px dashed #9dac9d; border-radius: 45% 55% 38% 62%; content: ''; }

@@ -40,7 +40,7 @@ export function SectionContent({ app }: { app: AppView }) {
     )
 
   if (section === 'publish')
-    return <PublishPage app={app} />
+    return <PublishPage form={app.publish} actions={app.actions.publish} />
 
   if (section === 'my-reports')
     return (
