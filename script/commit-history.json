@@ -665,12 +665,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "f137bc6c126e0d54d893660866fb07f3d15f0975",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:52:46.000Z",
       "message": "feat(web): validate authentication credentials",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/f137bc6c126e0d54d893660866fb07f3d15f0975"
     },
     "stats": {
       "total": 139,
@@ -680,6 +680,25 @@
     },
     "coverage": 74.07,
     "test_count": 140,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:54:59.000Z",
+      "message": "feat(web): present report card data",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 137,
+      "additions": 137,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 75.13,
+    "test_count": 145,
     "failed_tests": 0,
     "conclusion": "success"
   }
