@@ -104,4 +104,15 @@ describe('PerdiU web', () => {
     cy.contains('button', 'Limpiar').click()
     cy.contains('label', 'Buscar').find('input').should('have.value', '')
   })
+
+  it('guides someone from an empty saved list back to the catalog', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Guardados').click()
+    cy.get('.report-grid').contains('button', 'Guardado').click()
+    cy.get('.empty-state').within(() => {
+      cy.contains('Tu lista está vacía por ahora').should('be.visible')
+      cy.contains('Guarda reportes con el ícono de corazón y aparecerán aquí.').should('be.visible')
+      cy.contains('button', 'Explorar reportes').click()
+    })
+    cy.get('.app-header').should('contain', 'Explorar reportes')
+  })
 })

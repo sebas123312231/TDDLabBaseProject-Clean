@@ -969,17 +969,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "bcaafe3ff95bd8be6e56137e4b932042d4732998",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T15:06:03.000Z",
       "message": "refactor(web): separate dashboard section views",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/bcaafe3ff95bd8be6e56137e4b932042d4732998"
     },
     "stats": {
       "total": 175,
       "additions": 128,
       "deletions": 47,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T15:14:56.000Z",
+      "message": "feat(web): guide users from an empty saved list",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 64,
+      "additions": 59,
+      "deletions": 5,
       "date": "2026-10-21"
     },
     "coverage": 91.78,
