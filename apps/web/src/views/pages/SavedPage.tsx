@@ -1,5 +1,6 @@
 import type { AppView } from '../../presenters/app/useApp.js'
 import { EmptyState } from '../components/EmptyState.js'
+import { PageHeading } from '../components/PageHeading.js'
 import { ReportGrid } from '../components/ReportGrid.js'
 
 type SavedPageProps = {
@@ -13,9 +14,10 @@ type SavedPageProps = {
 export function SavedPage({ reports, isSaved, onSave, onOpen, onNavigate }: SavedPageProps) {
   return (
     <>
-      <p className="page-description">
-        Publicaciones que quieres revisar o seguir más tarde en este dispositivo.
-      </p>
+      <PageHeading
+        title="Reportes guardados"
+        description="Publicaciones que quieres revisar o seguir más tarde en este dispositivo."
+      />
       {reports.length ? (
         <ReportGrid reports={reports} isSaved={isSaved} onSave={onSave} onOpen={onOpen} />
       ) : (

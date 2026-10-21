@@ -2,6 +2,7 @@ import type { AppView } from '../../presenters/app/useApp.js'
 import type { OwnFilter } from '../../presenters/reports/reports.presenter.js'
 import type { Section } from '../../presenters/app/sections.js'
 import { EmptyState } from '../components/EmptyState.js'
+import { PageHeading } from '../components/PageHeading.js'
 import { StatusTabs } from '../components/StatusTabs.js'
 
 type MyReportsPageProps = {
@@ -29,14 +30,15 @@ export function MyReportsPage({
 }: MyReportsPageProps) {
   return (
     <>
-      <div className="page-intro">
-        <p className="page-description">
-          {myReports.total} publicados · {myReports.active} activos. Solo tú puedes cambiar su estado.
-        </p>
-        <button className="primary-button" onClick={() => onNavigate('publish')}>
-          Nuevo reporte
-        </button>
-      </div>
+      <PageHeading
+        title="Mis reportes"
+        description={`${myReports.total} publicados · ${myReports.active} activos. Solo tú puedes cambiar su estado.`}
+        action={
+          <button className="primary-button" onClick={() => onNavigate('publish')}>
+            Nuevo reporte
+          </button>
+        }
+      />
       <div className="filter-row">
         <StatusTabs label="Estado de mis reportes" options={filters} value={myReports.filter} onChange={onFilter} />
         <span className="result-count"><b>{myReports.cards.length}</b> resultados</span>

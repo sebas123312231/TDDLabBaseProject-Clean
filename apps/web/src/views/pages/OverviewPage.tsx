@@ -1,5 +1,6 @@
 import type { AppView } from '../../presenters/app/useApp.js'
 import type { Section } from '../../presenters/app/sections.js'
+import { PageHeading } from '../components/PageHeading.js'
 import { ReportGrid } from '../components/ReportGrid.js'
 
 type OverviewPageProps = {
@@ -13,12 +14,15 @@ type OverviewPageProps = {
 export function OverviewPage({ overview, onNavigate, isSaved, onSave, onOpen }: OverviewPageProps) {
   return (
     <>
-      <div className="page-intro">
-        <p>Actividad de los reportes de demostración de la comunidad.</p>
-        <button className="primary-button" onClick={() => onNavigate('publish')}>
-          Nuevo reporte
-        </button>
-      </div>
+      <PageHeading
+        title="Resumen"
+        description="Actividad de los reportes de demostración de la comunidad."
+        action={
+          <button className="primary-button" onClick={() => onNavigate('publish')}>
+            Nuevo reporte
+          </button>
+        }
+      />
       <section className="panel summary" aria-label="Resumen de reportes">
         <dl className="metrics">
           {overview.metrics.map((metric) => (

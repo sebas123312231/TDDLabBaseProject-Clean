@@ -7,6 +7,7 @@ import {
 } from '../../presenters/catalog/filters.presenter.js'
 import { EmptyState } from '../components/EmptyState.js'
 import { MapView } from '../components/MapView.js'
+import { PageHeading } from '../components/PageHeading.js'
 import { ReportFilters } from '../components/ReportFilters.js'
 import { StatusTabs } from '../components/StatusTabs.js'
 
@@ -20,16 +21,16 @@ type MapPageProps = {
 
 export function MapPage({ map, selection, filters, onOpen, onNavigate }: MapPageProps) {
   return (
-    <section className="map-page">
-      <div className="page-intro">
-        <div>
-          <p>Ubica reportes cercanos y abre cada punto para ver sus detalles.</p>
-          <p>Las posiciones son ilustrativas, no representan ubicaciones geográficas.</p>
-        </div>
-        <button className="primary-button" onClick={() => onNavigate('publish')}>
-          Nuevo reporte
-        </button>
-      </div>
+    <>
+      <PageHeading
+        title="Mapa de reportes"
+        description="Ubica reportes cercanos y abre cada punto para ver sus detalles."
+        action={
+          <button className="primary-button" onClick={() => onNavigate('publish')}>
+            Nuevo reporte
+          </button>
+        }
+      />
       <div className="filter-row" aria-label="Filtros del mapa">
         <ReportFilters
           selection={selection}
@@ -68,6 +69,6 @@ export function MapPage({ map, selection, filters, onOpen, onNavigate }: MapPage
           )}
         </div>
       </div>
-    </section>
+    </>
   )
 }

@@ -35,7 +35,6 @@ export function AppShell({ app }: { app: AppView }) {
         />
         <main className="content">
           {shell.access === 'wait' && <p className="session-wait" role="status">Verificando tu sesión…</p>}
-          <h1>{shell.title}</h1>
           {shell.access === 'allow' && <SectionContent app={app} />}
         </main>
         <footer className="app-footer"><span>PerdiU · Bolivia</span><button className="text-button" onClick={() => actions.navigate('safety')}>Privacidad y seguridad</button></footer>

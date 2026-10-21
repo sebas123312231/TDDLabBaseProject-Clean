@@ -128,10 +128,10 @@ describe('PerdiU web', () => {
 
   it('offers publication directly from the map when reports are visible', () => {
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Mapa').click()
-    cy.get('.page-intro').should('have.css', 'display', 'flex').within(() => {
+    cy.get('[role="region"][aria-label="Mapa ilustrativo de reportes"]')
+      .should('contain', 'Mapa ilustrativo · datos de demostración')
+    cy.get('.page-heading').within(() => {
       cy.contains('Ubica reportes cercanos y abre cada punto para ver sus detalles.').should('be.visible')
-      cy.contains('Las posiciones son ilustrativas, no representan ubicaciones geográficas.')
-        .should('be.visible')
       cy.contains('button', 'Nuevo reporte').click()
     })
 
@@ -151,7 +151,7 @@ describe('PerdiU web', () => {
 
   it('introduces the safety recommendations with their privacy purpose', () => {
     cy.contains('button', 'Seguridad y privacidad').click()
-    cy.contains('.page-description', 'Recomendaciones para coordinar una devolución cuidando tus datos.')
+    cy.contains('.page-heading', 'Recomendaciones para coordinar una devolución cuidando tus datos.')
       .should('be.visible')
   })
 
@@ -210,7 +210,7 @@ describe('PerdiU web', () => {
   it('styles the saved reports explanation as secondary copy', () => {
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Guardados').click()
 
-    cy.get('.page-description').should('have.css', 'color', 'rgb(95, 103, 95)')
+    cy.get('.page-heading p').should('have.css', 'color', 'rgb(95, 103, 95)')
   })
 
   it('offers publication when catalog filters find no reports', () => {
@@ -325,7 +325,7 @@ describe('PerdiU web', () => {
   it('describes the account details shown on the profile page', () => {
     restoreTestAccount()
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Mi perfil').click()
-    cy.contains('.page-description', 'Los datos con los que usas PerdiU.').should('be.visible')
+    cy.contains('.page-heading', 'Los datos con los que usas PerdiU.').should('be.visible')
   })
 
   it('navigates from the profile to the signed-in user reports', () => {
@@ -348,8 +348,8 @@ describe('PerdiU web', () => {
     restoreTestAccount()
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
 
-    cy.get('.page-intro').within(() => {
-      cy.contains('.page-description', '1 publicados · 1 activos. Solo tú puedes cambiar su estado.')
+    cy.get('.page-heading').within(() => {
+      cy.contains('p', '1 publicados · 1 activos. Solo tú puedes cambiar su estado.')
         .should('be.visible')
       cy.contains('button', 'Nuevo reporte').should('be.visible')
     })
@@ -470,7 +470,7 @@ describe('PerdiU web', () => {
   it('introduces the publication form with its recognition guidance', () => {
     restoreTestAccount()
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
-    cy.contains('.page-description', 'Comparte lo esencial para que la comunidad pueda reconocerlo.')
+    cy.contains('.page-heading', 'Comparte lo esencial para que la comunidad pueda reconocerlo.')
       .should('be.visible')
   })
 
@@ -604,7 +604,7 @@ describe('PerdiU web', () => {
 
   it('offers publication from exploration even when reports are listed', () => {
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
-    cy.get('.page-intro').should('have.css', 'display', 'flex').within(() => {
+    cy.get('.page-heading').should('have.css', 'display', 'flex').within(() => {
       cy.contains('button', 'Publicar reporte').click()
     })
 

@@ -6,6 +6,7 @@ import {
   type FiltersPresenter,
 } from '../../presenters/catalog/filters.presenter.js'
 import { EmptyState } from '../components/EmptyState.js'
+import { PageHeading } from '../components/PageHeading.js'
 import { ReportFilters } from '../components/ReportFilters.js'
 import { ReportGrid } from '../components/ReportGrid.js'
 import { StatusTabs } from '../components/StatusTabs.js'
@@ -24,12 +25,15 @@ type ExplorePageProps = {
 export function ExplorePage({ catalog, selection, filters, onRetry, isSaved, onSave, onOpen, onNavigate }: ExplorePageProps) {
   return (
     <>
-      <div className="page-intro">
-        <p>Busca por palabra, ciudad o categoría.</p>
-        <button className="primary-button" onClick={() => onNavigate('publish')}>
-          Publicar reporte
-        </button>
-      </div>
+      <PageHeading
+        title="Explorar reportes"
+        description="Busca por palabra, ciudad o categoría."
+        action={
+          <button className="primary-button" onClick={() => onNavigate('publish')}>
+            Publicar reporte
+          </button>
+        }
+      />
       <div className="filter-row">
         <ReportFilters
           selection={selection}

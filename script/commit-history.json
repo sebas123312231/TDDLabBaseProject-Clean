@@ -1482,17 +1482,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "3dc2849159ad5512a07d20a0b0d0eb03f1b7a65d",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:52:34.000Z",
       "message": "feat(web): restore accessible report cards",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/3dc2849159ad5512a07d20a0b0d0eb03f1b7a65d"
     },
     "stats": {
       "total": 103,
       "additions": 81,
       "deletions": 22,
+      "date": "2026-10-21"
+    },
+    "coverage": 87.75,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T17:04:54.000Z",
+      "message": "feat(web): align page headings with reference",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 283,
+      "additions": 226,
+      "deletions": 57,
       "date": "2026-10-21"
     },
     "coverage": 87.75,

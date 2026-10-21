@@ -1,3 +1,5 @@
+import { PageHeading } from '../components/PageHeading.js'
+
 const recommendations = [
   {
     title: 'Elige un lugar público',
@@ -20,9 +22,10 @@ const recommendations = [
 export function SafetyPage() {
   return (
     <div className="safety-page">
-      <p className="page-description">
-        Recomendaciones para coordinar una devolución cuidando tus datos.
-      </p>
+      <PageHeading
+        title="Seguridad y privacidad"
+        description="Recomendaciones para coordinar una devolución cuidando tus datos."
+      />
       <section className="safety-panel">
         <h2>Antes de encontrarse</h2>
         <ol className="tip-list">

@@ -1,5 +1,6 @@
 import type { FormEvent } from 'react'
 import { publishOptions, type PublishPresenter, type PublishState } from '../../presenters/reports/publish.presenter.js'
+import { PageHeading } from '../components/PageHeading.js'
 
 type PublishPageProps = {
   form: PublishState
@@ -14,9 +15,10 @@ export function PublishPage({ form, actions }: PublishPageProps) {
 
   return (
     <>
-      <p className="page-description">
-        Comparte lo esencial para que la comunidad pueda reconocerlo.
-      </p>
+      <PageHeading
+        title="Publicar reporte"
+        description="Comparte lo esencial para que la comunidad pueda reconocerlo."
+      />
       <form className="panel publish-form" onSubmit={submit} noValidate>
       <fieldset className="type-choice">
         <legend>¿Qué ocurrió?</legend>
