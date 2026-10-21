@@ -874,17 +874,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ae9fa6837e796cf7a3d3af83d6de60299db51b26",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T05:28:39.000Z",
       "message": "feat(web): bootstrap the MVP application",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/ae9fa6837e796cf7a3d3af83d6de60299db51b26"
     },
     "stats": {
       "total": 1474,
       "additions": 1461,
       "deletions": 13,
+      "date": "2026-10-21"
+    },
+    "coverage": 87.75,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T05:31:10.000Z",
+      "message": "test(web): cover catalog flows in browser",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 50,
+      "additions": 49,
+      "deletions": 1,
       "date": "2026-10-21"
     },
     "coverage": 87.75,
