@@ -142,4 +142,17 @@ describe('PerdiU web', () => {
       .should('contain', 'Se muestran hasta 50 resultados.')
       .and('contain', 'Ajusta los filtros para precisar la búsqueda.')
   })
+
+  it('filters the catalog by report status with accessible tabs', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
+    cy.intercept('GET', /\/api\/reports\?.*type=lost/).as('lostCatalog')
+    cy.get('[role="tablist"][aria-label="Estado del reporte"]')
+      .contains('[role="tab"]', 'Perdidos')
+      .click()
+    cy.get('[role="tablist"][aria-label="Estado del reporte"] [role="tab"][aria-selected="true"]')
+      .should('contain', 'Perdidos')
+    cy.wait('@lostCatalog').then(({ request }) => {
+      expect(request.url).to.contain('type=lost')
+    })
+  })
 })

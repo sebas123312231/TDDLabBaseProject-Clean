@@ -1007,17 +1007,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a1fd12a96ae6f59e01b16ef4dc70f8fba917e0e8",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T15:18:36.000Z",
       "message": "feat(web): guide empty and capped catalog results",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/a1fd12a96ae6f59e01b16ef4dc70f8fba917e0e8"
     },
     "stats": {
       "total": 46,
       "additions": 44,
       "deletions": 2,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T15:21:02.000Z",
+      "message": "feat(web): add accessible catalog status tabs",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 50,
+      "additions": 49,
+      "deletions": 1,
       "date": "2026-10-21"
     },
     "coverage": 91.78,
