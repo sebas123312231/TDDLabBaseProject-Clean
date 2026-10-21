@@ -912,16 +912,35 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "81b6b1327808698b9598a1ca231589f07975f9dd",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T05:32:14.000Z",
       "message": "feat(web): show overview totals by city",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/81b6b1327808698b9598a1ca231589f07975f9dd"
     },
     "stats": {
       "total": 47,
       "additions": 37,
+      "deletions": 10,
+      "date": "2026-10-21"
+    },
+    "coverage": 87.75,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T05:36:40.000Z",
+      "message": "feat(web): restore map and safety views",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 164,
+      "additions": 154,
       "deletions": 10,
       "date": "2026-10-21"
     },

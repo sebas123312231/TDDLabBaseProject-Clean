@@ -50,4 +50,29 @@ describe('PerdiU web', () => {
     cy.contains('.metric-grid', 'Reportes activos').should('contain', '7')
     cy.get('.city-list').should('contain', 'La Paz').and('contain', 'Cochabamba')
   })
+
+  it('labels the map as illustrative and opens a report from a pin', () => {
+    cy.contains('button', 'Mapa').click()
+    cy.get('[role="region"][aria-label="Mapa ilustrativo de reportes"]').within(() => {
+      cy.get('button').first().click()
+    })
+    cy.get('[role="dialog"]').should('be.visible')
+  })
+
+  it('shows the four safety recommendations and privacy explanation', () => {
+    cy.contains('button', 'Seguridad y privacidad').click()
+    cy.contains('h2', 'Antes de encontrarse').should('be.visible')
+    cy.contains('b', 'Elige un lugar público').should('be.visible')
+    cy.contains('b', 'Ve acompañado si puedes').should('be.visible')
+    cy.contains('b', 'Comparte solo lo necesario').should('be.visible')
+    cy.contains('b', 'Confirma los detalles').should('be.visible')
+    cy.contains('h2', 'Tu privacidad en PerdiU').should('be.visible')
+    cy.contains('El correo de tu cuenta nunca se muestra en el catálogo.').should('be.visible')
+  })
+
+  it('explains that account email stays private in the public catalog', () => {
+    cy.contains('button', 'Seguridad y privacidad').click()
+    cy.contains('h2', 'Tu privacidad en PerdiU').should('be.visible')
+    cy.contains('El correo de tu cuenta nunca se muestra en el catálogo.').should('be.visible')
+  })
 })

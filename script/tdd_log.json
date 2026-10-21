@@ -3704,9 +3704,23 @@
     "testId": 48
   },
   {
-    "commitId": "HEAD",
+    "commitId": "81b6b1327808698b9598a1ca231589f07975f9dd",
     "commitName": "feat(web): show overview totals by city",
     "commitTimestamp": 1792560734203,
     "testId": 48
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792560952032,
+    "success": true,
+    "testId": 49
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): restore map and safety views",
+    "commitTimestamp": 1792561000488,
+    "testId": 49
   }
 ]

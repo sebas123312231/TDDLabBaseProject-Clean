@@ -2,7 +2,9 @@ import type { AppView } from '../../presenters/app/useApp.js'
 import { filterOptions } from '../../presenters/catalog/filters.presenter.js'
 import { publishOptions } from '../../presenters/reports/publish.presenter.js'
 import { ReportGrid } from '../components/ReportGrid.js'
+import { MapPage } from './MapPage.js'
 import { OverviewPage } from './OverviewPage.js'
+import { SafetyPage } from './SafetyPage.js'
 
 export function SectionContent({ app }: { app: AppView }) {
   const cards = {
@@ -33,15 +35,7 @@ export function SectionContent({ app }: { app: AppView }) {
     )
 
   if (section === 'map')
-    return (
-      <>
-        <p>Mapa ilustrativo de reportes; las posiciones no representan ubicaciones geográficas.</p>
-        <div className="illustrative-map" role="img" aria-label="Representación ilustrativa de reportes en Bolivia">
-          {app.map.pins.map((pin) => <button key={pin.id} style={{ top: pin.top, left: pin.left }} aria-label={pin.label} onClick={() => app.actions.reports.open(pin.id)}>{pin.number}</button>)}
-        </div>
-        <ReportGrid reports={app.map.list} {...cards} />
-      </>
-    )
+    return <MapPage app={app} />
 
   if (section === 'publish')
     return (
@@ -78,7 +72,7 @@ export function SectionContent({ app }: { app: AppView }) {
     return <section className="profile-card"><h2>{app.shell.account?.name ?? 'Invitado'}</h2><p>{app.shell.account?.email ?? 'Inicia sesión para ver tu perfil.'}</p><button className="secondary-button" onClick={() => void app.actions.signOut()}>Cerrar sesión</button></section>
 
   if (section === 'safety')
-    return <section><h2>Cuida tu información</h2><p>Coordina con cuidado y evita publicar datos personales sensibles en los reportes públicos.</p></section>
+    return <SafetyPage />
 
   return null
 }
