@@ -4094,9 +4094,23 @@
     "testId": 73
   },
   {
-    "commitId": "HEAD",
+    "commitId": "4753cb251f2ea9d303f5c35fc0805214f9d64a90",
     "commitName": "feat(web): add publication action to map header",
     "commitTimestamp": 1792600679208,
     "testId": 73
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792600809863,
+    "success": true,
+    "testId": 74
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): summarize owned reports in page header",
+    "commitTimestamp": 1792600826237,
+    "testId": 74
   }
 ]

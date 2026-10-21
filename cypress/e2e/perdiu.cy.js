@@ -312,6 +312,17 @@ describe('PerdiU web', () => {
     cy.contains('button', 'Marcar resuelto').should('be.enabled')
   })
 
+  it('summarizes owned report counts beside the new report action', () => {
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
+
+    cy.get('.page-intro').within(() => {
+      cy.contains('.page-description', '1 publicados · 1 activos. Solo tú puedes cambiar su estado.')
+        .should('be.visible')
+      cy.contains('button', 'Nuevo reporte').should('be.visible')
+    })
+  })
+
   it('filters own reports with accessible status tabs', () => {
     cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
     restoreTestAccount()

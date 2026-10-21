@@ -29,8 +29,13 @@ export function MyReportsPage({
 }: MyReportsPageProps) {
   return (
     <>
-      <div className="own-reports-heading">
-        <button className="primary-button" onClick={() => onNavigate('publish')}>Nuevo reporte</button>
+      <div className="page-intro">
+        <p className="page-description">
+          {myReports.total} publicados · {myReports.active} activos. Solo tú puedes cambiar su estado.
+        </p>
+        <button className="primary-button" onClick={() => onNavigate('publish')}>
+          Nuevo reporte
+        </button>
       </div>
       <div className="filter-row">
         <StatusTabs label="Estado de mis reportes" options={filters} value={myReports.filter} onChange={onFilter} />
