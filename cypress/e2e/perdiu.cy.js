@@ -178,4 +178,25 @@ describe('PerdiU web', () => {
       expect(request.url).to.contain('category=object')
     })
   })
+
+  it('offers accessible status tabs on the illustrative map', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mapa').click()
+    cy.get('[role="tablist"][aria-label="Estado del reporte"]').within(() => {
+      cy.contains('[role="tab"]', 'Encontrados').click()
+      cy.contains('[role="tab"][aria-selected="true"]', 'Encontrados').should('be.visible')
+    })
+    cy.get('input[aria-label="Buscar reportes"]').should('not.exist')
+  })
+
+  it('offers publication when map filters find no reports', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mapa').click()
+    cy.get('select[aria-label="Ciudad"]').select('Santa Cruz')
+    cy.get('select[aria-label="Categoría"]').select('Documentos')
+    cy.get('.empty-state').within(() => {
+      cy.contains('No hay reportes en esta zona').should('be.visible')
+      cy.contains('Cambia los filtros o crea un reporte nuevo.').should('be.visible')
+      cy.contains('button', 'Publicar reporte').click()
+    })
+    cy.get('input[type="email"]').should('be.visible')
+  })
 })

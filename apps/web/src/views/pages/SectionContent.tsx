@@ -29,7 +29,15 @@ export function SectionContent({ app }: { app: AppView }) {
     )
 
   if (section === 'map')
-    return <MapPage app={app} />
+    return (
+      <MapPage
+        map={app.map}
+        selection={app.selection}
+        filters={app.actions.filters}
+        onOpen={app.actions.reports.open}
+        onNavigate={app.actions.navigate}
+      />
+    )
 
   if (section === 'publish')
     return <PublishPage app={app} />

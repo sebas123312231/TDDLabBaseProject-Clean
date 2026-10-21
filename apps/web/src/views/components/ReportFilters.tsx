@@ -4,19 +4,22 @@ type ReportFiltersProps = {
   selection: FilterSelection
   options: { cities: readonly string[]; categories: readonly string[] }
   actions: Pick<FiltersPresenter, 'setSearch' | 'setCity' | 'setCategory'>
+  withSearch?: boolean
 }
 
-export function ReportFilters({ selection, options, actions }: ReportFiltersProps) {
+export function ReportFilters({ selection, options, actions, withSearch = true }: ReportFiltersProps) {
   return (
     <>
-      <input
-        className="search-field"
-        value={selection.search}
-        onChange={(event) => actions.setSearch(event.target.value)}
-        placeholder="Buscar por nombre o descripción"
-        aria-label="Buscar reportes"
-        maxLength={200}
-      />
+      {withSearch && (
+        <input
+          className="search-field"
+          value={selection.search}
+          onChange={(event) => actions.setSearch(event.target.value)}
+          placeholder="Buscar por nombre o descripción"
+          aria-label="Buscar reportes"
+          maxLength={200}
+        />
+      )}
       <select
         className="select-field"
         value={selection.city}
