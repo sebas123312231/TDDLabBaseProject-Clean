@@ -4024,9 +4024,23 @@
     "testId": 68
   },
   {
-    "commitId": "HEAD",
+    "commitId": "8aa374e10ceb4ff3d0118033dfe16ab6df3c7d12",
     "commitName": "refactor(web): narrow filter actions for catalog views",
     "commitTimestamp": 1792600064167,
     "testId": 68
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792600179246,
+    "success": true,
+    "testId": 69
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): offer report publication from exploration",
+    "commitTimestamp": 1792600189072,
+    "testId": 69
   }
 ]

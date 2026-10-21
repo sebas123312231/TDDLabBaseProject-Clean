@@ -24,7 +24,12 @@ type ExplorePageProps = {
 export function ExplorePage({ catalog, selection, filters, onRetry, isSaved, onSave, onOpen, onNavigate }: ExplorePageProps) {
   return (
     <>
-      <p>Busca por palabra, ciudad o categoría.</p>
+      <div className="page-intro">
+        <p>Busca por palabra, ciudad o categoría.</p>
+        <button className="primary-button" onClick={() => onNavigate('publish')}>
+          Publicar reporte
+        </button>
+      </div>
       <div className="filter-row">
         <ReportFilters
           selection={selection}

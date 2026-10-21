@@ -511,4 +511,14 @@ describe('PerdiU web', () => {
     cy.get('.app-header').should('contain', 'Publicar reporte')
     cy.get('.publish-form').should('be.visible')
   })
+
+  it('offers publication from exploration even when reports are listed', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
+    cy.get('.page-intro').should('have.css', 'display', 'flex').within(() => {
+      cy.contains('button', 'Publicar reporte').click()
+    })
+
+    cy.get('.auth-card').should('be.visible')
+    cy.get('.auth-card').should('contain', 'Inicia sesión')
+  })
 })

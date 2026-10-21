@@ -1292,17 +1292,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "8aa374e10ceb4ff3d0118033dfe16ab6df3c7d12",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:27:44.000Z",
       "message": "refactor(web): narrow filter actions for catalog views",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/8aa374e10ceb4ff3d0118033dfe16ab6df3c7d12"
     },
     "stats": {
       "total": 34,
       "additions": 22,
       "deletions": 12,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:29:49.000Z",
+      "message": "feat(web): offer report publication from exploration",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 20,
+      "additions": 19,
+      "deletions": 1,
       "date": "2026-10-21"
     },
     "coverage": 91.78,
