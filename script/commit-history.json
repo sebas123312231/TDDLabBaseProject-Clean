@@ -1349,17 +1349,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a64d50efe882ac542c4aff7e1bcf38ca80fa9d16",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:34:06.000Z",
       "message": "feat(web): explain saved report storage",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/a64d50efe882ac542c4aff7e1bcf38ca80fa9d16"
     },
     "stats": {
       "total": 41,
       "additions": 32,
       "deletions": 9,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:36:13.000Z",
+      "message": "feat(web): group overview metrics in a summary panel",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 52,
+      "additions": 34,
+      "deletions": 18,
       "date": "2026-10-21"
     },
     "coverage": 91.78,

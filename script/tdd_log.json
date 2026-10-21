@@ -4066,9 +4066,23 @@
     "testId": 71
   },
   {
-    "commitId": "HEAD",
+    "commitId": "a64d50efe882ac542c4aff7e1bcf38ca80fa9d16",
     "commitName": "feat(web): explain saved report storage",
     "commitTimestamp": 1792600446060,
     "testId": 71
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792600559590,
+    "success": true,
+    "testId": 72
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): group overview metrics in a summary panel",
+    "commitTimestamp": 1792600573148,
+    "testId": 72
   }
 ]

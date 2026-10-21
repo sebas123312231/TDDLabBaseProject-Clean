@@ -94,8 +94,10 @@ describe('PerdiU web', () => {
   })
 
   it('shows report totals and the city breakdown on the overview', () => {
-    cy.contains('.metric-grid', 'Reportes activos').should('contain', '7')
-    cy.get('.city-list').should('contain', 'La Paz').and('contain', 'Cochabamba')
+    cy.get('.summary').within(() => {
+      cy.get('.metrics').should('contain', 'Reportes activos').and('contain', '7')
+      cy.get('.city-list').should('contain', 'La Paz').and('contain', 'Cochabamba')
+    })
   })
 
   it('labels the map as illustrative and opens a report from a pin', () => {
