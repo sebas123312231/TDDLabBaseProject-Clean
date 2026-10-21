@@ -836,17 +836,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "2ca54b17fa46a95d55402507e0e71a3b72a76917",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T05:21:15.000Z",
       "message": "feat(web): coordinate session and shell state",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/2ca54b17fa46a95d55402507e0e71a3b72a76917"
     },
     "stats": {
       "total": 342,
       "additions": 334,
       "deletions": 8,
+      "date": "2026-10-21"
+    },
+    "coverage": 89.7,
+    "test_count": 216,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T05:21:38.000Z",
+      "message": "test(web): fix auth test callback types",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 14,
+      "additions": 11,
+      "deletions": 3,
       "date": "2026-10-21"
     },
     "coverage": 89.7,

@@ -26,15 +26,23 @@ function setup(
         expired = undefined
       }
     },
-    signIn: async (email) => calls.push(`signIn:${email}`),
+    signIn: async (email) => {
+      calls.push(`signIn:${email}`)
+    },
     signUp: async () => 'confirmation_sent',
     resendConfirmation: async () => {},
-    signOut: async () => calls.push('signOut'),
+    signOut: async () => {
+      calls.push('signOut')
+    },
     ...overrides,
   }
   const presenter = new AuthPresenter(gateway, {
     me: account ?? (async () => identity),
-    revokeSession: revoke ?? (async () => calls.push('revoke')),
+    revokeSession:
+      revoke ??
+      (async () => {
+        calls.push('revoke')
+      }),
   })
   return { presenter, calls, expire: () => expired?.() }
 }

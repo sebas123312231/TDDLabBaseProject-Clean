@@ -3600,9 +3600,23 @@
     "testId": 44
   },
   {
-    "commitId": "HEAD",
+    "commitId": "2ca54b17fa46a95d55402507e0e71a3b72a76917",
     "commitName": "feat(web): coordinate session and shell state",
     "commitTimestamp": 1792560075319,
     "testId": 44
+  },
+  {
+    "numPassedTests": 216,
+    "failedTests": 0,
+    "numTotalTests": 216,
+    "timestamp": 1792560091056,
+    "success": true,
+    "testId": 45
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "test(web): fix auth test callback types",
+    "commitTimestamp": 1792560098104,
+    "testId": 45
   }
 ]
