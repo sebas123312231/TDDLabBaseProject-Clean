@@ -4,6 +4,7 @@ import { test } from '@jest/globals'
 import { hasActiveFilters, matchesFilters, toReportQuery } from '../../src/models/reports/filters.js'
 import type { DemoReport } from '../../src/models/reports/report.js'
 import { isOwnedBy } from '../../src/models/reports/report.js'
+import { validateDraft } from '../../src/models/reports/publication.js'
 import { summarizeReports } from '../../src/models/reports/stats.js'
 
 const searchableReport: DemoReport = {
@@ -22,6 +23,15 @@ const searchableReport: DemoReport = {
   author: { id: 'demo-owner', displayName: 'Demo' },
   phone: '59170000001',
   position: { top: '30%', left: '28%' },
+}
+const validDraft = {
+  type: 'found' as const,
+  category: 'object' as const,
+  title: 'Mochila azul',
+  description: 'La encontré cerca de la plaza principal.',
+  city: 'La Paz',
+  zone: 'Miraflores',
+  incidentDate: '2026-10-06',
 }
 
 test('web declara un workspace TypeScript estricto y sus contratos compartidos', () => {
@@ -132,4 +142,38 @@ test('el resumen cuenta activos, tipos y ciudades conocidas o restantes', () => 
     ],
     other: 1,
   })
+})
+
+test('la validación exige un título no vacío', () => {
+  assert.deepEqual(validateDraft({ ...validDraft, title: '   ' }), { title: 'required' })
+})
+
+test('la validación exige al menos tres caracteres en el título', () => {
+  assert.deepEqual(validateDraft({ ...validDraft, title: 'ab' }), { title: 'too_short' })
+})
+
+test('la validación exige una descripción no vacía', () => {
+  assert.deepEqual(validateDraft({ ...validDraft, description: '   ' }), { description: 'required' })
+})
+
+test('la validación exige al menos veinte caracteres en la descripción', () => {
+  assert.deepEqual(validateDraft({ ...validDraft, description: 'muy corta' }), { description: 'too_short' })
+})
+
+test('la validación exige una zona no vacía', () => {
+  assert.deepEqual(validateDraft({ ...validDraft, zone: '   ' }), { zone: 'required' })
+})
+
+test('acepta título y descripción justo en sus longitudes mínimas', () => {
+  assert.deepEqual(
+    validateDraft({ ...validDraft, title: 'Sol', description: '12345678901234567890' }),
+    {},
+  )
+})
+
+test('informa todos los campos inválidos en una sola validación', () => {
+  assert.deepEqual(
+    validateDraft({ ...validDraft, title: ' ', description: ' ', zone: ' ' }),
+    { title: 'required', description: 'required', zone: 'required' },
+  )
 })

@@ -570,12 +570,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "936cb4454a0774b0736283cb50338b3f79010cac",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:40:03.000Z",
       "message": "feat(web): summarize demo report ownership and totals",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/936cb4454a0774b0736283cb50338b3f79010cac"
     },
     "stats": {
       "total": 70,
@@ -585,6 +585,25 @@
     },
     "coverage": 63.43,
     "test_count": 105,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:43:14.000Z",
+      "message": "feat(web): validate report drafts",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 72,
+      "additions": 72,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 67.11,
+    "test_count": 112,
     "failed_tests": 0,
     "conclusion": "success"
   }

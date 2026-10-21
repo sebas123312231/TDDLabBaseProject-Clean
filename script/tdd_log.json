@@ -2036,9 +2036,111 @@
     "testId": 30
   },
   {
-    "commitId": "HEAD",
+    "commitId": "936cb4454a0774b0736283cb50338b3f79010cac",
     "commitName": "feat(web): summarize demo report ownership and totals",
     "commitTimestamp": 1792546803949,
     "testId": 30
+  },
+  {
+    "numPassedTests": 105,
+    "failedTests": 1,
+    "numTotalTests": 106,
+    "timestamp": 1792546838114,
+    "success": false,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 106,
+    "failedTests": 0,
+    "numTotalTests": 106,
+    "timestamp": 1792546890608,
+    "success": true,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 106,
+    "failedTests": 0,
+    "numTotalTests": 106,
+    "timestamp": 1792546902011,
+    "success": true,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 106,
+    "failedTests": 1,
+    "numTotalTests": 107,
+    "timestamp": 1792546910598,
+    "success": false,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 107,
+    "failedTests": 0,
+    "numTotalTests": 107,
+    "timestamp": 1792546918308,
+    "success": true,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 107,
+    "failedTests": 1,
+    "numTotalTests": 108,
+    "timestamp": 1792546926044,
+    "success": false,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 108,
+    "failedTests": 0,
+    "numTotalTests": 108,
+    "timestamp": 1792546934339,
+    "success": true,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 108,
+    "failedTests": 1,
+    "numTotalTests": 109,
+    "timestamp": 1792546942963,
+    "success": false,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 109,
+    "failedTests": 0,
+    "numTotalTests": 109,
+    "timestamp": 1792546950564,
+    "success": true,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 109,
+    "failedTests": 1,
+    "numTotalTests": 110,
+    "timestamp": 1792546957849,
+    "success": false,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 110,
+    "failedTests": 0,
+    "numTotalTests": 110,
+    "timestamp": 1792546965323,
+    "success": true,
+    "testId": 31
+  },
+  {
+    "numPassedTests": 112,
+    "failedTests": 0,
+    "numTotalTests": 112,
+    "timestamp": 1792546982573,
+    "success": true,
+    "testId": 31
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): validate report drafts",
+    "commitTimestamp": 1792546994594,
+    "testId": 31
   }
 ]
