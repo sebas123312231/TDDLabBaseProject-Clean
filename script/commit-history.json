@@ -1615,17 +1615,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "1ae1b892f7ecd04a39c701c50a001bfe1ad9767a",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T17:34:50.000Z",
       "message": "fix(workspace): expose Vite preview command",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/1ae1b892f7ecd04a39c701c50a001bfe1ad9767a"
     },
     "stats": {
       "total": 4,
       "additions": 2,
       "deletions": 2,
+      "date": "2026-10-21"
+    },
+    "coverage": 88.66,
+    "test_count": 251,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T17:38:23.000Z",
+      "message": "fix(auth): keep signup confirmation private",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 34,
+      "additions": 33,
+      "deletions": 1,
       "date": "2026-10-21"
     },
     "coverage": 88.66,

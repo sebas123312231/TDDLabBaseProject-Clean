@@ -32,7 +32,10 @@ export function AuthPage({
         {notice && <p role="status">{notice}</p>}
         {state.sentTo ? (
           <div role="status">
-            <p>Enviamos un enlace de confirmación a {state.sentTo}.</p>
+            <p>
+              Si <b>{state.sentTo}</b> puede registrarse, te enviamos un enlace para confirmar la
+              cuenta. Ábrelo en este navegador para ingresar directamente.
+            </p>
             <button className="secondary-button" onClick={() => void form.resend()} disabled={state.resendStatus === 'Enviando…'}>
               Reenviar enlace
             </button>

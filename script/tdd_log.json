@@ -4462,9 +4462,23 @@
     "testId": 85
   },
   {
-    "commitId": "HEAD",
+    "commitId": "1ae1b892f7ecd04a39c701c50a001bfe1ad9767a",
     "commitName": "fix(workspace): expose Vite preview command",
     "commitTimestamp": 1792604090973,
     "testId": 85
+  },
+  {
+    "numPassedTests": 251,
+    "failedTests": 0,
+    "numTotalTests": 251,
+    "timestamp": 1792604288742,
+    "success": true,
+    "testId": 86
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix(auth): keep signup confirmation private",
+    "commitTimestamp": 1792604303350,
+    "testId": 86
   }
 ]
