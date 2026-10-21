@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs'
 import { readDatabaseUrl } from '@perdiu/database/config'
 
 export interface AuthConfig {
@@ -14,6 +15,11 @@ export interface ApiConfig {
 }
 
 export class ConfigurationError extends Error {}
+
+export function loadEnvironment() {
+  const envFile = new URL('../../../.env', import.meta.url)
+  if (existsSync(envFile)) process.loadEnvFile(envFile)
+}
 
 function publicUrl(value: string | undefined): boolean {
   try {

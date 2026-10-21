@@ -456,12 +456,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "68616b79fcdfdd77de4cf2dcb69da4577f3dd233",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:27:35.000Z",
       "message": "feat(database): add local migration and seed commands",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/68616b79fcdfdd77de4cf2dcb69da4577f3dd233"
     },
     "stats": {
       "total": 155,
@@ -471,6 +471,25 @@
     },
     "coverage": 59.29,
     "test_count": 85,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:30:30.000Z",
+      "message": "feat(api): add local server entrypoint",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 402,
+      "additions": 402,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 57.76,
+    "test_count": 87,
     "failed_tests": 0,
     "conclusion": "success"
   }

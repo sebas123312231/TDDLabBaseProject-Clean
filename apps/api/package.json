@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch --include '../../packages/catalog/dist/**/*.js' --include '../../packages/database/dist/**/*.js' --include '../../packages/contracts/dist/**/*.js' src/main.ts",
+    "start": "node dist/main.js",
     "typecheck": "tsc -p tsconfig.check.json",
     "test": "pnpm --workspace-root exec jest --testPathPattern=apps/api/test/",
     "test:integration": "pnpm --workspace-root run test:build && pnpm --workspace-root exec jest --config jest.integration.config.cjs --runInBand --runTestsByPath apps/api/test/catalog.integration.ts apps/api/test/auth.integration.ts"
@@ -23,6 +25,7 @@
   "devDependencies": {
     "@jest/globals": "29.7.0",
     "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
     "typescript": "7.0.2"
   }
 }

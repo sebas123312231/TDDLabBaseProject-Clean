@@ -1640,9 +1640,55 @@
     "testId": 24
   },
   {
-    "commitId": "HEAD",
+    "commitId": "68616b79fcdfdd77de4cf2dcb69da4577f3dd233",
     "commitName": "feat(database): add local migration and seed commands",
     "commitTimestamp": 1792546055123,
     "testId": 24
+  },
+  {
+    "numPassedTests": 85,
+    "failedTests": 1,
+    "numTotalTests": 86,
+    "timestamp": 1792546098535,
+    "success": false,
+    "testId": 25
+  },
+  {
+    "numPassedTests": 86,
+    "failedTests": 0,
+    "numTotalTests": 86,
+    "timestamp": 1792546119784,
+    "success": true,
+    "testId": 25
+  },
+  {
+    "numPassedTests": 86,
+    "failedTests": 1,
+    "numTotalTests": 87,
+    "timestamp": 1792546146054,
+    "success": false,
+    "testId": 25
+  },
+  {
+    "numPassedTests": 86,
+    "failedTests": 1,
+    "numTotalTests": 87,
+    "timestamp": 1792546158412,
+    "success": false,
+    "testId": 25
+  },
+  {
+    "numPassedTests": 87,
+    "failedTests": 0,
+    "numTotalTests": 87,
+    "timestamp": 1792546188441,
+    "success": true,
+    "testId": 25
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(api): add local server entrypoint",
+    "commitTimestamp": 1792546230285,
+    "testId": 25
   }
 ]
