@@ -114,12 +114,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "09987d523d8e332e7f59c4d64f20e3c60538aaff",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T00:43:20.000Z",
       "message": "feat(database): validate local database targets",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/09987d523d8e332e7f59c4d64f20e3c60538aaff"
     },
     "stats": {
       "total": 156,
@@ -129,6 +129,25 @@
     },
     "coverage": 100,
     "test_count": 18,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T00:47:20.000Z",
+      "message": "feat(database): add transactional migration runner",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 296,
+      "additions": 294,
+      "deletions": 2,
+      "date": "2026-10-21"
+    },
+    "coverage": 96.23,
+    "test_count": 23,
     "failed_tests": 0,
     "conclusion": "success"
   }
