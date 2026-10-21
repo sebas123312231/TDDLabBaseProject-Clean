@@ -1672,12 +1672,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "4aacffde9f3716d697da7b23099b294adb65f8d0",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T17:43:53.000Z",
       "message": "fix(auth): expose credential form semantics",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/4aacffde9f3716d697da7b23099b294adb65f8d0"
     },
     "stats": {
       "total": 33,
@@ -1687,6 +1687,25 @@
     },
     "coverage": 88.66,
     "test_count": 251,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T17:50:16.000Z",
+      "message": "test(integration): verify live catalog workflow",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 235,
+      "additions": 235,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 88.66,
+    "test_count": 252,
     "failed_tests": 0,
     "conclusion": "success"
   }

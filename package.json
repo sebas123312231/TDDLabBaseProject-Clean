@@ -24,6 +24,8 @@
     "lint": "eslint .",
     "auth:keys": "node scripts/auth-keys.mjs",
     "test:auth": "pnpm test:build && node scripts/verify-auth.mjs",
+    "test:integration": "node scripts/verify-catalog.mjs",
+    "test:e2e": "node scripts/verify-catalog.mjs --with-browser",
     "db:up": "docker compose up -d --wait",
     "db:down": "docker compose down",
     "db:migrate": "pnpm --filter @perdiu/database... build && pnpm --filter @perdiu/database db:migrate",

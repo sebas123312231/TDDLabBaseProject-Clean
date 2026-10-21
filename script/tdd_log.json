@@ -4504,9 +4504,23 @@
     "testId": 88
   },
   {
-    "commitId": "HEAD",
+    "commitId": "4aacffde9f3716d697da7b23099b294adb65f8d0",
     "commitName": "fix(auth): expose credential form semantics",
     "commitTimestamp": 1792604633221,
     "testId": 88
+  },
+  {
+    "numPassedTests": 252,
+    "failedTests": 0,
+    "numTotalTests": 252,
+    "timestamp": 1792604993215,
+    "success": true,
+    "testId": 89
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "test(integration): verify live catalog workflow",
+    "commitTimestamp": 1792605016200,
+    "testId": 89
   }
 ]
