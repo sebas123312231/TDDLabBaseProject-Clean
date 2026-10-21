@@ -71,6 +71,7 @@ textarea { min-height: 110px; resize: vertical; }
 .filter-row label { flex: 1 1 170px; }
 .page-intro { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
 .page-intro p { margin: 0; }
+.more-link { display: inline-block; margin-top: 16px; }
 .search-field { min-width: 220px; flex: 1; }
 .select-field { min-width: 170px; }
 .status-tabs { display: inline-flex; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }

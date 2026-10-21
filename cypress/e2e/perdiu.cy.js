@@ -521,4 +521,12 @@ describe('PerdiU web', () => {
     cy.get('.auth-card').should('be.visible')
     cy.get('.auth-card').should('contain', 'Inicia sesión')
   })
+
+  it('offers another publication path after the catalog results', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
+    cy.get('.report-grid').should('be.visible')
+    cy.contains('button.more-link', '¿No ves lo que buscas? Publica un reporte').click()
+
+    cy.get('.auth-card').should('be.visible')
+  })
 })

@@ -4038,9 +4038,23 @@
     "testId": 69
   },
   {
-    "commitId": "HEAD",
+    "commitId": "3b160711648d5b62291b5302040ab288cc970c2c",
     "commitName": "feat(web): offer report publication from exploration",
     "commitTimestamp": 1792600189072,
     "testId": 69
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792600280869,
+    "success": true,
+    "testId": 70
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): add publication link after catalog results",
+    "commitTimestamp": 1792600292055,
+    "testId": 70
   }
 ]

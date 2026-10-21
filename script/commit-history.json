@@ -1311,16 +1311,35 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "3b160711648d5b62291b5302040ab288cc970c2c",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:29:49.000Z",
       "message": "feat(web): offer report publication from exploration",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/3b160711648d5b62291b5302040ab288cc970c2c"
     },
     "stats": {
       "total": 20,
       "additions": 19,
+      "deletions": 1,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:31:31.000Z",
+      "message": "feat(web): add publication link after catalog results",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 16,
+      "additions": 15,
       "deletions": 1,
       "date": "2026-10-21"
     },

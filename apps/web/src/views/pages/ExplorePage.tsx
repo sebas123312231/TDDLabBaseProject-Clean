@@ -54,7 +54,12 @@ export function ExplorePage({ catalog, selection, filters, onRetry, isSaved, onS
       {catalog.status === 'ready' && <>
         <p>{catalog.count} resultados</p>
         {catalog.count ? (
-          <ReportGrid reports={catalog.reports} isSaved={isSaved} onSave={onSave} onOpen={onOpen} />
+          <>
+            <ReportGrid reports={catalog.reports} isSaved={isSaved} onSave={onSave} onOpen={onOpen} />
+            <button className="text-button more-link" onClick={() => onNavigate('publish')}>
+              ¿No ves lo que buscas? Publica un reporte
+            </button>
+          </>
         ) : (
           <EmptyState
             title={catalog.empty.title}
