@@ -64,6 +64,8 @@ label { display: flex; flex-direction: column; gap: 5px; font-weight: 600; }
 input, select, textarea { min-height: 38px; padding: 7px 9px; border: 1px solid #aeb8ae; border-radius: var(--radius); background: var(--surface); }
 textarea { min-height: 110px; resize: vertical; }
 .filter-row label { flex: 1 1 170px; }
+.search-field { min-width: 220px; flex: 1; }
+.select-field { min-width: 170px; }
 .status-tabs { display: inline-flex; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .status-tabs button { min-height: 34px; padding: 0 12px; color: var(--muted); }
 .status-tabs button + button { border-left: 1px solid var(--line); }

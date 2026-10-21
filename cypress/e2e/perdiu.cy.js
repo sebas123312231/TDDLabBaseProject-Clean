@@ -30,7 +30,7 @@ describe('PerdiU web', () => {
     cy.contains('button', 'Explorar reportes').click()
     cy.contains('Mochila azul encontrada').should('be.visible')
     cy.intercept('GET', /\/api\/reports\?q=/).as('filteredCatalog')
-    cy.contains('label', 'Buscar').find('input').type('mochila')
+    cy.get('input[aria-label="Buscar reportes"]').type('mochila')
     cy.get('@filteredCatalog.all').should('have.length', 7).then((requests) => {
       expect(requests.at(-1).request.url).to.contain('q=mochila')
     })
@@ -103,10 +103,10 @@ describe('PerdiU web', () => {
   it('clears the catalog search filter', () => {
     cy.contains('button', 'Explorar reportes').click()
     cy.intercept('GET', /\/api\/reports\?q=/).as('filteredCatalog')
-    cy.contains('label', 'Buscar').find('input').type('mochila')
+    cy.get('input[aria-label="Buscar reportes"]').type('mochila')
     cy.wait('@filteredCatalog')
     cy.contains('button', 'Limpiar').click()
-    cy.contains('label', 'Buscar').find('input').should('have.value', '')
+    cy.get('input[aria-label="Buscar reportes"]').should('have.value', '')
   })
 
   it('guides someone from an empty saved list back to the catalog', () => {
@@ -123,7 +123,7 @@ describe('PerdiU web', () => {
   it('offers publication when catalog filters find no reports', () => {
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
     cy.intercept('GET', /\/api\/reports\?q=/, { body: [] }).as('emptyCatalog')
-    cy.contains('label', 'Buscar').find('input').type('sin-coincidencias')
+    cy.get('input[aria-label="Buscar reportes"]').type('sin-coincidencias')
     cy.wait('@emptyCatalog')
     cy.get('.empty-state').within(() => {
       cy.contains('No se encontraron coincidencias').should('be.visible')
@@ -136,7 +136,7 @@ describe('PerdiU web', () => {
   it('explains when the catalog has reached its result limit', () => {
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
     cy.intercept('GET', /\/api\/reports\?q=/, { body: limitedReports }).as('limitedCatalog')
-    cy.contains('label', 'Buscar').find('input').type('limite')
+    cy.get('input[aria-label="Buscar reportes"]').type('limite')
     cy.get('@limitedCatalog.all').should('have.length', 6)
     cy.get('.hint[role="status"]')
       .should('contain', 'Se muestran hasta 50 resultados.')
@@ -153,6 +153,29 @@ describe('PerdiU web', () => {
       .should('contain', 'Perdidos')
     cy.wait('@lostCatalog').then(({ request }) => {
       expect(request.url).to.contain('type=lost')
+    })
+  })
+
+  it('gives catalog search and selectors accessible names', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
+    cy.get('input[aria-label="Buscar reportes"]')
+      .should('have.attr', 'placeholder', 'Buscar por nombre o descripción')
+      .and('have.attr', 'maxlength', '200')
+    cy.get('select[aria-label="Ciudad"]').should('be.visible')
+    cy.get('select[aria-label="Categoría"]').should('be.visible')
+  })
+
+  it('filters catalog results by city and category', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
+    cy.intercept('GET', /\/api\/reports\?.*city=Cochabamba/).as('cityFilter')
+    cy.get('select[aria-label="Ciudad"]').select('Cochabamba')
+    cy.wait('@cityFilter').then(({ request }) => {
+      expect(request.url).to.contain('city=Cochabamba')
+    })
+    cy.intercept('GET', /\/api\/reports\?.*category=object/).as('categoryFilter')
+    cy.get('select[aria-label="Categoría"]').select('Objeto')
+    cy.wait('@categoryFilter').then(({ request }) => {
+      expect(request.url).to.contain('category=object')
     })
   })
 })

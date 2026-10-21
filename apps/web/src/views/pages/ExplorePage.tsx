@@ -1,6 +1,7 @@
 import type { AppView } from '../../presenters/app/useApp.js'
 import { filterOptions } from '../../presenters/catalog/filters.presenter.js'
 import { EmptyState } from '../components/EmptyState.js'
+import { ReportFilters } from '../components/ReportFilters.js'
 import { ReportGrid } from '../components/ReportGrid.js'
 import { StatusTabs } from '../components/StatusTabs.js'
 
@@ -20,16 +21,18 @@ export function ExplorePage({ catalog, selection, filters, onRetry, isSaved, onS
     <>
       <p>Busca por palabra, ciudad o categoría.</p>
       <div className="filter-row">
-        <label>Buscar<input value={selection.search} onChange={(event) => filters.setSearch(event.target.value)} /></label>
-        <label>Ciudad<select value={selection.city} onChange={(event) => filters.setCity(event.target.value)}>{filterOptions.cities.map((city) => <option key={city}>{city}</option>)}</select></label>
-        <label>Categoría<select value={selection.category} onChange={(event) => filters.setCategory(event.target.value)}>{filterOptions.categories.map((category) => <option key={category}>{category}</option>)}</select></label>
+        <ReportFilters
+          selection={selection}
+          options={filterOptions}
+          actions={filters}
+        />
         <StatusTabs
           label="Estado del reporte"
           options={filterOptions.statuses}
           value={selection.status}
           onChange={filters.setStatus}
         />
-        <button className="secondary-button" onClick={filters.reset}>Limpiar</button>
+        <button className="secondary-button" onClick={filters.reset}>Limpiar filtros</button>
       </div>
       {catalog.status === 'loading' && <p role="status">Cargando reportes…</p>}
       {catalog.status === 'error' && <div role="alert"><p>{catalog.message}</p><button className="secondary-button" onClick={onRetry}>Reintentar</button></div>}
