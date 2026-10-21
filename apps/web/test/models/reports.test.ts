@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
 import { test } from '@jest/globals'
-import { toReportQuery } from '../../src/models/reports/filters.js'
+import { hasActiveFilters, toReportQuery } from '../../src/models/reports/filters.js'
 
 test('web declara un workspace TypeScript estricto y sus contratos compartidos', () => {
   const manifestPath = new URL('../../package.json', import.meta.url)
@@ -36,4 +36,24 @@ test('la categoría seleccionada se incluye en la consulta', () => {
 test('el tipo seleccionado se incluye en la consulta', () => {
   const filters = { text: '', type: 'lost' as const }
   assert.deepEqual(toReportQuery(filters), { type: 'lost' })
+})
+
+test('una búsqueda con texto cuenta como filtro activo', () => {
+  assert.equal(hasActiveFilters({ text: 'cámara' }), true)
+})
+
+test('los espacios no cuentan como búsqueda activa', () => {
+  assert.equal(hasActiveFilters({ text: '   ' }), false)
+})
+
+test('una ciudad seleccionada cuenta como filtro activo', () => {
+  assert.equal(hasActiveFilters({ text: '', city: 'La Paz' }), true)
+})
+
+test('una categoría seleccionada cuenta como filtro activo', () => {
+  assert.equal(hasActiveFilters({ text: '', category: 'object' }), true)
+})
+
+test('un tipo seleccionado cuenta como filtro activo', () => {
+  assert.equal(hasActiveFilters({ text: '', type: 'found' }), true)
 })

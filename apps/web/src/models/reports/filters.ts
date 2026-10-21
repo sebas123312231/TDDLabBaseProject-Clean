@@ -7,6 +7,10 @@ export interface ReportFilters {
   type?: ReportType
 }
 
+export function hasActiveFilters(filters: ReportFilters): boolean {
+  return Boolean(filters.text.trim() || filters.city || filters.category || filters.type)
+}
+
 export function toReportQuery(filters: ReportFilters): ReportQuery {
   const text = filters.text.trim()
   return {

@@ -1794,9 +1794,95 @@
     "testId": 27
   },
   {
-    "commitId": "HEAD",
+    "commitId": "0218d9ebe66455d4d6f57b8a0f04d3aeb60fda59",
     "commitName": "feat(web): map report selections to queries",
     "commitTimestamp": 1792546489455,
     "testId": 27
+  },
+  {
+    "numPassedTests": 93,
+    "failedTests": 1,
+    "numTotalTests": 94,
+    "timestamp": 1792546515889,
+    "success": false,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 94,
+    "failedTests": 0,
+    "numTotalTests": 94,
+    "timestamp": 1792546522424,
+    "success": true,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 94,
+    "failedTests": 0,
+    "numTotalTests": 94,
+    "timestamp": 1792546534073,
+    "success": true,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 94,
+    "failedTests": 1,
+    "numTotalTests": 95,
+    "timestamp": 1792546540718,
+    "success": false,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 95,
+    "failedTests": 0,
+    "numTotalTests": 95,
+    "timestamp": 1792546546922,
+    "success": true,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 95,
+    "failedTests": 1,
+    "numTotalTests": 96,
+    "timestamp": 1792546553516,
+    "success": false,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 96,
+    "failedTests": 0,
+    "numTotalTests": 96,
+    "timestamp": 1792546559466,
+    "success": true,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 96,
+    "failedTests": 1,
+    "numTotalTests": 97,
+    "timestamp": 1792546565969,
+    "success": false,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 97,
+    "failedTests": 0,
+    "numTotalTests": 97,
+    "timestamp": 1792546572219,
+    "success": true,
+    "testId": 28
+  },
+  {
+    "numPassedTests": 98,
+    "failedTests": 0,
+    "numTotalTests": 98,
+    "timestamp": 1792546578440,
+    "success": true,
+    "testId": 28
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): detect active report filters",
+    "commitTimestamp": 1792546586164,
+    "testId": 28
   }
 ]

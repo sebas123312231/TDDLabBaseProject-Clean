@@ -513,12 +513,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0218d9ebe66455d4d6f57b8a0f04d3aeb60fda59",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:34:49.000Z",
       "message": "feat(web): map report selections to queries",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/0218d9ebe66455d4d6f57b8a0f04d3aeb60fda59"
     },
     "stats": {
       "total": 27,
@@ -528,6 +528,25 @@
     },
     "coverage": 58.47,
     "test_count": 93,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:36:26.000Z",
+      "message": "feat(web): detect active report filters",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 26,
+      "additions": 25,
+      "deletions": 1,
+      "date": "2026-10-21"
+    },
+    "coverage": 58.82,
+    "test_count": 98,
     "failed_tests": 0,
     "conclusion": "success"
   }
