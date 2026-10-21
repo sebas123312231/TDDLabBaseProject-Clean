@@ -13,7 +13,11 @@ export function PublishPage({ form, actions }: PublishPageProps) {
   }
 
   return (
-    <form className="panel publish-form" onSubmit={submit} noValidate>
+    <>
+      <p className="page-description">
+        Comparte lo esencial para que la comunidad pueda reconocerlo.
+      </p>
+      <form className="panel publish-form" onSubmit={submit} noValidate>
       <fieldset className="type-choice">
         <legend>¿Qué ocurrió?</legend>
         <button
@@ -128,6 +132,7 @@ export function PublishPage({ form, actions }: PublishPageProps) {
         <small className="hint">Tu correo y tu número no aparecen públicamente.</small>
         <button className="primary-button" type="submit">Publicar reporte</button>
       </div>
-    </form>
+      </form>
+    </>
   )
 }

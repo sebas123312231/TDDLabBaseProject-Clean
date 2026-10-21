@@ -4136,9 +4136,23 @@
     "testId": 76
   },
   {
-    "commitId": "HEAD",
+    "commitId": "09c461cb814668fccf1463c3fcf5a842df267d87",
     "commitName": "feat(web): describe account details on profile page",
     "commitTimestamp": 1792601073782,
     "testId": 76
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792601318964,
+    "success": true,
+    "testId": 77
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): restore guidance on publish and safety pages",
+    "commitTimestamp": 1792601328674,
+    "testId": 77
   }
 ]

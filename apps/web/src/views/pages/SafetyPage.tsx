@@ -20,6 +20,9 @@ const recommendations = [
 export function SafetyPage() {
   return (
     <div className="safety-page">
+      <p className="page-description">
+        Recomendaciones para coordinar una devolución cuidando tus datos.
+      </p>
       <section className="safety-panel">
         <h2>Antes de encontrarse</h2>
         <ol className="tip-list">

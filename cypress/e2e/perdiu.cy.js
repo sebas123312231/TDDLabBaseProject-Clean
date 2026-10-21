@@ -131,6 +131,12 @@ describe('PerdiU web', () => {
     cy.contains('El correo de tu cuenta nunca se muestra en el catálogo.').should('be.visible')
   })
 
+  it('introduces the safety recommendations with their privacy purpose', () => {
+    cy.contains('button', 'Seguridad y privacidad').click()
+    cy.contains('.page-description', 'Recomendaciones para coordinar una devolución cuidando tus datos.')
+      .should('be.visible')
+  })
+
   it('explains that account email stays private in the public catalog', () => {
     cy.contains('button', 'Seguridad y privacidad').click()
     cy.contains('h2', 'Tu privacidad en PerdiU').should('be.visible')
@@ -439,6 +445,13 @@ describe('PerdiU web', () => {
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
 
     cy.contains('Tu correo y tu número no aparecen públicamente.').should('be.visible')
+  })
+
+  it('introduces the publication form with its recognition guidance', () => {
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+    cy.contains('.page-description', 'Comparte lo esencial para que la comunidad pueda reconocerlo.')
+      .should('be.visible')
   })
 
   it('associates the required title error with its field', () => {
