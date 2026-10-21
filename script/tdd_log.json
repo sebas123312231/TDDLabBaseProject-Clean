@@ -2200,9 +2200,79 @@
     "testId": 32
   },
   {
-    "commitId": "HEAD",
+    "commitId": "8685c35285b27692083e133ae426b82f43284825",
     "commitName": "feat(web): validate report photos",
     "commitTimestamp": 1792547117500,
     "testId": 32
+  },
+  {
+    "numPassedTests": 87,
+    "failedTests": 0,
+    "numTotalTests": 87,
+    "timestamp": 1792547144332,
+    "success": false,
+    "testId": 33
+  },
+  {
+    "numPassedTests": 117,
+    "failedTests": 0,
+    "numTotalTests": 117,
+    "timestamp": 1792547154258,
+    "success": true,
+    "testId": 33
+  },
+  {
+    "numPassedTests": 117,
+    "failedTests": 1,
+    "numTotalTests": 118,
+    "timestamp": 1792547167073,
+    "success": false,
+    "testId": 33
+  },
+  {
+    "numPassedTests": 118,
+    "failedTests": 0,
+    "numTotalTests": 118,
+    "timestamp": 1792547174865,
+    "success": true,
+    "testId": 33
+  },
+  {
+    "numPassedTests": 118,
+    "failedTests": 1,
+    "numTotalTests": 119,
+    "timestamp": 1792547183370,
+    "success": false,
+    "testId": 33
+  },
+  {
+    "numPassedTests": 119,
+    "failedTests": 0,
+    "numTotalTests": 119,
+    "timestamp": 1792547192914,
+    "success": true,
+    "testId": 33
+  },
+  {
+    "numPassedTests": 119,
+    "failedTests": 1,
+    "numTotalTests": 120,
+    "timestamp": 1792547202772,
+    "success": false,
+    "testId": 33
+  },
+  {
+    "numPassedTests": 120,
+    "failedTests": 0,
+    "numTotalTests": 120,
+    "timestamp": 1792547210397,
+    "success": true,
+    "testId": 33
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): publish demo reports",
+    "commitTimestamp": 1792547219123,
+    "testId": 33
   }
 ]

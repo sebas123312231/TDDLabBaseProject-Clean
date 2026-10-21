@@ -4,7 +4,11 @@ import { test } from '@jest/globals'
 import { hasActiveFilters, matchesFilters, toReportQuery } from '../../src/models/reports/filters.js'
 import type { DemoReport } from '../../src/models/reports/report.js'
 import { isOwnedBy } from '../../src/models/reports/report.js'
-import { isAcceptedPhoto, validateDraft } from '../../src/models/reports/publication.js'
+import {
+  isAcceptedPhoto,
+  publishDemoReport,
+  validateDraft,
+} from '../../src/models/reports/publication.js'
 import { summarizeReports } from '../../src/models/reports/stats.js'
 
 const searchableReport: DemoReport = {
@@ -193,4 +197,77 @@ test('rechaza una foto que supera los cinco mebibytes', () => {
 test('acepta el límite exacto y rechaza formatos distintos de JPG y PNG', () => {
   assert.equal(isAcceptedPhoto({ type: 'image/png', size: 5 * 1024 * 1024 }), true)
   assert.equal(isAcceptedPhoto({ type: 'image/gif', size: 10 }), false)
+})
+
+test('publicar crea un reporte demo activo con su dueño y los campos del borrador', () => {
+  const now = new Date('2026-10-21T02:30:00.000Z')
+  assert.deepEqual(
+    publishDemoReport(validDraft, {
+      id: 'demo-new',
+      now,
+      owner: { id: 'owner-1', displayName: 'María', phone: '59170000001' },
+    }),
+    {
+      id: 'demo-new',
+      source: 'demo',
+      type: 'found',
+      state: 'active',
+      category: 'object',
+      title: 'Mochila azul',
+      description: 'La encontré cerca de la plaza principal.',
+      city: 'La Paz',
+      zone: 'Miraflores',
+      incidentDate: '2026-10-06',
+      createdAt: '2026-10-21T02:30:00.000Z',
+      imageUrls: [],
+      author: { id: 'owner-1', displayName: 'María' },
+      phone: '59170000001',
+      position: { top: '48%', left: '48%' },
+    },
+  )
+})
+
+test('publicar recorta el título, la descripción y la zona', () => {
+  const published = publishDemoReport(
+    {
+      ...validDraft,
+      title: '  Mochila azul  ',
+      description: '  La encontré cerca de la plaza principal.  ',
+      zone: ' Miraflores ',
+    },
+    {
+      id: 'demo-new',
+      now: new Date('2026-10-21T02:30:00.000Z'),
+      owner: { id: 'owner-1', displayName: 'María', phone: '59170000001' },
+    },
+  )
+  assert.deepEqual([published.title, published.description, published.zone], [
+    'Mochila azul',
+    'La encontré cerca de la plaza principal.',
+    'Miraflores',
+  ])
+})
+
+test('publicar usa el día local de Bolivia cuando no se conoce la fecha del incidente', () => {
+  const published = publishDemoReport(
+    { ...validDraft, incidentDate: '' },
+    {
+      id: 'demo-new',
+      now: new Date('2026-10-21T02:30:00.000Z'),
+      owner: { id: 'owner-1', displayName: 'María', phone: '59170000001' },
+    },
+  )
+  assert.equal(published.incidentDate, '2026-10-20')
+})
+
+test('publicar incluye la foto opcional en el reporte demo', () => {
+  const published = publishDemoReport(
+    { ...validDraft, imageUrl: 'blob:preview' },
+    {
+      id: 'demo-new',
+      now: new Date('2026-10-21T02:30:00.000Z'),
+      owner: { id: 'owner-1', displayName: 'María', phone: '59170000001' },
+    },
+  )
+  assert.deepEqual(published.imageUrls, ['blob:preview'])
 })
