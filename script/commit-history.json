@@ -209,12 +209,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0731a27d52261785611dd1e2b99f85270f07faca",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:03:13.000Z",
       "message": "feat(database): add repeatable development seed",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/0731a27d52261785611dd1e2b99f85270f07faca"
     },
     "stats": {
       "total": 165,
@@ -224,6 +224,25 @@
     },
     "coverage": 66.67,
     "test_count": 58,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:04:42.000Z",
+      "message": "feat(database): expose public profile lookup",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 64,
+      "additions": 64,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 66.67,
+    "test_count": 59,
     "failed_tests": 0,
     "conclusion": "success"
   }
