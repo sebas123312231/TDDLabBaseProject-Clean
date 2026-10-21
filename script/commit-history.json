@@ -1653,17 +1653,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "6f500265d351b8c392cbf89302299138fd899dca",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T17:41:40.000Z",
       "message": "fix(auth): preserve accessible form state",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/6f500265d351b8c392cbf89302299138fd899dca"
     },
     "stats": {
       "total": 79,
       "additions": 73,
       "deletions": 6,
+      "date": "2026-10-21"
+    },
+    "coverage": 88.66,
+    "test_count": 251,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T17:43:53.000Z",
+      "message": "fix(auth): expose credential form semantics",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 33,
+      "additions": 33,
+      "deletions": 0,
       "date": "2026-10-21"
     },
     "coverage": 88.66,

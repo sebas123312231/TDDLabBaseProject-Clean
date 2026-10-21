@@ -46,19 +46,23 @@ export function AuthPage({
             <label>
               Correo electrónico
               <input
+                name="email"
                 type="email"
                 autoComplete="email"
+                inputMode="email"
                 value={state.email}
                 onChange={(event) => form.setEmail(event.target.value)}
                 aria-invalid={Boolean(state.errors.email)}
                 aria-describedby={state.errors.email ? 'email-error' : undefined}
                 disabled={state.pending}
+                required
               />
             </label>
             {state.errors.email && <small id="email-error" role="alert">{state.errors.email}</small>}
             <label>
               Contraseña
               <input
+                name="password"
                 type={state.showPassword ? 'text' : 'password'}
                 autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
                 value={state.password}
@@ -66,6 +70,7 @@ export function AuthPage({
                 aria-invalid={Boolean(state.errors.password)}
                 aria-describedby={state.errors.password ? 'password-error' : undefined}
                 disabled={state.pending}
+                required
               />
             </label>
             {state.errors.password && <small id="password-error" role="alert">{state.errors.password}</small>}
@@ -74,6 +79,7 @@ export function AuthPage({
                 <label>
                   Confirma tu contraseña
                   <input
+                    name="confirmPassword"
                     type={state.showPassword ? 'text' : 'password'}
                     autoComplete="new-password"
                     value={state.confirmPassword}
@@ -83,6 +89,7 @@ export function AuthPage({
                       state.errors.confirmPassword ? 'confirm-error' : undefined
                     }
                     disabled={state.pending}
+                    required
                   />
                 </label>
                 {state.errors.confirmPassword && (
