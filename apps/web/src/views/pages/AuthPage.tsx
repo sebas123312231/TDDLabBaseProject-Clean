@@ -45,21 +45,51 @@ export function AuthPage({
           <form onSubmit={submit} noValidate>
             <label>
               Correo electrónico
-              <input type="email" autoComplete="email" value={state.email} onChange={(event) => form.setEmail(event.target.value)} aria-invalid={Boolean(state.errors.email)} />
+              <input
+                type="email"
+                autoComplete="email"
+                value={state.email}
+                onChange={(event) => form.setEmail(event.target.value)}
+                aria-invalid={Boolean(state.errors.email)}
+                aria-describedby={state.errors.email ? 'email-error' : undefined}
+                disabled={state.pending}
+              />
             </label>
-            {state.errors.email && <small role="alert">{state.errors.email}</small>}
+            {state.errors.email && <small id="email-error" role="alert">{state.errors.email}</small>}
             <label>
               Contraseña
-              <input type={state.showPassword ? 'text' : 'password'} autoComplete={mode === 'login' ? 'current-password' : 'new-password'} value={state.password} onChange={(event) => form.setPassword(event.target.value)} aria-invalid={Boolean(state.errors.password)} />
+              <input
+                type={state.showPassword ? 'text' : 'password'}
+                autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
+                value={state.password}
+                onChange={(event) => form.setPassword(event.target.value)}
+                aria-invalid={Boolean(state.errors.password)}
+                aria-describedby={state.errors.password ? 'password-error' : undefined}
+                disabled={state.pending}
+              />
             </label>
-            {state.errors.password && <small role="alert">{state.errors.password}</small>}
+            {state.errors.password && <small id="password-error" role="alert">{state.errors.password}</small>}
             {mode === 'register' && (
               <>
                 <label>
                   Confirma tu contraseña
-                  <input type={state.showPassword ? 'text' : 'password'} autoComplete="new-password" value={state.confirmPassword} onChange={(event) => form.setConfirmPassword(event.target.value)} aria-invalid={Boolean(state.errors.confirmPassword)} />
+                  <input
+                    type={state.showPassword ? 'text' : 'password'}
+                    autoComplete="new-password"
+                    value={state.confirmPassword}
+                    onChange={(event) => form.setConfirmPassword(event.target.value)}
+                    aria-invalid={Boolean(state.errors.confirmPassword)}
+                    aria-describedby={
+                      state.errors.confirmPassword ? 'confirm-error' : undefined
+                    }
+                    disabled={state.pending}
+                  />
                 </label>
-                {state.errors.confirmPassword && <small role="alert">{state.errors.confirmPassword}</small>}
+                {state.errors.confirmPassword && (
+                  <small id="confirm-error" role="alert">
+                    {state.errors.confirmPassword}
+                  </small>
+                )}
               </>
             )}
             <button type="button" className="text-button" onClick={form.togglePassword}>
