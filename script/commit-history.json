@@ -1273,17 +1273,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ab9adfdd0f0ab46927b1565bed408ad042699045",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:26:12.000Z",
       "message": "refactor(web): pass overview data and actions explicitly",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/ab9adfdd0f0ab46927b1565bed408ad042699045"
     },
     "stats": {
       "total": 47,
       "additions": 34,
       "deletions": 13,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:27:44.000Z",
+      "message": "refactor(web): narrow filter actions for catalog views",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 34,
+      "additions": 22,
+      "deletions": 12,
       "date": "2026-10-21"
     },
     "coverage": 91.78,

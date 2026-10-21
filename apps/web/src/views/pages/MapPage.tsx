@@ -1,5 +1,10 @@
 import type { AppView } from '../../presenters/app/useApp.js'
-import { filterOptions } from '../../presenters/catalog/filters.presenter.js'
+import type { Section } from '../../presenters/app/sections.js'
+import {
+  filterOptions,
+  type FilterSelection,
+  type FiltersPresenter,
+} from '../../presenters/catalog/filters.presenter.js'
 import { EmptyState } from '../components/EmptyState.js'
 import { MapView } from '../components/MapView.js'
 import { ReportFilters } from '../components/ReportFilters.js'
@@ -7,10 +12,10 @@ import { StatusTabs } from '../components/StatusTabs.js'
 
 type MapPageProps = {
   map: AppView['map']
-  selection: AppView['selection']
-  filters: AppView['actions']['filters']
-  onOpen: AppView['actions']['reports']['open']
-  onNavigate: AppView['actions']['navigate']
+  selection: FilterSelection
+  filters: Pick<FiltersPresenter, 'setSearch' | 'setCity' | 'setCategory' | 'setStatus'>
+  onOpen: (id: string) => void
+  onNavigate: (section: Section) => void
 }
 
 export function MapPage({ map, selection, filters, onOpen, onNavigate }: MapPageProps) {

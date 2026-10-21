@@ -1,5 +1,10 @@
 import type { AppView } from '../../presenters/app/useApp.js'
-import { filterOptions } from '../../presenters/catalog/filters.presenter.js'
+import type { Section } from '../../presenters/app/sections.js'
+import {
+  filterOptions,
+  type FilterSelection,
+  type FiltersPresenter,
+} from '../../presenters/catalog/filters.presenter.js'
 import { EmptyState } from '../components/EmptyState.js'
 import { ReportFilters } from '../components/ReportFilters.js'
 import { ReportGrid } from '../components/ReportGrid.js'
@@ -7,13 +12,13 @@ import { StatusTabs } from '../components/StatusTabs.js'
 
 type ExplorePageProps = {
   catalog: AppView['catalog']
-  selection: AppView['selection']
-  filters: AppView['actions']['filters']
-  onRetry: AppView['actions']['retryCatalog']
+  selection: FilterSelection
+  filters: Pick<FiltersPresenter, 'setSearch' | 'setCity' | 'setCategory' | 'setStatus' | 'reset'>
+  onRetry: () => void
   isSaved: AppView['isSaved']
-  onSave: AppView['actions']['reports']['toggleSaved']
-  onOpen: AppView['actions']['reports']['open']
-  onNavigate: AppView['actions']['navigate']
+  onSave: (id: string) => void
+  onOpen: (id: string) => void
+  onNavigate: (section: Section) => void
 }
 
 export function ExplorePage({ catalog, selection, filters, onRetry, isSaved, onSave, onOpen, onNavigate }: ExplorePageProps) {
