@@ -19,12 +19,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ece51595eb6887f834099372c84bffd2d7625240",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T00:34:25.000Z",
       "message": "chore(build): establish pnpm workspace",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/ece51595eb6887f834099372c84bffd2d7625240"
     },
     "stats": {
       "total": 35933,
@@ -34,6 +34,25 @@
     },
     "coverage": 100,
     "test_count": 2,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T00:35:55.000Z",
+      "message": "chore(test): support TypeScript Jest suites",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 94,
+      "additions": 88,
+      "deletions": 6,
+      "date": "2026-10-21"
+    },
+    "coverage": 100,
+    "test_count": 3,
     "failed_tests": 0,
     "conclusion": "success"
   }

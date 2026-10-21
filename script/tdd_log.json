@@ -54,9 +54,47 @@
     "testId": 1
   },
   {
-    "commitId": "HEAD",
+    "commitId": "ece51595eb6887f834099372c84bffd2d7625240",
     "commitName": "chore(build): establish pnpm workspace",
     "commitTimestamp": 1792542865420,
     "testId": 1
+  },
+  {
+    "numPassedTests": 2,
+    "failedTests": 0,
+    "numTotalTests": 2,
+    "timestamp": 1792542896419,
+    "success": false,
+    "testId": 2
+  },
+  {
+    "numPassedTests": 2,
+    "failedTests": 0,
+    "numTotalTests": 2,
+    "timestamp": 1792542918813,
+    "success": false,
+    "testId": 2
+  },
+  {
+    "numPassedTests": 3,
+    "failedTests": 0,
+    "numTotalTests": 3,
+    "timestamp": 1792542928560,
+    "success": true,
+    "testId": 2
+  },
+  {
+    "numPassedTests": 3,
+    "failedTests": 0,
+    "numTotalTests": 3,
+    "timestamp": 1792542939692,
+    "success": true,
+    "testId": 2
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "chore(test): support TypeScript Jest suites",
+    "commitTimestamp": 1792542955209,
+    "testId": 2
   }
 ]
