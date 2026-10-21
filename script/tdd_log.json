@@ -3050,9 +3050,127 @@
     "testId": 39
   },
   {
-    "commitId": "HEAD",
+    "commitId": "a9f08251cb32a22a770211214617b1feedb359a4",
     "commitName": "feat(web): manage community report views",
     "commitTimestamp": 1792559151684,
     "testId": 39
+  },
+  {
+    "numPassedTests": 175,
+    "failedTests": 0,
+    "numTotalTests": 175,
+    "timestamp": 1792559173221,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 176,
+    "failedTests": 0,
+    "numTotalTests": 176,
+    "timestamp": 1792559187899,
+    "success": true,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 176,
+    "failedTests": 1,
+    "numTotalTests": 177,
+    "timestamp": 1792559202966,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 177,
+    "failedTests": 0,
+    "numTotalTests": 177,
+    "timestamp": 1792559213411,
+    "success": true,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 177,
+    "failedTests": 1,
+    "numTotalTests": 178,
+    "timestamp": 1792559223121,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 178,
+    "failedTests": 0,
+    "numTotalTests": 178,
+    "timestamp": 1792559233465,
+    "success": true,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 178,
+    "failedTests": 1,
+    "numTotalTests": 179,
+    "timestamp": 1792559244329,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 179,
+    "failedTests": 0,
+    "numTotalTests": 179,
+    "timestamp": 1792559254607,
+    "success": true,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 179,
+    "failedTests": 1,
+    "numTotalTests": 180,
+    "timestamp": 1792559267970,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 180,
+    "failedTests": 0,
+    "numTotalTests": 180,
+    "timestamp": 1792559283165,
+    "success": true,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 180,
+    "failedTests": 1,
+    "numTotalTests": 181,
+    "timestamp": 1792559294762,
+    "success": false,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 181,
+    "failedTests": 0,
+    "numTotalTests": 181,
+    "timestamp": 1792559302277,
+    "success": true,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 182,
+    "failedTests": 0,
+    "numTotalTests": 182,
+    "timestamp": 1792559313895,
+    "success": true,
+    "testId": 40
+  },
+  {
+    "numPassedTests": 182,
+    "failedTests": 0,
+    "numTotalTests": 182,
+    "timestamp": 1792559325289,
+    "success": true,
+    "testId": 40
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): publish demo reports from validated drafts",
+    "commitTimestamp": 1792559333017,
+    "testId": 40
   }
 ]
