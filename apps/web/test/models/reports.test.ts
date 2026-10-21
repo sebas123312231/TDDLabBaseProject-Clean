@@ -1,7 +1,26 @@
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
 import { test } from '@jest/globals'
-import { hasActiveFilters, toReportQuery } from '../../src/models/reports/filters.js'
+import { hasActiveFilters, matchesFilters, toReportQuery } from '../../src/models/reports/filters.js'
+import type { DemoReport } from '../../src/models/reports/report.js'
+
+const searchableReport: DemoReport = {
+  id: 'demo-1',
+  source: 'demo',
+  type: 'lost',
+  state: 'active',
+  category: 'pet',
+  title: 'Luna, perrita café',
+  description: 'Se perdió cerca del parque.',
+  city: 'La Paz',
+  zone: 'Sopocachi',
+  incidentDate: '2026-10-06',
+  createdAt: '2026-10-06T14:00:00.000Z',
+  imageUrls: [],
+  author: { id: 'demo-owner', displayName: 'Demo' },
+  phone: '59170000001',
+  position: { top: '30%', left: '28%' },
+}
 
 test('web declara un workspace TypeScript estricto y sus contratos compartidos', () => {
   const manifestPath = new URL('../../package.json', import.meta.url)
@@ -56,4 +75,24 @@ test('una categoría seleccionada cuenta como filtro activo', () => {
 
 test('un tipo seleccionado cuenta como filtro activo', () => {
   assert.equal(hasActiveFilters({ text: '', type: 'found' }), true)
+})
+
+test('la búsqueda local ignora mayúsculas y tildes', () => {
+  assert.equal(matchesFilters(searchableReport, { text: 'SOPOCACHÍ' }), true)
+})
+
+test('la búsqueda local excluye reportes resueltos', () => {
+  assert.equal(matchesFilters({ ...searchableReport, state: 'resolved' }, { text: '' }), false)
+})
+
+test('la ciudad filtra por coincidencia exacta', () => {
+  assert.equal(matchesFilters(searchableReport, { text: '', city: 'Cochabamba' }), false)
+})
+
+test('la categoría excluye reportes de otra categoría', () => {
+  assert.equal(matchesFilters(searchableReport, { text: '', category: 'object' }), false)
+})
+
+test('el tipo excluye reportes de otra clase', () => {
+  assert.equal(matchesFilters(searchableReport, { text: '', type: 'found' }), false)
 })

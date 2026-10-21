@@ -1880,9 +1880,111 @@
     "testId": 28
   },
   {
-    "commitId": "HEAD",
+    "commitId": "63d23f80958f8c1c9a1b157cdbba0ae618e313b8",
     "commitName": "feat(web): detect active report filters",
     "commitTimestamp": 1792546586164,
     "testId": 28
+  },
+  {
+    "numPassedTests": 98,
+    "failedTests": 1,
+    "numTotalTests": 99,
+    "timestamp": 1792546628537,
+    "success": false,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 99,
+    "failedTests": 0,
+    "numTotalTests": 99,
+    "timestamp": 1792546638254,
+    "success": true,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 99,
+    "failedTests": 0,
+    "numTotalTests": 99,
+    "timestamp": 1792546646979,
+    "success": true,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 99,
+    "failedTests": 1,
+    "numTotalTests": 100,
+    "timestamp": 1792546654514,
+    "success": false,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 100,
+    "failedTests": 0,
+    "numTotalTests": 100,
+    "timestamp": 1792546660624,
+    "success": true,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 100,
+    "failedTests": 1,
+    "numTotalTests": 101,
+    "timestamp": 1792546670417,
+    "success": false,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 101,
+    "failedTests": 0,
+    "numTotalTests": 101,
+    "timestamp": 1792546676764,
+    "success": true,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 101,
+    "failedTests": 1,
+    "numTotalTests": 102,
+    "timestamp": 1792546682908,
+    "success": false,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 102,
+    "failedTests": 0,
+    "numTotalTests": 102,
+    "timestamp": 1792546688953,
+    "success": true,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 102,
+    "failedTests": 1,
+    "numTotalTests": 103,
+    "timestamp": 1792546695232,
+    "success": false,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 103,
+    "failedTests": 0,
+    "numTotalTests": 103,
+    "timestamp": 1792546701168,
+    "success": true,
+    "testId": 29
+  },
+  {
+    "numPassedTests": 103,
+    "failedTests": 0,
+    "numTotalTests": 103,
+    "timestamp": 1792546718060,
+    "success": true,
+    "testId": 29
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): implement local report filters",
+    "commitTimestamp": 1792546726090,
+    "testId": 29
   }
 ]
