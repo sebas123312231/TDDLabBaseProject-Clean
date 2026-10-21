@@ -3982,9 +3982,23 @@
     "testId": 65
   },
   {
-    "commitId": "HEAD",
+    "commitId": "c8a08996e16d1a72bf459dc70ad7757622db28e4",
     "commitName": "feat(web): align publication form with responsive layout",
     "commitTimestamp": 1792599737387,
     "testId": 65
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792599827096,
+    "success": true,
+    "testId": 66
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): guide report titles and descriptions",
+    "commitTimestamp": 1792599847718,
+    "testId": 66
   }
 ]

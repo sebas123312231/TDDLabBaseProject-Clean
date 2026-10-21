@@ -491,4 +491,15 @@ describe('PerdiU web', () => {
       expect(getComputedStyle($grid[0]).gridTemplateColumns.trim().split(/\s+/)).to.have.length(1)
     })
   })
+
+  it('shows examples that guide the title and description fields', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+
+    cy.contains('.publish-form label', 'Nombre del reporte').find('input')
+      .should('have.attr', 'placeholder', 'Ej. Perrito café, mochila azul…')
+    cy.contains('.publish-form label', 'Descripción').find('textarea')
+      .should('have.attr', 'placeholder', 'Color, características, cuándo y dónde…')
+  })
 })

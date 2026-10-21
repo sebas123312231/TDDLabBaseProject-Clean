@@ -64,6 +64,7 @@ export function PublishPage({ form, actions }: PublishPageProps) {
           <input
             value={form.draft.title}
             onChange={(event) => actions.setField('title', event.target.value)}
+            placeholder="Ej. Perrito café, mochila azul…"
             aria-invalid={Boolean(form.errors.title)}
             aria-describedby={form.errors.title ? 'title-error' : undefined}
           />
@@ -74,6 +75,7 @@ export function PublishPage({ form, actions }: PublishPageProps) {
           <textarea
             value={form.draft.description}
             onChange={(event) => actions.setField('description', event.target.value)}
+            placeholder="Color, características, cuándo y dónde…"
             aria-invalid={Boolean(form.errors.description)}
             aria-describedby={form.errors.description ? 'description-error' : 'description-hint'}
             rows={4}

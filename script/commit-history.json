@@ -1235,17 +1235,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c8a08996e16d1a72bf459dc70ad7757622db28e4",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:22:17.000Z",
       "message": "feat(web): align publication form with responsive layout",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/c8a08996e16d1a72bf459dc70ad7757622db28e4"
     },
     "stats": {
       "total": 173,
       "additions": 110,
       "deletions": 63,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:24:07.000Z",
+      "message": "feat(web): guide report titles and descriptions",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 13,
+      "additions": 13,
+      "deletions": 0,
       "date": "2026-10-21"
     },
     "coverage": 91.78,
