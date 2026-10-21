@@ -4080,9 +4080,23 @@
     "testId": 72
   },
   {
-    "commitId": "HEAD",
+    "commitId": "0439284f8ab23d87388747d08b1d4ea1af02766f",
     "commitName": "feat(web): group overview metrics in a summary panel",
     "commitTimestamp": 1792600573148,
     "testId": 72
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792600668008,
+    "success": true,
+    "testId": 73
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): add publication action to map header",
+    "commitTimestamp": 1792600679208,
+    "testId": 73
   }
 ]

@@ -108,6 +108,18 @@ describe('PerdiU web', () => {
     cy.get('[role="dialog"]').should('be.visible')
   })
 
+  it('offers publication directly from the map when reports are visible', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mapa').click()
+    cy.get('.page-intro').should('have.css', 'display', 'flex').within(() => {
+      cy.contains('Ubica reportes cercanos y abre cada punto para ver sus detalles.').should('be.visible')
+      cy.contains('Las posiciones son ilustrativas, no representan ubicaciones geográficas.')
+        .should('be.visible')
+      cy.contains('button', 'Nuevo reporte').click()
+    })
+
+    cy.get('.auth-card').should('be.visible')
+  })
+
   it('shows the four safety recommendations and privacy explanation', () => {
     cy.contains('button', 'Seguridad y privacidad').click()
     cy.contains('h2', 'Antes de encontrarse').should('be.visible')

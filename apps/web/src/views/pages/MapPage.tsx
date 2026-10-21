@@ -21,7 +21,15 @@ type MapPageProps = {
 export function MapPage({ map, selection, filters, onOpen, onNavigate }: MapPageProps) {
   return (
     <section className="map-page">
-      <p>Abre un punto para consultar un reporte. Las posiciones son ilustrativas, no representan ubicaciones geográficas.</p>
+      <div className="page-intro">
+        <div>
+          <p>Ubica reportes cercanos y abre cada punto para ver sus detalles.</p>
+          <p>Las posiciones son ilustrativas, no representan ubicaciones geográficas.</p>
+        </div>
+        <button className="primary-button" onClick={() => onNavigate('publish')}>
+          Nuevo reporte
+        </button>
+      </div>
       <div className="filter-row" aria-label="Filtros del mapa">
         <ReportFilters
           selection={selection}

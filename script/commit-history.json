@@ -1368,17 +1368,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0439284f8ab23d87388747d08b1d4ea1af02766f",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:36:13.000Z",
       "message": "feat(web): group overview metrics in a summary panel",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/0439284f8ab23d87388747d08b1d4ea1af02766f"
     },
     "stats": {
       "total": 52,
       "additions": 34,
       "deletions": 18,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:37:59.000Z",
+      "message": "feat(web): add publication action to map header",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 22,
+      "additions": 21,
+      "deletions": 1,
       "date": "2026-10-21"
     },
     "coverage": 91.78,
