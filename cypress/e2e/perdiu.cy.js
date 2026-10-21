@@ -375,4 +375,59 @@ describe('PerdiU web', () => {
         .should('have.css', 'background-color', 'rgb(63, 106, 72)')
     })
   })
+
+  it('explains which contact details stay private on the publication form', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+
+    cy.contains('Tu correo y tu número no aparecen públicamente.').should('be.visible')
+  })
+
+  it('associates the required title error with its field', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+    cy.get('.publish-form').within(() => cy.contains('button[type="submit"]', 'Publicar reporte').click())
+
+    cy.contains('.publish-form label', 'Nombre').find('input')
+      .should('have.attr', 'aria-invalid', 'true')
+      .and('have.attr', 'aria-describedby', 'title-error')
+    cy.get('#title-error').should('contain', 'Escribe un nombre para el reporte.')
+  })
+
+  it('associates the required description error with its field', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+    cy.get('.publish-form').within(() => cy.contains('button[type="submit"]', 'Publicar reporte').click())
+
+    cy.contains('.publish-form label', 'Descripción').find('textarea')
+      .should('have.attr', 'aria-invalid', 'true')
+      .and('have.attr', 'aria-describedby', 'description-error')
+    cy.get('#description-error').should('contain', 'Describe lo que perdiste o encontraste.')
+  })
+
+  it('warns people not to include sensitive details in the description', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+
+    cy.contains('.publish-form label', 'Descripción').find('textarea')
+      .should('have.attr', 'aria-describedby', 'description-hint')
+    cy.get('#description-hint')
+      .should('contain', 'Evita incluir números de documento, cuentas u otros datos sensibles.')
+  })
+
+  it('associates the required location error with its field', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+    cy.get('.publish-form').within(() => cy.contains('button[type="submit"]', 'Publicar reporte').click())
+
+    cy.contains('.publish-form label', 'Zona o barrio').find('input')
+      .should('have.attr', 'aria-invalid', 'true')
+      .and('have.attr', 'aria-describedby', 'zone-error')
+    cy.get('#zone-error').should('contain', 'Indica la zona o el barrio.')
+  })
 })

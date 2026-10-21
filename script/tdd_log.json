@@ -3940,9 +3940,23 @@
     "testId": 62
   },
   {
-    "commitId": "HEAD",
+    "commitId": "9da3e5185bb99ee144c2323e1e90943c5779b049",
     "commitName": "feat(web): add accessible report type selection",
     "commitTimestamp": 1792599058874,
     "testId": 62
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792599406223,
+    "success": true,
+    "testId": 63
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix(web): connect publication errors to form fields",
+    "commitTimestamp": 1792599417531,
+    "testId": 63
   }
 ]

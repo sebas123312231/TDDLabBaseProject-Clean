@@ -47,14 +47,31 @@ export function PublishPage({ form, actions }: PublishPageProps) {
       </label>
       <label>
         Nombre
-        <input value={form.draft.title} onChange={(event) => actions.setField('title', event.target.value)} />
+        <input
+          value={form.draft.title}
+          onChange={(event) => actions.setField('title', event.target.value)}
+          aria-invalid={Boolean(form.errors.title)}
+          aria-describedby={form.errors.title ? 'title-error' : undefined}
+        />
       </label>
-      {form.errors.title && <small role="alert">{form.errors.title}</small>}
+      {form.errors.title && <small id="title-error" role="alert">{form.errors.title}</small>}
       <label>
         Descripción
-        <textarea value={form.draft.description} onChange={(event) => actions.setField('description', event.target.value)} />
+        <textarea
+          value={form.draft.description}
+          onChange={(event) => actions.setField('description', event.target.value)}
+          aria-invalid={Boolean(form.errors.description)}
+          aria-describedby={form.errors.description ? 'description-error' : 'description-hint'}
+        />
       </label>
-      {form.errors.description && <small role="alert">{form.errors.description}</small>}
+      {form.errors.description && (
+        <small id="description-error" role="alert">{form.errors.description}</small>
+      )}
+      {!form.errors.description && (
+        <small id="description-hint" className="hint">
+          Evita incluir números de documento, cuentas u otros datos sensibles.
+        </small>
+      )}
       <label>
         Ciudad
         <select value={form.draft.city} onChange={(event) => actions.setField('city', event.target.value)}>
@@ -63,9 +80,14 @@ export function PublishPage({ form, actions }: PublishPageProps) {
       </label>
       <label>
         Zona o barrio
-        <input value={form.draft.zone} onChange={(event) => actions.setField('zone', event.target.value)} />
+        <input
+          value={form.draft.zone}
+          onChange={(event) => actions.setField('zone', event.target.value)}
+          aria-invalid={Boolean(form.errors.zone)}
+          aria-describedby={form.errors.zone ? 'zone-error' : undefined}
+        />
       </label>
-      {form.errors.zone && <small role="alert">{form.errors.zone}</small>}
+      {form.errors.zone && <small id="zone-error" role="alert">{form.errors.zone}</small>}
       <label>
         Fecha del incidente
         <input type="date" value={form.draft.incidentDate} onChange={(event) => actions.setField('incidentDate', event.target.value)} />
@@ -83,6 +105,7 @@ export function PublishPage({ form, actions }: PublishPageProps) {
           <button className="text-button" type="button" onClick={actions.clearPhoto}>Quitar foto</button>
         </>
       )}
+      <small className="hint">Tu correo y tu número no aparecen públicamente.</small>
       <button className="primary-button" type="submit">Publicar reporte</button>
     </form>
   )
