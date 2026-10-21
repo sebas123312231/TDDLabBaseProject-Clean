@@ -7,6 +7,8 @@ import { isOwnedBy } from '../../src/models/reports/report.js'
 import {
   isAcceptedPhoto,
   publishDemoReport,
+  removeReport,
+  resolveReport,
   validateDraft,
 } from '../../src/models/reports/publication.js'
 import { summarizeReports } from '../../src/models/reports/stats.js'
@@ -270,4 +272,40 @@ test('publicar incluye la foto opcional en el reporte demo', () => {
     },
   )
   assert.deepEqual(published.imageUrls, ['blob:preview'])
+})
+
+test('resolver cambia el estado del reporte identificado', () => {
+  const reports = [searchableReport, { ...searchableReport, id: 'demo-2' }]
+  assert.deepEqual(
+    resolveReport(reports, 'demo-1', 'demo-owner').map(({ state }) => state),
+    ['resolved', 'active'],
+  )
+})
+
+test('resolver deja intacto un reporte que pertenece a otra persona', () => {
+  const reports = [searchableReport]
+  assert.equal(resolveReport(reports, 'demo-1', 'other-owner'), reports)
+})
+
+test('eliminar quita el reporte identificado de la lista', () => {
+  const reports = [searchableReport, { ...searchableReport, id: 'demo-2' }]
+  assert.deepEqual(
+    removeReport(reports, 'demo-1', 'demo-owner').map(({ id }) => id),
+    ['demo-2'],
+  )
+})
+
+test('eliminar deja intacto un reporte que pertenece a otra persona', () => {
+  const reports = [searchableReport]
+  assert.equal(removeReport(reports, 'demo-1', 'other-owner'), reports)
+})
+
+test('resolver conserva la lista si el reporte no existe', () => {
+  const reports = [searchableReport]
+  assert.equal(resolveReport(reports, 'missing', 'demo-owner'), reports)
+})
+
+test('eliminar conserva la lista si el reporte no existe', () => {
+  const reports = [searchableReport]
+  assert.equal(removeReport(reports, 'missing', 'demo-owner'), reports)
 })
