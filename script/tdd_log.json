@@ -3912,9 +3912,23 @@
     "testId": 60
   },
   {
-    "commitId": "HEAD",
+    "commitId": "e718af1c208f8b14e028d03c96b472f98d6ca27d",
     "commitName": "fix(web): make own report actions stateful and accessible",
     "commitTimestamp": 1792598584620,
     "testId": 60
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792598792104,
+    "success": true,
+    "testId": 61
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): manage own reports in compact rows",
+    "commitTimestamp": 1792598804179,
+    "testId": 61
   }
 ]

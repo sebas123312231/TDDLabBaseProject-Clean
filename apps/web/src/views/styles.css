@@ -110,6 +110,12 @@ textarea { min-height: 110px; resize: vertical; }
 .profile-link { width: 100%; display: flex; flex-direction: column; text-align: left; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .profile-link small { color: var(--muted); }
 .own-reports-heading { display: flex; justify-content: flex-end; margin-bottom: 12px; }
+.managed-list { display: flex; flex-direction: column; gap: 12px; }
+.managed-report { display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.managed-report > div:nth-child(2) { display: flex; flex-direction: column; gap: 4px; }
+.managed-image { width: 88px; height: 88px; overflow: hidden; padding: 0; }
+.managed-image img { width: 100%; height: 100%; object-fit: cover; }
+.managed-actions { display: flex; align-items: center; gap: 16px; }
 .toast { position: fixed; z-index: 60; right: 20px; bottom: 20px; display: flex; gap: 20px; padding: 14px 18px; border: 1px solid var(--green); background: white; }
 .toast-error { border-color: var(--lost); }
 .dialog-backdrop { position: fixed; z-index: 50; inset: 0; display: grid; place-items: center; padding: 20px; background: #17201988; }
@@ -120,6 +126,10 @@ textarea { min-height: 110px; resize: vertical; }
 .card-meta { color: var(--muted); font-size: 13px; }
 .status-text { color: var(--green-dark); font-weight: 700; }
 .status-text.lost { color: var(--lost); }
+.status-text.found { color: var(--green-dark); }
+.card-title { padding: 0; font-size: 16px; font-weight: 700; text-align: left; }
+.card-title:hover { text-decoration: underline; }
+.card-description { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .detail-content { padding-top: 14px; }
 .detail-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .detail-actions .primary-button, .detail-actions .secondary-button { margin: 0; }
@@ -142,6 +152,9 @@ textarea { min-height: 110px; resize: vertical; }
   .content { padding: 24px 18px; }
   .app-header { padding: 10px 16px; }
   .app-footer { padding: 18px; }
+  .managed-report { grid-template-columns: 64px minmax(0, 1fr); }
+  .managed-image { width: 64px; height: 64px; }
+  .managed-actions { grid-column: 1 / -1; }
 }
 @media (max-width: 520px) {
   .header-tools { gap: 8px; }

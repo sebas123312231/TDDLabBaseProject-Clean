@@ -322,7 +322,7 @@ describe('PerdiU web', () => {
     restoreTestAccount()
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
     cy.contains('button', 'Marcar resuelto').click()
-    cy.get('.report-grid').should('contain', 'Resuelto')
+    cy.get('.managed-list').should('contain', 'Resuelto')
     cy.contains('button', 'Marcar resuelto').should('not.exist')
   })
 
@@ -336,5 +336,29 @@ describe('PerdiU web', () => {
       .click()
     cy.get('.empty-state').should('contain', 'Aún no publicaste reportes')
     cy.contains('button', 'Publicar mi primer reporte').should('be.visible')
+  })
+
+  it('opens an own report detail from its title', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
+    cy.contains('button', 'Milo, gato gris con collar azul').click()
+    cy.get('[role="dialog"]').within(() => {
+      cy.contains('Milo, gato gris con collar azul').should('be.visible')
+      cy.contains('button', 'Marcar como resuelto').should('be.visible')
+    })
+  })
+
+  it('groups each own report details and management actions in one row', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mis reportes').click()
+    cy.get('.managed-list .managed-report').should('have.length', 1).first().within(() => {
+      cy.contains('Milo, gato gris con collar azul').should('be.visible')
+      cy.contains('.card-meta', 'Perdido · Mascota').should('be.visible')
+      cy.contains('.card-meta', 'Cala Cala, Cochabamba').should('be.visible')
+      cy.contains('button', 'Marcar resuelto').should('be.enabled')
+      cy.get('button[aria-label="Eliminar reporte"]').should('be.visible')
+    })
   })
 })

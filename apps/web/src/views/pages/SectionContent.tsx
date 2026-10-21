@@ -46,8 +46,6 @@ export function SectionContent({ app }: { app: AppView }) {
     return (
       <MyReportsPage
         myReports={app.myReports}
-        isSaved={app.isSaved}
-        onSave={app.actions.reports.toggleSaved}
         onOpen={app.actions.reports.open}
         onFilter={app.actions.reports.setOwnFilter}
         onResolve={app.actions.reports.resolve}

@@ -1140,17 +1140,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e718af1c208f8b14e028d03c96b472f98d6ca27d",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:03:04.000Z",
       "message": "fix(web): make own report actions stateful and accessible",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/e718af1c208f8b14e028d03c96b472f98d6ca27d"
     },
     "stats": {
       "total": 28,
       "additions": 26,
       "deletions": 2,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:06:44.000Z",
+      "message": "feat(web): manage own reports in compact rows",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 95,
+      "additions": 69,
+      "deletions": 26,
       "date": "2026-10-21"
     },
     "coverage": 91.78,
