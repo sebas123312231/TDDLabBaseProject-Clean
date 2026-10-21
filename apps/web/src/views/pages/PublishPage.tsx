@@ -13,7 +13,7 @@ export function PublishPage({ form, actions }: PublishPageProps) {
   }
 
   return (
-    <form className="publish-form" onSubmit={submit} noValidate>
+    <form className="panel publish-form" onSubmit={submit} noValidate>
       <fieldset className="type-choice">
         <legend>¿Qué ocurrió?</legend>
         <button
@@ -34,64 +34,6 @@ export function PublishPage({ form, actions }: PublishPageProps) {
         </button>
       </fieldset>
 
-      <label>
-        Categoría
-        <select
-          value={form.draft.category}
-          onChange={(event) => actions.setField('category', event.target.value as typeof form.draft.category)}
-        >
-          {publishOptions.categories.map((option) => (
-            <option key={option.value} value={option.value}>{option.label}</option>
-          ))}
-        </select>
-      </label>
-      <label>
-        Nombre
-        <input
-          value={form.draft.title}
-          onChange={(event) => actions.setField('title', event.target.value)}
-          aria-invalid={Boolean(form.errors.title)}
-          aria-describedby={form.errors.title ? 'title-error' : undefined}
-        />
-      </label>
-      {form.errors.title && <small id="title-error" role="alert">{form.errors.title}</small>}
-      <label>
-        Descripción
-        <textarea
-          value={form.draft.description}
-          onChange={(event) => actions.setField('description', event.target.value)}
-          aria-invalid={Boolean(form.errors.description)}
-          aria-describedby={form.errors.description ? 'description-error' : 'description-hint'}
-        />
-      </label>
-      {form.errors.description && (
-        <small id="description-error" role="alert">{form.errors.description}</small>
-      )}
-      {!form.errors.description && (
-        <small id="description-hint" className="hint">
-          Evita incluir números de documento, cuentas u otros datos sensibles.
-        </small>
-      )}
-      <label>
-        Ciudad
-        <select value={form.draft.city} onChange={(event) => actions.setField('city', event.target.value)}>
-          {publishOptions.cities.map((city) => <option key={city}>{city}</option>)}
-        </select>
-      </label>
-      <label>
-        Zona o barrio
-        <input
-          value={form.draft.zone}
-          onChange={(event) => actions.setField('zone', event.target.value)}
-          aria-invalid={Boolean(form.errors.zone)}
-          aria-describedby={form.errors.zone ? 'zone-error' : undefined}
-        />
-      </label>
-      {form.errors.zone && <small id="zone-error" role="alert">{form.errors.zone}</small>}
-      <label>
-        Fecha del incidente
-        <input type="date" value={form.draft.incidentDate} onChange={(event) => actions.setField('incidentDate', event.target.value)} />
-      </label>
       <div className="photo-field">
         {form.imagePreview ? (
           <>
@@ -116,8 +58,74 @@ export function PublishPage({ form, actions }: PublishPageProps) {
           </label>
         )}
       </div>
-      <small className="hint">Tu correo y tu número no aparecen públicamente.</small>
-      <button className="primary-button" type="submit">Publicar reporte</button>
+      <div className="form-grid">
+        <label className="form-field form-wide">
+          <span>Nombre del reporte</span>
+          <input
+            value={form.draft.title}
+            onChange={(event) => actions.setField('title', event.target.value)}
+            aria-invalid={Boolean(form.errors.title)}
+            aria-describedby={form.errors.title ? 'title-error' : undefined}
+          />
+          {form.errors.title && <small id="title-error" role="alert">{form.errors.title}</small>}
+        </label>
+        <label className="form-field form-wide">
+          <span>Descripción</span>
+          <textarea
+            value={form.draft.description}
+            onChange={(event) => actions.setField('description', event.target.value)}
+            aria-invalid={Boolean(form.errors.description)}
+            aria-describedby={form.errors.description ? 'description-error' : 'description-hint'}
+            rows={4}
+          />
+          {form.errors.description ? (
+            <small id="description-error" role="alert">{form.errors.description}</small>
+          ) : (
+            <small id="description-hint" className="hint">
+              Evita incluir números de documento, cuentas u otros datos sensibles.
+            </small>
+          )}
+        </label>
+        <label className="form-field">
+          <span>Categoría</span>
+          <select
+            value={form.draft.category}
+            onChange={(event) => actions.setField('category', event.target.value as typeof form.draft.category)}
+          >
+            {publishOptions.categories.map((option) => (
+              <option key={option.value} value={option.value}>{option.label}</option>
+            ))}
+          </select>
+        </label>
+        <label className="form-field">
+          <span>Ciudad</span>
+          <select value={form.draft.city} onChange={(event) => actions.setField('city', event.target.value)}>
+            {publishOptions.cities.map((city) => <option key={city}>{city}</option>)}
+          </select>
+        </label>
+        <label className="form-field">
+          <span>Zona o barrio</span>
+          <input
+            value={form.draft.zone}
+            onChange={(event) => actions.setField('zone', event.target.value)}
+            aria-invalid={Boolean(form.errors.zone)}
+            aria-describedby={form.errors.zone ? 'zone-error' : undefined}
+          />
+          {form.errors.zone && <small id="zone-error" role="alert">{form.errors.zone}</small>}
+        </label>
+        <label className="form-field">
+          <span>Fecha aproximada</span>
+          <input
+            type="date"
+            value={form.draft.incidentDate}
+            onChange={(event) => actions.setField('incidentDate', event.target.value)}
+          />
+        </label>
+      </div>
+      <div className="form-footer">
+        <small className="hint">Tu correo y tu número no aparecen públicamente.</small>
+        <button className="primary-button" type="submit">Publicar reporte</button>
+      </div>
     </form>
   )
 }

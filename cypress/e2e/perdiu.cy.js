@@ -461,4 +461,34 @@ describe('PerdiU web', () => {
       .should('have.attr', 'accept', 'image/jpeg,image/png')
       .and('have.attr', 'aria-label', 'Subir fotografía')
   })
+
+  it('publishes a valid demo report and opens the owner report list', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+    cy.contains('.publish-form label', 'Nombre').find('input').type('Bicicleta azul de prueba')
+    cy.contains('.publish-form label', 'Descripción').find('textarea')
+      .type('Bicicleta encontrada junto al parque central.')
+    cy.contains('.publish-form label', 'Zona o barrio').find('input').type('Sopocachi')
+    cy.get('.publish-form').within(() => cy.contains('button[type="submit"]', 'Publicar reporte').click())
+
+    cy.get('[role="status"]')
+      .should('contain', 'Tu reporte ya está publicado. Puedes gestionarlo desde Mis reportes.')
+    cy.get('.app-header').should('contain', 'Mis reportes')
+    cy.get('.managed-list').should('contain', 'Bicicleta azul de prueba')
+  })
+
+  it('lays out publication fields in columns on desktop and one column on mobile', () => {
+    cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Publicar reporte').click()
+    cy.get('.form-grid').should('have.css', 'display', 'grid').then(($grid) => {
+      expect(getComputedStyle($grid[0]).gridTemplateColumns.trim().split(/\s+/)).to.have.length(2)
+    })
+
+    cy.viewport(390, 844)
+    cy.get('.form-grid').then(($grid) => {
+      expect(getComputedStyle($grid[0]).gridTemplateColumns.trim().split(/\s+/)).to.have.length(1)
+    })
+  })
 })

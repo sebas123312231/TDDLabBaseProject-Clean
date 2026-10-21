@@ -3968,9 +3968,23 @@
     "testId": 64
   },
   {
-    "commitId": "HEAD",
+    "commitId": "c60b912c152aa2619fa21ca10696eb377cf72fea",
     "commitName": "feat(web): add accessible report photo upload",
     "commitTimestamp": 1792599558451,
     "testId": 64
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792599725325,
+    "success": true,
+    "testId": 65
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): align publication form with responsive layout",
+    "commitTimestamp": 1792599737387,
+    "testId": 65
   }
 ]

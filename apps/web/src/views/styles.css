@@ -75,8 +75,16 @@ textarea { min-height: 110px; resize: vertical; }
 .status-tabs button { min-height: 34px; padding: 0 12px; color: var(--muted); }
 .status-tabs button + button { border-left: 1px solid var(--line); }
 .status-tabs button.selected { color: white; background: var(--green); font-weight: 600; }
-.publish-form { width: min(640px, 100%); display: grid; gap: 14px; }
-.publish-form .primary-button { justify-self: start; }
+.panel { padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.publish-form { display: flex; flex-direction: column; gap: 20px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.form-field { display: flex; flex-direction: column; gap: 5px; font-weight: 600; }
+.form-wide { grid-column: 1 / -1; }
+.form-field small { color: var(--lost); font-weight: 400; }
+.form-field small.hint { color: var(--muted); }
+.form-field textarea { padding: 7px 9px; resize: vertical; }
+.form-field [aria-invalid='true'] { border-color: var(--lost); }
+.form-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
 .type-choice { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
 .type-choice legend { margin-bottom: 8px; font-weight: 600; }
 .type-choice button { min-height: 36px; padding: 0 16px; border: 1px solid var(--line); border-radius: var(--radius); }
@@ -171,6 +179,7 @@ textarea { min-height: 110px; resize: vertical; }
   .report-grid, .metric-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
+  .form-grid { grid-template-columns: 1fr; }
   .map-layout { grid-template-columns: 1fr; }
   .map-canvas { min-height: 280px; }
 }

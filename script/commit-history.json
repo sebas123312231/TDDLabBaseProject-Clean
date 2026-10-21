@@ -1216,17 +1216,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c60b912c152aa2619fa21ca10696eb377cf72fea",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T16:19:18.000Z",
       "message": "feat(web): add accessible report photo upload",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/c60b912c152aa2619fa21ca10696eb377cf72fea"
     },
     "stats": {
       "total": 73,
       "additions": 59,
       "deletions": 14,
+      "date": "2026-10-21"
+    },
+    "coverage": 91.78,
+    "test_count": 221,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T16:22:17.000Z",
+      "message": "feat(web): align publication form with responsive layout",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 173,
+      "additions": 110,
+      "deletions": 63,
       "date": "2026-10-21"
     },
     "coverage": 91.78,
