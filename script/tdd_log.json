@@ -4122,9 +4122,23 @@
     "testId": 75
   },
   {
-    "commitId": "HEAD",
+    "commitId": "30c2e992c63b8ca1381669dcccfea014f9233523",
     "commitName": "feat(web): show filtered count in own reports",
     "commitTimestamp": 1792600961346,
     "testId": 75
+  },
+  {
+    "numPassedTests": 221,
+    "failedTests": 0,
+    "numTotalTests": 221,
+    "timestamp": 1792601067279,
+    "success": true,
+    "testId": 76
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): describe account details on profile page",
+    "commitTimestamp": 1792601073782,
+    "testId": 76
   }
 ]

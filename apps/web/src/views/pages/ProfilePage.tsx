@@ -12,6 +12,7 @@ type ProfilePageProps = {
 export function ProfilePage({ account, signingOut, onNavigate, onSignOut }: ProfilePageProps) {
   return (
     <>
+      <p className="page-description">Los datos con los que usas PerdiU.</p>
       <section className="profile-card" aria-label="Datos de tu cuenta">
         <UserAvatar account={account} size="large" />
         <div>

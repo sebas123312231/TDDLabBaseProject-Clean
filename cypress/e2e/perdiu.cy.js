@@ -296,6 +296,12 @@ describe('PerdiU web', () => {
     cy.contains('.profile-card', 'Tu correo es privado: solo tú lo ves aquí.').should('be.visible')
   })
 
+  it('describes the account details shown on the profile page', () => {
+    restoreTestAccount()
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Mi perfil').click()
+    cy.contains('.page-description', 'Los datos con los que usas PerdiU.').should('be.visible')
+  })
+
   it('navigates from the profile to the signed-in user reports', () => {
     cy.intercept('GET', 'https://cdn.example.test/avatar.png', { statusCode: 404 }).as('avatar')
     restoreTestAccount()
