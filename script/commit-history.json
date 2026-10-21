@@ -171,12 +171,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "47daac56699bcd6e332defba327e6e4b09a58005",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T00:58:21.000Z",
       "message": "feat(database): query persisted public reports",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/47daac56699bcd6e332defba327e6e4b09a58005"
     },
     "stats": {
       "total": 375,
@@ -186,6 +186,25 @@
     },
     "coverage": 96.23,
     "test_count": 53,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T00:59:34.000Z",
+      "message": "feat(database): manage PostgreSQL pool lifecycle",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 38,
+      "additions": 38,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 96.23,
+    "test_count": 54,
     "failed_tests": 0,
     "conclusion": "success"
   }
