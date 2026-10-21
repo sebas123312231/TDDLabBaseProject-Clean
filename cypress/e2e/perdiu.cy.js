@@ -158,6 +158,21 @@ describe('PerdiU web', () => {
     cy.get('.app-header').should('contain', 'Explorar reportes')
   })
 
+  it('explains that saved reports stay on this device', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Guardados').click()
+
+    cy.contains(
+      '.content',
+      'Publicaciones que quieres revisar o seguir más tarde en este dispositivo.',
+    ).should('be.visible')
+  })
+
+  it('styles the saved reports explanation as secondary copy', () => {
+    cy.contains('nav[aria-label="Navegación del panel"] button', 'Guardados').click()
+
+    cy.get('.page-description').should('have.css', 'color', 'rgb(95, 103, 95)')
+  })
+
   it('offers publication when catalog filters find no reports', () => {
     cy.contains('nav[aria-label="Navegación del panel"] button', 'Explorar reportes').click()
     cy.intercept('GET', /\/api\/reports\?q=/, { body: [] }).as('emptyCatalog')

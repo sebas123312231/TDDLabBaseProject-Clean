@@ -11,14 +11,21 @@ type SavedPageProps = {
 }
 
 export function SavedPage({ reports, isSaved, onSave, onOpen, onNavigate }: SavedPageProps) {
-  return reports.length ? (
-    <ReportGrid reports={reports} isSaved={isSaved} onSave={onSave} onOpen={onOpen} />
-  ) : (
-    <EmptyState
-      title="Tu lista está vacía por ahora"
-      description="Guarda reportes con el ícono de corazón y aparecerán aquí."
-      action="Explorar reportes"
-      onAction={() => onNavigate('explore')}
-    />
+  return (
+    <>
+      <p className="page-description">
+        Publicaciones que quieres revisar o seguir más tarde en este dispositivo.
+      </p>
+      {reports.length ? (
+        <ReportGrid reports={reports} isSaved={isSaved} onSave={onSave} onOpen={onOpen} />
+      ) : (
+        <EmptyState
+          title="Tu lista está vacía por ahora"
+          description="Guarda reportes con el ícono de corazón y aparecerán aquí."
+          action="Explorar reportes"
+          onAction={() => onNavigate('explore')}
+        />
+      )}
+    </>
   )
 }
