@@ -798,12 +798,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "23cc4141a713e99f08b052bc715e44d2c30082ff",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T05:14:12.000Z",
       "message": "feat(web): manage authentication form state",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/23cc4141a713e99f08b052bc715e44d2c30082ff"
     },
     "stats": {
       "total": 190,
@@ -813,6 +813,25 @@
     },
     "coverage": 88.65,
     "test_count": 203,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T05:17:02.000Z",
+      "message": "feat(web): add shell navigation and notices",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 171,
+      "additions": 171,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 88.8,
+    "test_count": 208,
     "failed_tests": 0,
     "conclusion": "success"
   }
