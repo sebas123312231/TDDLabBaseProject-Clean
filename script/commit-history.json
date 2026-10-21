@@ -703,12 +703,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "34258dddbe86c8252808e7a219150e57d710e043",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T04:57:39.000Z",
       "message": "feat(web): add catalog filters presenter",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/34258dddbe86c8252808e7a219150e57d710e043"
     },
     "stats": {
       "total": 184,
@@ -718,6 +718,25 @@
     },
     "coverage": 78.51,
     "test_count": 155,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T05:01:53.000Z",
+      "message": "feat(web): load filtered report catalog",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 301,
+      "additions": 301,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 80.86,
+    "test_count": 165,
     "failed_tests": 0,
     "conclusion": "success"
   }

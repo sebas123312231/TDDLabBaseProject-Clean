@@ -2742,9 +2742,151 @@
     "testId": 37
   },
   {
-    "commitId": "HEAD",
+    "commitId": "34258dddbe86c8252808e7a219150e57d710e043",
     "commitName": "feat(web): add catalog filters presenter",
     "commitTimestamp": 1792558659171,
     "testId": 37
+  },
+  {
+    "numPassedTests": 155,
+    "failedTests": 0,
+    "numTotalTests": 155,
+    "timestamp": 1792558714970,
+    "success": false,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 156,
+    "failedTests": 0,
+    "numTotalTests": 156,
+    "timestamp": 1792558723422,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 156,
+    "failedTests": 1,
+    "numTotalTests": 157,
+    "timestamp": 1792558738171,
+    "success": false,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 157,
+    "failedTests": 0,
+    "numTotalTests": 157,
+    "timestamp": 1792558757235,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 157,
+    "failedTests": 1,
+    "numTotalTests": 158,
+    "timestamp": 1792558766030,
+    "success": false,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 158,
+    "failedTests": 0,
+    "numTotalTests": 158,
+    "timestamp": 1792558776020,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 158,
+    "failedTests": 1,
+    "numTotalTests": 159,
+    "timestamp": 1792558787584,
+    "success": false,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 159,
+    "failedTests": 0,
+    "numTotalTests": 159,
+    "timestamp": 1792558796134,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 160,
+    "failedTests": 0,
+    "numTotalTests": 160,
+    "timestamp": 1792558810182,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 160,
+    "failedTests": 1,
+    "numTotalTests": 161,
+    "timestamp": 1792558824640,
+    "success": false,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 161,
+    "failedTests": 0,
+    "numTotalTests": 161,
+    "timestamp": 1792558834148,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 162,
+    "failedTests": 0,
+    "numTotalTests": 162,
+    "timestamp": 1792558843802,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 162,
+    "failedTests": 1,
+    "numTotalTests": 163,
+    "timestamp": 1792558851608,
+    "success": false,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 163,
+    "failedTests": 0,
+    "numTotalTests": 163,
+    "timestamp": 1792558862223,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 163,
+    "failedTests": 1,
+    "numTotalTests": 164,
+    "timestamp": 1792558878899,
+    "success": false,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 164,
+    "failedTests": 0,
+    "numTotalTests": 164,
+    "timestamp": 1792558894099,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "numPassedTests": 165,
+    "failedTests": 0,
+    "numTotalTests": 165,
+    "timestamp": 1792558904389,
+    "success": true,
+    "testId": 38
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): load filtered report catalog",
+    "commitTimestamp": 1792558913911,
+    "testId": 38
   }
 ]
