@@ -23,3 +23,31 @@ test('las pruebas instrumentadas construyen los workspaces antes de ejecutar Jes
   assert.equal(scripts.test, 'pnpm test:build && node ./scripts/run-tdd.mjs')
   assert.equal(scripts['test:build'], 'pnpm --recursive --if-present build')
 })
+
+test('los comandos principales ejecutan Vite y las aplicaciones del workspace', () => {
+  const { scripts } = JSON.parse(readFileSync('package.json', 'utf8'))
+
+  assert.equal(scripts.start, 'pnpm --filter @perdiu/web preview')
+  assert.equal(scripts.build, 'pnpm --recursive --if-present build')
+  assert.equal(
+    scripts.dev,
+    'pnpm test:build && pnpm --parallel --stream --filter @perdiu/api --filter @perdiu/web run dev',
+  )
+  assert.equal(scripts['dev:api'], 'pnpm test:build && pnpm --filter @perdiu/api dev')
+  assert.equal(scripts['dev:web'], 'pnpm --filter @perdiu/web dev')
+})
+
+test('los comandos locales administran PostgreSQL y sus migraciones', () => {
+  const { scripts } = JSON.parse(readFileSync('package.json', 'utf8'))
+
+  assert.equal(scripts['db:up'], 'docker compose up -d --wait')
+  assert.equal(scripts['db:down'], 'docker compose down')
+  assert.equal(
+    scripts['db:migrate'],
+    'pnpm --filter @perdiu/database... build && pnpm --filter @perdiu/database db:migrate',
+  )
+  assert.equal(
+    scripts['db:seed'],
+    'pnpm --filter @perdiu/database... build && pnpm --filter @perdiu/database db:seed',
+  )
+})

@@ -11,8 +11,11 @@
     "pnpm": ">=10 <11"
   },
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": "pnpm --filter @perdiu/web preview",
+    "dev": "pnpm test:build && pnpm --parallel --stream --filter @perdiu/api --filter @perdiu/web run dev",
+    "dev:api": "pnpm test:build && pnpm --filter @perdiu/api dev",
+    "dev:web": "pnpm --filter @perdiu/web dev",
+    "build": "pnpm --recursive --if-present build",
     "test": "pnpm test:build && node ./scripts/run-tdd.mjs",
     "test:build": "pnpm --recursive --if-present build",
     "test:runner": "node --test scripts/test/tdd-script.test.mjs",
@@ -21,6 +24,10 @@
     "lint": "eslint .",
     "auth:keys": "node scripts/auth-keys.mjs",
     "test:auth": "pnpm test:build && node scripts/verify-auth.mjs",
+    "db:up": "docker compose up -d --wait",
+    "db:down": "docker compose down",
+    "db:migrate": "pnpm --filter @perdiu/database... build && pnpm --filter @perdiu/database db:migrate",
+    "db:seed": "pnpm --filter @perdiu/database... build && pnpm --filter @perdiu/database db:seed",
     "prepare": "husky",
     "semantic-commits-on": "node semantic-commits.js enable",
     "semantic-commits-off": "node semantic-commits.js disabled"

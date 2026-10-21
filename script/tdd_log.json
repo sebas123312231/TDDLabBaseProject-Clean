@@ -4426,9 +4426,31 @@
     "testId": 83
   },
   {
-    "commitId": "HEAD",
+    "commitId": "8c0e3f06621d056cc0e00d5af159467c08b7eb6c",
     "commitName": "test(api): cover JWT rejection boundaries",
     "commitTimestamp": 1792603803159,
     "testId": 83
+  },
+  {
+    "numPassedTests": 251,
+    "failedTests": 0,
+    "numTotalTests": 251,
+    "timestamp": 1792603926719,
+    "success": true,
+    "testId": 84
+  },
+  {
+    "numPassedTests": 251,
+    "failedTests": 0,
+    "numTotalTests": 251,
+    "timestamp": 1792603959308,
+    "success": true,
+    "testId": 84
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(workspace): run PerdiU from root scripts",
+    "commitTimestamp": 1792603968771,
+    "testId": 84
   }
 ]

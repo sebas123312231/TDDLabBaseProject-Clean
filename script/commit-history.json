@@ -1577,12 +1577,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "8c0e3f06621d056cc0e00d5af159467c08b7eb6c",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T17:30:03.000Z",
       "message": "test(api): cover JWT rejection boundaries",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/8c0e3f06621d056cc0e00d5af159467c08b7eb6c"
     },
     "stats": {
       "total": 143,
@@ -1592,6 +1592,25 @@
     },
     "coverage": 88.66,
     "test_count": 249,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T17:32:48.000Z",
+      "message": "feat(workspace): run PerdiU from root scripts",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 39,
+      "additions": 37,
+      "deletions": 2,
+      "date": "2026-10-21"
+    },
+    "coverage": 88.66,
+    "test_count": 251,
     "failed_tests": 0,
     "conclusion": "success"
   }
