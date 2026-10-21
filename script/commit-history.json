@@ -38,12 +38,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e9119586a65143fb02ed57df3304713010407df9",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T00:35:55.000Z",
       "message": "chore(test): support TypeScript Jest suites",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/e9119586a65143fb02ed57df3304713010407df9"
     },
     "stats": {
       "total": 94,
@@ -53,6 +53,25 @@
     },
     "coverage": 100,
     "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T00:37:23.000Z",
+      "message": "feat(contracts): define shared report DTOs",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 317,
+      "additions": 317,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 100,
+    "test_count": 4,
     "failed_tests": 0,
     "conclusion": "success"
   }
