@@ -399,17 +399,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "5c5e0149b12f4b33c05b5a34b8ee9cb574262459",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:20:12.000Z",
       "message": "feat(api): verify tokens with remote JWKS",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/5c5e0149b12f4b33c05b5a34b8ee9cb574262459"
     },
     "stats": {
       "total": 38,
       "additions": 36,
       "deletions": 2,
+      "date": "2026-10-21"
+    },
+    "coverage": 80.53,
+    "test_count": 79,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:21:31.000Z",
+      "message": "feat(api): expose authenticated profile",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 152,
+      "additions": 147,
+      "deletions": 5,
       "date": "2026-10-21"
     },
     "coverage": 80.53,

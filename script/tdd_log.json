@@ -1494,9 +1494,23 @@
     "testId": 21
   },
   {
-    "commitId": "HEAD",
+    "commitId": "5c5e0149b12f4b33c05b5a34b8ee9cb574262459",
     "commitName": "feat(api): verify tokens with remote JWKS",
     "commitTimestamp": 1792545612492,
     "testId": 21
+  },
+  {
+    "numPassedTests": 79,
+    "failedTests": 0,
+    "numTotalTests": 79,
+    "timestamp": 1792545675733,
+    "success": true,
+    "testId": 22
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(api): expose authenticated profile",
+    "commitTimestamp": 1792545691837,
+    "testId": 22
   }
 ]

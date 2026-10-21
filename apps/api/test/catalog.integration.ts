@@ -5,6 +5,12 @@ import { assertLocalDatabase } from '@perdiu/database/config'
 import { createPool } from '@perdiu/database'
 import { migrate, seed } from '@perdiu/database/maintenance'
 
+const noSessions = {
+  verify: async () => {
+    throw new Error('El catálogo público no debe verificar sesiones.')
+  },
+}
+
 test('GET /reports es público y devuelve solo reportes activos persistidos', async () => {
   assert.equal(process.env.PERDIU_TEST_CONTAINER, '1')
   const databaseUrl = process.env.TEST_DATABASE_URL
@@ -17,7 +23,7 @@ test('GET /reports es público y devuelve solo reportes activos persistidos', as
     await migrate(pool)
     await pool.query('TRUNCATE TABLE profiles CASCADE')
     await seed(pool)
-    app = await createApplication(databaseUrl)
+    app = await createApplication(databaseUrl, noSessions)
     await app.listen(0, '127.0.0.1')
 
     const response = await fetch(`${await app.getUrl()}/reports`)

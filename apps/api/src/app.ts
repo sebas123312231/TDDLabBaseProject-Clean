@@ -2,14 +2,23 @@ import 'reflect-metadata'
 import {
   Controller,
   Get,
+  Header,
   Inject,
   Module,
   Query,
   ServiceUnavailableException,
+  UseGuards,
 } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 import { ListReports } from '@perdiu/catalog'
-import { openDatabase, type Database } from '@perdiu/database'
+import type { AccountIdentity } from '@perdiu/contracts'
+import { openDatabase, type Database, type PostgresProfileRepository } from '@perdiu/database'
+import {
+  withSessionRevocation,
+  type AccessTokenVerifier,
+  type AuthenticatedUser,
+} from './auth/access-token.js'
+import { ACCESS_TOKEN_VERIFIER, AuthGuard, CurrentUser } from './auth/guard.js'
 import { parseReportQuery } from './reports/query.js'
 
 @Controller('reports')
@@ -27,19 +36,52 @@ class ReportsController {
   }
 }
 
+const PROFILES = 'PROFILES'
+
+@Controller('me')
+@UseGuards(AuthGuard)
+class AccountController {
+  constructor(
+    @Inject(PROFILES) private readonly profiles: Pick<PostgresProfileRepository, 'find'>,
+  ) {}
+
+  @Get()
+  @Header('Cache-Control', 'no-store')
+  async me(@CurrentUser() user: AuthenticatedUser): Promise<AccountIdentity> {
+    let profile
+    try {
+      profile = await this.profiles.find(user.id)
+    } catch {
+      throw new ServiceUnavailableException('No se pudo cargar tu perfil. Intenta nuevamente.')
+    }
+    return {
+      id: user.id,
+      email: user.email,
+      ...(profile && { displayName: profile.displayName }),
+      ...(profile?.photoUrl && { photoUrl: profile.photoUrl }),
+    }
+  }
+}
+
 @Module({})
 class AppModule {}
 
-export async function createApplication(databaseUrl: string) {
+export async function createApplication(databaseUrl: string, verifier: AccessTokenVerifier) {
   let database: Database | undefined
   try {
     database = await openDatabase(databaseUrl)
     const app = await NestFactory.create(
       {
         module: AppModule,
-        controllers: [ReportsController],
+        controllers: [ReportsController, AccountController],
         providers: [
           { provide: ListReports, useValue: new ListReports(database.reports) },
+          { provide: PROFILES, useValue: database.profiles },
+          {
+            provide: ACCESS_TOKEN_VERIFIER,
+            useValue: withSessionRevocation(verifier, database.sessions),
+          },
+          AuthGuard,
           { provide: 'DATABASE_LIFECYCLE', useValue: { onModuleDestroy: database.close } },
         ],
       },
