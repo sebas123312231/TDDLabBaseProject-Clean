@@ -22,3 +22,18 @@ test('la búsqueda del catálogo recorta los espacios exteriores', () => {
 test('la consulta omite el texto que queda vacío al recortarlo', () => {
   assert.deepEqual(toReportQuery({ text: '   ' }), {})
 })
+
+test('la ciudad seleccionada se incluye en la consulta', () => {
+  const filters = { text: '', city: 'La Paz' }
+  assert.deepEqual(toReportQuery(filters), { city: 'La Paz' })
+})
+
+test('la categoría seleccionada se incluye en la consulta', () => {
+  const filters = { text: '', category: 'object' as const }
+  assert.deepEqual(toReportQuery(filters), { category: 'object' })
+})
+
+test('el tipo seleccionado se incluye en la consulta', () => {
+  const filters = { text: '', type: 'lost' as const }
+  assert.deepEqual(toReportQuery(filters), { type: 'lost' })
+})

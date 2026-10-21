@@ -1740,9 +1740,63 @@
     "testId": 26
   },
   {
-    "commitId": "HEAD",
+    "commitId": "ff9edca06df5b53686ecd0e123a327b2d7242afb",
     "commitName": "feat(web): start report query model",
     "commitTimestamp": 1792546412113,
     "testId": 26
+  },
+  {
+    "numPassedTests": 90,
+    "failedTests": 1,
+    "numTotalTests": 91,
+    "timestamp": 1792546430164,
+    "success": false,
+    "testId": 27
+  },
+  {
+    "numPassedTests": 91,
+    "failedTests": 0,
+    "numTotalTests": 91,
+    "timestamp": 1792546439356,
+    "success": true,
+    "testId": 27
+  },
+  {
+    "numPassedTests": 91,
+    "failedTests": 1,
+    "numTotalTests": 92,
+    "timestamp": 1792546446322,
+    "success": false,
+    "testId": 27
+  },
+  {
+    "numPassedTests": 92,
+    "failedTests": 0,
+    "numTotalTests": 92,
+    "timestamp": 1792546452561,
+    "success": true,
+    "testId": 27
+  },
+  {
+    "numPassedTests": 92,
+    "failedTests": 1,
+    "numTotalTests": 93,
+    "timestamp": 1792546459186,
+    "success": false,
+    "testId": 27
+  },
+  {
+    "numPassedTests": 93,
+    "failedTests": 0,
+    "numTotalTests": 93,
+    "timestamp": 1792546465427,
+    "success": true,
+    "testId": 27
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): map report selections to queries",
+    "commitTimestamp": 1792546489455,
+    "testId": 27
   }
 ]
