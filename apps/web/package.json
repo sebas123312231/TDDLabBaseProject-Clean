@@ -1,0 +1,19 @@
+{
+  "name": "@perdiu/web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.check.json",
+    "test": "pnpm --workspace-root exec jest --testPathPattern=apps/web/test/"
+  },
+  "dependencies": {
+    "@perdiu/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "@jest/globals": "29.7.0",
+    "@types/node": "^26.6.5",
+    "typescript": "7.0.2"
+  }
+}

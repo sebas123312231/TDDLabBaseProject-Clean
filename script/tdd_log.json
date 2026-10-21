@@ -1686,9 +1686,63 @@
     "testId": 25
   },
   {
-    "commitId": "HEAD",
+    "commitId": "71571b6df1b95e8ad541d8af7e69987b40ff5913",
     "commitName": "feat(api): add local server entrypoint",
     "commitTimestamp": 1792546230285,
     "testId": 25
+  },
+  {
+    "numPassedTests": 87,
+    "failedTests": 0,
+    "numTotalTests": 87,
+    "timestamp": 1792546311261,
+    "success": false,
+    "testId": 26
+  },
+  {
+    "numPassedTests": 87,
+    "failedTests": 1,
+    "numTotalTests": 88,
+    "timestamp": 1792546322846,
+    "success": false,
+    "testId": 26
+  },
+  {
+    "numPassedTests": 88,
+    "failedTests": 0,
+    "numTotalTests": 88,
+    "timestamp": 1792546331058,
+    "success": true,
+    "testId": 26
+  },
+  {
+    "numPassedTests": 88,
+    "failedTests": 1,
+    "numTotalTests": 89,
+    "timestamp": 1792546337395,
+    "success": false,
+    "testId": 26
+  },
+  {
+    "numPassedTests": 89,
+    "failedTests": 1,
+    "numTotalTests": 90,
+    "timestamp": 1792546379508,
+    "success": false,
+    "testId": 26
+  },
+  {
+    "numPassedTests": 90,
+    "failedTests": 0,
+    "numTotalTests": 90,
+    "timestamp": 1792546400776,
+    "success": true,
+    "testId": 26
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(web): start report query model",
+    "commitTimestamp": 1792546412113,
+    "testId": 26
   }
 ]

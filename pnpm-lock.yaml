@@ -85,6 +85,22 @@ importers:
         specifier: 7.0.2
         version: 7.0.2
 
+  apps/web:
+    dependencies:
+      '@perdiu/contracts':
+        specifier: workspace:*
+        version: link:../../packages/contracts
+    devDependencies:
+      '@jest/globals':
+        specifier: 29.7.0
+        version: 29.7.0
+      '@types/node':
+        specifier: ^26.6.5
+        version: 26.6.5
+      typescript:
+        specifier: 7.0.2
+        version: 7.0.2
+
   packages/catalog:
     dependencies:
       '@perdiu/contracts':

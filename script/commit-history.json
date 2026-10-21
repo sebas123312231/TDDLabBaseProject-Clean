@@ -475,12 +475,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "71571b6df1b95e8ad541d8af7e69987b40ff5913",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T01:30:30.000Z",
       "message": "feat(api): add local server entrypoint",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/71571b6df1b95e8ad541d8af7e69987b40ff5913"
     },
     "stats": {
       "total": 402,
@@ -490,6 +490,25 @@
     },
     "coverage": 57.76,
     "test_count": 87,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T01:33:32.000Z",
+      "message": "feat(web): start report query model",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 94,
+      "additions": 94,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 58.47,
+    "test_count": 90,
     "failed_tests": 0,
     "conclusion": "success"
   }
