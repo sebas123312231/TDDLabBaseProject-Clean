@@ -76,12 +76,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "643d57a3d569bc0b2a206f57b5105c81fbe62354",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T00:38:06.000Z",
       "message": "chore(test): build workspace packages before Jest",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/643d57a3d569bc0b2a206f57b5105c81fbe62354"
     },
     "stats": {
       "total": 10,
@@ -91,6 +91,25 @@
     },
     "coverage": 100,
     "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T00:40:34.000Z",
+      "message": "feat(catalog): return ordered public reports",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 255,
+      "additions": 255,
+      "deletions": 0,
+      "date": "2026-10-21"
+    },
+    "coverage": 100,
+    "test_count": 12,
     "failed_tests": 0,
     "conclusion": "success"
   }

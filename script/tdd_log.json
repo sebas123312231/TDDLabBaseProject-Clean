@@ -136,9 +136,127 @@
     "testId": 4
   },
   {
-    "commitId": "HEAD",
+    "commitId": "643d57a3d569bc0b2a206f57b5105c81fbe62354",
     "commitName": "chore(test): build workspace packages before Jest",
     "commitTimestamp": 1792543086943,
     "testId": 4
+  },
+  {
+    "numPassedTests": 5,
+    "failedTests": 0,
+    "numTotalTests": 5,
+    "timestamp": 1792543104227,
+    "success": false,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 6,
+    "failedTests": 0,
+    "numTotalTests": 6,
+    "timestamp": 1792543122805,
+    "success": true,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 6,
+    "failedTests": 1,
+    "numTotalTests": 7,
+    "timestamp": 1792543128850,
+    "success": false,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 7,
+    "failedTests": 0,
+    "numTotalTests": 7,
+    "timestamp": 1792543133981,
+    "success": true,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 7,
+    "failedTests": 1,
+    "numTotalTests": 8,
+    "timestamp": 1792543140175,
+    "success": false,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 8,
+    "failedTests": 0,
+    "numTotalTests": 8,
+    "timestamp": 1792543145694,
+    "success": true,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 8,
+    "failedTests": 1,
+    "numTotalTests": 9,
+    "timestamp": 1792543151805,
+    "success": false,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 9,
+    "failedTests": 0,
+    "numTotalTests": 9,
+    "timestamp": 1792543158538,
+    "success": true,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 9,
+    "failedTests": 1,
+    "numTotalTests": 10,
+    "timestamp": 1792543173151,
+    "success": false,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 10,
+    "failedTests": 0,
+    "numTotalTests": 10,
+    "timestamp": 1792543179022,
+    "success": true,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 10,
+    "failedTests": 1,
+    "numTotalTests": 11,
+    "timestamp": 1792543189226,
+    "success": false,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 11,
+    "failedTests": 0,
+    "numTotalTests": 11,
+    "timestamp": 1792543196463,
+    "success": true,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 11,
+    "failedTests": 1,
+    "numTotalTests": 12,
+    "timestamp": 1792543203319,
+    "success": false,
+    "testId": 5
+  },
+  {
+    "numPassedTests": 12,
+    "failedTests": 0,
+    "numTotalTests": 12,
+    "timestamp": 1792543213073,
+    "success": true,
+    "testId": 5
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(catalog): return ordered public reports",
+    "commitTimestamp": 1792543234171,
+    "testId": 5
   }
 ]
