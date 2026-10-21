@@ -855,12 +855,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e41f19237a40dce52c19a3dfc9771d8df8fc1204",
     "author": "Sebastian_Arce_Antezana",
     "commit": {
       "date": "2026-10-21T05:21:38.000Z",
       "message": "test(web): fix auth test callback types",
-      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/e41f19237a40dce52c19a3dfc9771d8df8fc1204"
     },
     "stats": {
       "total": 14,
@@ -870,6 +870,25 @@
     },
     "coverage": 89.7,
     "test_count": 216,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Sebastian_Arce_Antezana",
+    "commit": {
+      "date": "2026-10-21T05:28:39.000Z",
+      "message": "feat(web): bootstrap the MVP application",
+      "url": "https://github.com/sebas123312231/TDDLabBaseProject-Clean/commit/HEAD"
+    },
+    "stats": {
+      "total": 1474,
+      "additions": 1461,
+      "deletions": 13,
+      "date": "2026-10-21"
+    },
+    "coverage": 87.75,
+    "test_count": 221,
     "failed_tests": 0,
     "conclusion": "success"
   }

@@ -48,7 +48,7 @@ test('web declara un workspace TypeScript estricto y sus contratos compartidos',
   const tsconfig = JSON.parse(readFileSync(tsconfigPath, 'utf8'))
   assert.equal(manifest.name, '@perdiu/web')
   assert.equal(manifest.dependencies['@perdiu/contracts'], 'workspace:*')
-  assert.equal(manifest.scripts.build, 'tsc -p tsconfig.json')
+  assert.match(manifest.scripts.build, /tsc --noEmit.*vite build/)
   assert.equal(tsconfig.compilerOptions.strict, true)
 })
 
