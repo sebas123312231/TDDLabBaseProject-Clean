@@ -1472,9 +1472,31 @@
     "testId": 20
   },
   {
-    "commitId": "HEAD",
+    "commitId": "c618c291daf3311a662ad753bda3235c7106941c",
     "commitName": "feat(api): serve public report catalog",
     "commitTimestamp": 1792545566714,
     "testId": 20
+  },
+  {
+    "numPassedTests": 74,
+    "failedTests": 0,
+    "numTotalTests": 74,
+    "timestamp": 1792545591290,
+    "success": false,
+    "testId": 21
+  },
+  {
+    "numPassedTests": 79,
+    "failedTests": 0,
+    "numTotalTests": 79,
+    "timestamp": 1792545599746,
+    "success": true,
+    "testId": 21
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat(api): verify tokens with remote JWKS",
+    "commitTimestamp": 1792545612492,
+    "testId": 21
   }
 ]

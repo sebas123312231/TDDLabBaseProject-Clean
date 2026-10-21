@@ -1,4 +1,4 @@
-import { errors, jwtVerify, type JWTVerifyGetKey } from 'jose'
+import { createRemoteJWKSet, errors, jwtVerify, type JWTVerifyGetKey } from 'jose'
 
 /** Identity taken exclusively from a verified access token. */
 export interface AuthenticatedUser {
@@ -86,4 +86,14 @@ export function withSessionRevocation(
       return user
     },
   }
+}
+
+export function createRemoteAccessTokenVerifier(
+  jwksUrl: string,
+  options: AccessTokenOptions,
+): AccessTokenVerifier {
+  return createAccessTokenVerifier(
+    createRemoteJWKSet(new URL(jwksUrl), { timeoutDuration: 3000, cooldownDuration: 30000 }),
+    options,
+  )
 }

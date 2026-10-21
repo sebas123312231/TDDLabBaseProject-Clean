@@ -1,9 +1,11 @@
 import assert from 'node:assert/strict'
+import { createServer } from 'node:http'
 import { test } from '@jest/globals'
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT, type JWK } from 'jose'
 import {
   AuthUnavailable,
   createAccessTokenVerifier,
+  createRemoteAccessTokenVerifier,
   InvalidAccessToken,
   withSessionRevocation,
 } from '../src/auth/access-token.js'
@@ -36,7 +38,7 @@ async function signedToken(claims: Record<string, unknown> = {}, sub = subject) 
     .setExpirationTime('15m')
     .sign(privateKey)
 
-  return { verifier, token }
+  return { verifier, token, jwk }
 }
 
 test('un JWT ES256 válido entrega solo la identidad firmada', async () => {
@@ -74,6 +76,28 @@ test('la indisponibilidad de las claves de Auth no se confunde con una credencia
   )
 
   await assert.rejects(verifier.verify(token), (error) => error instanceof AuthUnavailable)
+})
+
+test('el verificador remoto obtiene la clave pública desde el JWKS configurado', async () => {
+  const { token, jwk } = await signedToken()
+  const server = createServer((_request, response) => {
+    response.setHeader('content-type', 'application/json')
+    response.end(JSON.stringify({ keys: [jwk] }))
+  })
+  await new Promise<void>((resolve) => server.listen(0, '127.0.0.1', resolve))
+  const { port } = server.address() as { port: number }
+
+  try {
+    const verifier = createRemoteAccessTokenVerifier(
+      `http://127.0.0.1:${port}/.well-known/jwks.json`,
+      { issuer, audience },
+    )
+    assert.equal((await verifier.verify(token)).id, subject)
+  } finally {
+    await new Promise<void>((resolve, reject) =>
+      server.close((error) => (error ? reject(error) : resolve())),
+    )
+  }
 })
 
 test('revocar el session_id verificado rechaza el token todavía firmado', async () => {
